@@ -1,3 +1,5 @@
+"use strict";
+
 /* ================================
 ===  BACKGROUND SLIDER        ====
 ================================= */
@@ -48,8 +50,11 @@ $(document).ready(function() {
     filter: ':not(.external)'
   });
   
-  // Sticky Header - http://jqueryfordesigners.com/fixed-floating-elements/         
-  var top = $('#main-nav').offset().top - parseFloat($('#main-nav').css('margin-top').replace(/auto/, 0));
+    // Sticky Header - http://jqueryfordesigners.com/fixed-floating-elements/         
+  var top = 0;
+  setTimeout(function () {
+      top = $('#main-nav').offset().top - parseFloat($('#main-nav').css('margin-top').replace(/auto/, 0));
+  }, 1000);
   
   $(window).scroll(function (event) {
     // what the y position of the scroll is

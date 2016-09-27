@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("TestimonialController", TestimonialController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/testimonial/testimonial.controller.js.map
+//# sourceMappingURL=testimonial.controller.js.map

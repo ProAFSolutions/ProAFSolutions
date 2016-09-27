@@ -3,11 +3,13 @@ var proafsolutions;
     var shared;
     (function (shared) {
         var BaseController = (function () {
-            function BaseController() {
+            function BaseController($scope, $dataContext) {
+                this.$scope = $scope;
+                this.$dataContext = $dataContext;
             }
             return BaseController;
         }());
         shared.BaseController = BaseController;
     })(shared = proafsolutions.shared || (proafsolutions.shared = {}));
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/shared/base.controller.js.map
+//# sourceMappingURL=base.controller.js.map

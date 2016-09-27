@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("TeamController", TeamController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/team/team.controller.js.map
+//# sourceMappingURL=team.controller.js.map

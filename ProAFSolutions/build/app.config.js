@@ -95,4 +95,4 @@ var proafsolutions;
     angular.module("proafsolutions", ["ngSanitize", "ngResource", "ui.router"])
         .config(init);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../app/build/app.config.js.map
+//# sourceMappingURL=app.config.js.map

@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("FeaturesController", FeaturesController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/features/features.controller.js.map
+//# sourceMappingURL=features.controller.js.map

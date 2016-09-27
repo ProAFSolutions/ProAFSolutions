@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("NewsetterController", NewsetterController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/newsetter/newsetter.controller.js.map
+//# sourceMappingURL=newsetter.controller.js.map

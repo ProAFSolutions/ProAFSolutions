@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("SeparatorController", SeparatorController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/separator/separator.controller.js.map
+//# sourceMappingURL=separator.controller.js.map

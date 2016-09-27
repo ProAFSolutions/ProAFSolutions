@@ -46,7 +46,8 @@
     <TypeScriptGeneratesDeclarations>False</TypeScriptGeneratesDeclarations>
     <TypeScriptNoEmitOnError>True</TypeScriptNoEmitOnError>
     <TypeScriptSourceMap>True</TypeScriptSourceMap>
-    <TypeScriptMapRoot>build</TypeScriptMapRoot>
+    <TypeScriptMapRoot>
+    </TypeScriptMapRoot>
     <TypeScriptSourceRoot />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -310,6 +311,7 @@
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />
     <TypeScriptCompile Include="app\components\purchase\purchase.controller.ts" />
     <TypeScriptCompile Include="app\components\separator\separator.controller.ts" />
+    <TypeScriptCompile Include="app\components\shared\datacontext.ts" />
     <TypeScriptCompile Include="app\components\stats\stats.controller.ts" />
     <TypeScriptCompile Include="app\components\team\team.controller.ts" />
     <TypeScriptCompile Include="app\components\testimonial\testimonial.controller.ts" />

@@ -10,4 +10,4 @@ var proafsolutions;
         services.BaseService = BaseService;
     })(services = proafsolutions.services || (proafsolutions.services = {}));
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../app/build/services/base.service.js.map
+//# sourceMappingURL=base.service.js.map

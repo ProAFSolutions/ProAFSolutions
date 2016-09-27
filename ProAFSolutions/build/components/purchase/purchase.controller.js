@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("PurchaseController", PurchaseController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/purchase/purchase.controller.js.map
+//# sourceMappingURL=purchase.controller.js.map

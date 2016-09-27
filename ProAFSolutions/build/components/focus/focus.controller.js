@@ -7,4 +7,4 @@ var proafsolutions;
     }());
     angular.module("proafsolutions").controller("FocusController", FocusController);
 })(proafsolutions || (proafsolutions = {}));
-//# sourceMappingURL=../../../app/build/components/focus/focus.controller.js.map
+//# sourceMappingURL=focus.controller.js.map
