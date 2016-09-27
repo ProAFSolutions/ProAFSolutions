@@ -1,0 +1,18 @@
+﻿[
+  {
+    "outputFile": "css/main.css",
+    "inputFile": "css/main.scss"
+  },
+  {
+    "outputFile": "css/styles.css",
+    "inputFile": "css/styles.scss"
+  },
+  {
+    "outputFile": "assets/icon-fonts/icons.css",
+    "inputFile": "assets/icon-fonts/icons.scss"
+  },
+  {
+    "outputFile": "css/custom.css",
+    "inputFile": "css/custom.scss"
+  }
+]
