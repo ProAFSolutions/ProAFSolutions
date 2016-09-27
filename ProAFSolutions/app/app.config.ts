@@ -114,6 +114,6 @@ namespace proafsolutions {
         //$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);  
     };
 
-    angular.module("proafsolutions", ["ngSanitize", "ngResource", "ui.router"])
+    angular.module("proafsolutions", ["ngSanitize", "ngResource", "ui.router", "pascalprecht.translate"])
            .config(init);
 }

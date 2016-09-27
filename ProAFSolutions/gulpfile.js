@@ -22,6 +22,7 @@ var config = {
         //Core
         'node_modules/jquery/jquery.js',
         'node_modules/angular/angular.js',
+        'node_modules/angular-translate/dist/angular-translate.js',
         'node_modules/angular-sanitize/angular-sanitize.js',
         'js/modernizr-custom.js',        
         'node_modules/angular-resource/angular-resource.js',
