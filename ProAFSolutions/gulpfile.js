@@ -13,7 +13,7 @@ var amdOptimize = require("amd-optimize")
 var config = {
     //Include all js files but exclude any min.js files
     src: [
-        'build/app.js',
+        'build/app.config.js',
         'build/services/base.service.js',
         'build/components/shared/base.controller.js',        
         'build/**/*.js' 

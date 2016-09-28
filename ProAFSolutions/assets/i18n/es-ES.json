@@ -1,14 +1,14 @@
 ﻿{
-  "home_nav_home": "Inicio",
-  "home_nav_focus": "Enfoque",
-  "home_nav_works": "Trabajos",
-  "home_nav_about": "Nosotros",
-  "home_nav_team": "Equipo de Trabajo",
-  "home_nav_pricing": "Estimaciones",
-  "home_nav_features": "Caracteristicas",
-  "home_nav_products": "Nuestros Productos",
-  "home_nav_testimonials": "Recomendaciones",
-  "home_nav_contact": "Contactenos",
+  "home.nav.home": "Inicio",
+  "home.nav.focus": "Enfoque",
+  "home.nav.works": "Trabajos",
+  "home.nav.about": "Nosotros",
+  "home.nav.team": "Equipo de Trabajo",
+  "home.nav.pricing": "Estimaciones",
+  "home.nav.features": "Caracteristicas",
+  "home.nav.products": "Nuestros Productos",
+  "home.nav.testimonials": "Recomendaciones",
+  "home.nav.contact": "Contactenos",
 
-  "home_title": "Servicios de calidad orientados a pequenos negocios"
+  "home.title": "Servicios de calidad orientados a pequenos negocios"
 }

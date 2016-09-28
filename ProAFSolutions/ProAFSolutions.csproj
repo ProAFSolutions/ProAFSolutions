@@ -125,6 +125,8 @@
     <Content Include="css\pixeden-icons.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
+    <Content Include="images\i18n\en.gif" />
+    <Content Include="images\i18n\es.gif" />
     <Content Include="js\modernizr-custom.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

@@ -120,7 +120,6 @@ namespace proafsolutions {
                    prefix: '/assets/i18n/',
                    suffix: '.json'
                });
-               $translateProvider.preferredLanguage('es-ES');
-
+               $translateProvider.preferredLanguage('es-ES');              
          });   
 }

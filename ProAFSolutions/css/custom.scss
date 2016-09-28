@@ -4,6 +4,24 @@ body {
     
     .home {
 
+        .lang-selector{
+            float: right;
+
+            .lang-item {                
+                cursor: pointer;
+                padding-left: 5px;
+               
+                 span{
+                     color: #000;
+                     font-size: 12px;
+                 }
+
+                 img {
+                    width: 24px;
+                }                
+            }
+        }
+
     }
 
     .about-us{
