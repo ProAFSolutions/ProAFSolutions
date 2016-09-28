@@ -18,7 +18,7 @@
     export abstract class BaseController  {       
 
         constructor(protected $scope: ng.IScope,                    
-                    protected $dataContext: shared.IDataContext) {
+                    protected $dataContext: shared.IDataContextService) {
         } 
     }
 }

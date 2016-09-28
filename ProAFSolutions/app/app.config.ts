@@ -1,5 +1,5 @@
 ﻿///<reference path="../node_modules/definitely-typed-angular/angular.d.ts" />
-///<reference path="../node_modules/definitely-typed-angular/angular-resource.d.ts" />
+///<reference path="../node_modules/definitely-typed-angular-trainslate/angular-translate.d.ts" />
 ///<reference path="../node_modules/definitely-typed-angular-ui-router/angular-ui-router.d.ts" />
 ///<reference path="../node_modules/definitely-typed-jquery/jquery.d.ts" />
 ///<reference path="../node_modules/retyped-modernizr-tsd-ambient/modernizr.d.ts" />
@@ -7,113 +7,120 @@
 
 namespace proafsolutions {
 
-      function init($stateProvider: angular.ui.IStateProvider,
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate"])
+           .config(($stateProvider: angular.ui.IStateProvider,
                     $urlRouterProvider: angular.ui.IUrlRouterProvider,
                     $locationProvider: ng.ILocationProvider,
-                    $compileProvider: ng.ICompileProvider) {
-        
-        $stateProvider
-            .state("root", {
-                url: '',
-                views: {     
+                    $compileProvider: ng.ICompileProvider,
+                    $translateProvider: angular.translate.ITranslateProvider) => {
 
-                    "home": {
-                        templateUrl: 'app/components/home/home.html',
-                        controller: "HomeController",
-                        controllerAs: "vm"
-                    },
+               $stateProvider
+                   .state("root", {
+                       url: '',
+                       views: {
 
-                    "about": {
-                        templateUrl: 'app/components/about/about.html',
-                        controller: "AboutController",
-                        controllerAs: "vm"
-                    },
+                           "home": {
+                               templateUrl: 'app/components/home/home.html',
+                               controller: "HomeController",
+                               controllerAs: "vm"
+                           },
 
-                    "contact": {
-                        templateUrl: 'app/components/contact/contact.html',
-                        controller: "ContactController",
-                        controllerAs: "vm"
-                    },
+                           "about": {
+                               templateUrl: 'app/components/about/about.html',
+                               controller: "AboutController",
+                               controllerAs: "vm"
+                           },
 
-                    "features": {
-                        templateUrl: 'app/components/features/features.html',
-                        controller: "FeaturesController",
-                        controllerAs: "vm"
-                    },
+                           "contact": {
+                               templateUrl: 'app/components/contact/contact.html',
+                               controller: "ContactController",
+                               controllerAs: "vm"
+                           },
 
-                    "focus": {
-                        templateUrl: 'app/components/focus/focus.html',
-                        controller: "FocusController",
-                        controllerAs: "vm"
-                    },
+                           "features": {
+                               templateUrl: 'app/components/features/features.html',
+                               controller: "FeaturesController",
+                               controllerAs: "vm"
+                           },
 
-                    "newsetter": {
-                        templateUrl: 'app/components/newsetter/newsetter.html',
-                        controller: "NewsetterController",
-                        controllerAs: "vm"
-                    },
+                           "focus": {
+                               templateUrl: 'app/components/focus/focus.html',
+                               controller: "FocusController",
+                               controllerAs: "vm"
+                           },
 
-                    "packages": {
-                        templateUrl: 'app/components/packages/packages.html',
-                        controller: "NewsetterController",
-                        controllerAs: "vm"
-                    },
+                           "newsetter": {
+                               templateUrl: 'app/components/newsetter/newsetter.html',
+                               controller: "NewsetterController",
+                               controllerAs: "vm"
+                           },
 
-                    "products": {
-                        templateUrl: 'app/components/products/products.html',
-                        controller: "ProductsController",
-                        controllerAs: "vm"
-                    },
+                           "packages": {
+                               templateUrl: 'app/components/packages/packages.html',
+                               controller: "NewsetterController",
+                               controllerAs: "vm"
+                           },
 
-                    "purchase": {
-                        templateUrl: 'app/components/purchase/purchase.html',
-                        controller: "PurchaseController",
-                        controllerAs: "vm"
-                    },
+                           "products": {
+                               templateUrl: 'app/components/products/products.html',
+                               controller: "ProductsController",
+                               controllerAs: "vm"
+                           },
 
-                    "separator": {
-                        templateUrl: 'app/components/separator/separator.html',
-                        controller: "SeparatorController",
-                        controllerAs: "vm"
-                    },
+                           "purchase": {
+                               templateUrl: 'app/components/purchase/purchase.html',
+                               controller: "PurchaseController",
+                               controllerAs: "vm"
+                           },
 
-                    "stats": {
-                        templateUrl: 'app/components/stats/stats.html',
-                        controller: "StatsController",
-                        controllerAs: "vm"
-                    },
+                           "separator": {
+                               templateUrl: 'app/components/separator/separator.html',
+                               controller: "SeparatorController",
+                               controllerAs: "vm"
+                           },
 
-                    "team": {
-                        templateUrl: 'app/components/team/team.html',
-                        controller: "TeamController",
-                        controllerAs: "vm"
-                    },
+                           "stats": {
+                               templateUrl: 'app/components/stats/stats.html',
+                               controller: "StatsController",
+                               controllerAs: "vm"
+                           },
 
-                    "testimonial": {
-                        templateUrl: 'app/components/testimonial/testimonial.html',
-                        controller: "TestimonialController",
-                        controllerAs: "vm"
-                    },
+                           "team": {
+                               templateUrl: 'app/components/team/team.html',
+                               controller: "TeamController",
+                               controllerAs: "vm"
+                           },
 
-                    "works": {
-                        templateUrl: 'app/components/works/works.html',
-                        controller: "WorksController",
-                        controllerAs: "vm"
-                    },
+                           "testimonial": {
+                               templateUrl: 'app/components/testimonial/testimonial.html',
+                               controller: "TestimonialController",
+                               controllerAs: "vm"
+                           },
 
-                    "footer": {
-                        templateUrl: 'app/components/footer/footer.html',
-                        controller: "FooterController",
-                        controllerAs: "vm"
-                    }
-                }
-            });            
+                           "works": {
+                               templateUrl: 'app/components/works/works.html',
+                               controller: "WorksController",
+                               controllerAs: "vm"
+                           },
 
-        $urlRouterProvider.otherwise("");
+                           "footer": {
+                               templateUrl: 'app/components/footer/footer.html',
+                               controller: "FooterController",
+                               controllerAs: "vm"
+                           }
+                       }
+                   });
 
-        //$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);  
-    };
+               $urlRouterProvider.otherwise("");
 
-    angular.module("proafsolutions", ["ngSanitize", "ngResource", "ui.router", "pascalprecht.translate"])
-           .config(init);
+               $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//); 
+
+               //i18N
+               $translateProvider.useStaticFilesLoader({
+                   prefix: '/assets/i18n/',
+                   suffix: '.json'
+               });
+               $translateProvider.preferredLanguage('es-ES');
+
+         });   
 }

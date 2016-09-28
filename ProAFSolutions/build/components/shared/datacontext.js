@@ -3,13 +3,13 @@ var proafsolutions;
     var shared;
     (function (shared) {
         //This service is being used to shared data accross the app
-        var DataContext = (function () {
-            function DataContext() {
+        var DataContextService = (function () {
+            function DataContextService() {
             }
-            return DataContext;
+            return DataContextService;
         }());
-        shared.DataContext = DataContext;
-        angular.module("proafsolutions").service("$dataContext", DataContext);
+        shared.DataContextService = DataContextService;
+        angular.module("proafsolutions").service("$dataContext", DataContextService);
     })(shared = proafsolutions.shared || (proafsolutions.shared = {}));
 })(proafsolutions || (proafsolutions = {}));
 //# sourceMappingURL=datacontext.js.map

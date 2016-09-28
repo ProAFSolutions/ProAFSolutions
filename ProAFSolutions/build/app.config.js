@@ -1,12 +1,13 @@
 ///<reference path="../node_modules/definitely-typed-angular/angular.d.ts" />
-///<reference path="../node_modules/definitely-typed-angular/angular-resource.d.ts" />
+///<reference path="../node_modules/definitely-typed-angular-trainslate/angular-translate.d.ts" />
 ///<reference path="../node_modules/definitely-typed-angular-ui-router/angular-ui-router.d.ts" />
 ///<reference path="../node_modules/definitely-typed-jquery/jquery.d.ts" />
 ///<reference path="../node_modules/retyped-modernizr-tsd-ambient/modernizr.d.ts" />
 ///<reference path="../typings/underscore.d.ts" />
 var proafsolutions;
 (function (proafsolutions) {
-    function init($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider) {
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate"])
+        .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $compileProvider, $translateProvider) {
         $stateProvider
             .state("root", {
             url: '',
@@ -89,10 +90,13 @@ var proafsolutions;
             }
         });
         $urlRouterProvider.otherwise("");
-        //$compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);  
-    }
-    ;
-    angular.module("proafsolutions", ["ngSanitize", "ngResource", "ui.router", "pascalprecht.translate"])
-        .config(init);
+        $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
+        //i18N
+        $translateProvider.useStaticFilesLoader({
+            prefix: '/assets/i18n/',
+            suffix: '.json'
+        });
+        $translateProvider.preferredLanguage('es-ES');
+    });
 })(proafsolutions || (proafsolutions = {}));
 //# sourceMappingURL=app.config.js.map

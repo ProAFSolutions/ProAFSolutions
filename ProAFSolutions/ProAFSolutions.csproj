@@ -134,11 +134,14 @@
     <Content Include="assets\icon-fonts\fonts\712-icon-fonts.eot" />
     <Content Include="assets\icon-fonts\fonts\712-icon-fonts.ttf" />
     <Content Include="assets\icon-fonts\fonts\712-icon-fonts.woff" />
+    <Content Include="assets\i18n\en-US.json" />
+    <Content Include="assets\i18n\es-ES.json" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="css\custom.scss" />
+    <Content Include="data\products.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -316,7 +319,8 @@
     <TypeScriptCompile Include="app\components\team\team.controller.ts" />
     <TypeScriptCompile Include="app\components\testimonial\testimonial.controller.ts" />
     <TypeScriptCompile Include="app\components\works\works.controller.ts" />
-    <TypeScriptCompile Include="app\services\base.service.ts" />
+    <TypeScriptCompile Include="app\models\product.ts" />
+    <TypeScriptCompile Include="app\services\dataprovider.service.ts" />
     <TypeScriptCompile Include="typings\underscore.d.ts" />
   </ItemGroup>
   <ItemGroup>
@@ -324,9 +328,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\directives\" />
-    <Folder Include="app\models\" />
     <Folder Include="build\" />
-    <Folder Include="data\" />
     <Folder Include="dist\" />
   </ItemGroup>
   <PropertyGroup>
