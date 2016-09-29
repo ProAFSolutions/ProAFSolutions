@@ -7,11 +7,13 @@
 
 
     export class DataProviderService implements IDataProviderService {
-        
+
+        static $inject = ['$http'];  
+
         constructor(private $http: ng.IHttpService) { }
 
         public getProductsPromise(): ng.IHttpPromise<models.IProduct[]> {
-            return this.$http.get<models.IProduct[]>("/data/products.json");
+            return this.$http.get<models.IProduct[]>(AppSettings.DATA_FOLDER + "/products.json");
         }
 
     }       

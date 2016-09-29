@@ -7,8 +7,9 @@ var proafsolutions;
                 this.$http = $http;
             }
             DataProviderService.prototype.getProductsPromise = function () {
-                return this.$http.get("/data/products.json");
+                return this.$http.get(proafsolutions.AppSettings.DATA_FOLDER + "/products.json");
             };
+            DataProviderService.$inject = ['$http'];
             return DataProviderService;
         }());
         services.DataProviderService = DataProviderService;

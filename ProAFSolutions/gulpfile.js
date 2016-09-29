@@ -6,6 +6,9 @@ var inject = require('gulp-inject');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
 var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-htmlmin');
+var rename = require('gulp-rename');
+var flatten = require('gulp-flatten');
 var del = require('del');
 var runSequence = require('run-sequence');
 var amdOptimize = require("amd-optimize") 
@@ -13,9 +16,8 @@ var amdOptimize = require("amd-optimize")
 
 var config = {
     //Include all js files but exclude any min.js files
-    src: [
-        'build/app.config.js',
-        'build/services/base.service.js',
+    src: [       
+        'build/proafsolutions.js',        
         'build/components/shared/base.controller.js',        
         'build/**/*.js' 
     ],
@@ -52,6 +54,9 @@ var config = {
         'css/site.css',
         'css/responsive.css',
         'css/custom.css'
+    ],
+    html: [
+        'app/components/**/*.html'
     ]
 }
 
@@ -74,7 +79,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('clean',function () {
-    return del(['dist/*.*']);
+    return del(['app/**/*.js', 'app/**/*.js.map', 'dist/*.*']);
 });
 
 gulp.task('scripts:app', function () {
@@ -104,8 +109,20 @@ gulp.task('css:minify', function () {
     }
 });
 
+gulp.task('html:minify', function () {
+    if (process.env.NODE_ENV && process.env.NODE_ENV === 'Release') {
+        return gulp.src(config.html)
+                   .pipe(htmlmin({ collapseWhitespace: true }))
+                   .pipe(rename({                            
+                       suffix: '.min'                   
+                   }))
+                   .pipe(flatten())
+                   .pipe(gulp.dest('dist/'));
+    }
+});
+
 gulp.task('build', function (cb) {
-    runSequence('clean', ['css:minify', 'scripts:libs', 'scripts:app'],'index', cb);
+    runSequence('clean', ['css:minify', 'scripts:libs', 'scripts:app', 'html:minify'], 'index', cb);
 });
 
 gulp.task('default', ['build']);
