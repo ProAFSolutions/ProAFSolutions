@@ -5,6 +5,7 @@ var gulp = require('gulp');
 var inject = require('gulp-inject');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var cleanCSS = require('gulp-clean-css');
 var del = require('del');
 var runSequence = require('run-sequence');
 var amdOptimize = require("amd-optimize") 
@@ -61,7 +62,7 @@ gulp.task('index', function () {
     var css;
     if (process.env.NODE_ENV && process.env.NODE_ENV === 'Release') {
         sources = gulp.src(['./dist/libs.min.js', './dist/app.min.js'], { read: false });
-        css = gulp.src([], { read: false });
+        css = gulp.src(['./dist/styles.min.css'], { read: false });
     }
     else {
         sources = gulp.src(config.libs.concat(config.src), { read: false });
@@ -73,7 +74,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('clean',function () {
-    return del(['dist/*.js']);
+    return del(['dist/*.*']);
 });
 
 gulp.task('scripts:app', function () {
@@ -94,8 +95,17 @@ gulp.task('scripts:libs', function () {
     }
 });
 
+gulp.task('css:minify', function () {
+    if (process.env.NODE_ENV && process.env.NODE_ENV === 'Release') {
+        return gulp.src(config.css)
+                   .pipe(cleanCSS({ compatibility: 'ie8' }))
+                   .pipe(concat('styles.min.css'))
+                   .pipe(gulp.dest('dist/'));
+    }
+});
+
 gulp.task('build', function (cb) {
-    runSequence('clean', ['scripts:libs', 'scripts:app'],'index', cb);
+    runSequence('clean', ['css:minify', 'scripts:libs', 'scripts:app'],'index', cb);
 });
 
 gulp.task('default', ['build']);
