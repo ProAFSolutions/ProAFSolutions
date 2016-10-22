@@ -4,28 +4,47 @@ body {
     
     .home {
 
-        .lang-selector{
-            float: right;
+        .navbar{
+            .lang-selector{
+               position: absolute;
+               right: 20px;
 
-            .lang-item {                
-                cursor: pointer;
-                padding-left: 5px;
+                .lang-item {                
+                    cursor: pointer;
+                    padding-left: 5px;
                
-                 span{
-                     color: #000;
-                     font-size: 12px;
-                 }
+                     span{
+                         color: #000;
+                         font-size: 12px;
+                     }
 
-                 img {
-                    width: 24px;
-                }                
+                     img {
+                        width: 24px;
+                    }                
+                }
             }
-        }
 
+            .navbar-brand{
+                margin-bottom: 20px;
+            }
+
+            .navbar-toggle{
+                margin-top: 50px !important;
+            }
+
+        }
     }
 
     .about-us{
 
+        .skill {
+            .skill-count{
+                i {
+                    font-size: 48px;
+                    color: #fff;
+                }
+            }
+        }
     }
 
     .features{
@@ -33,7 +52,11 @@ body {
     }
 
     .focus{
-
+        .other-focuses{
+            .section-footer-title{
+                text-transform: uppercase;
+            }
+        }
     }
 
     .newsletter{
