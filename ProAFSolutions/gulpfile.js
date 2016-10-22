@@ -79,7 +79,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('clean',function () {
-    return del(['app/**/*.js', 'app/**/*.js.map', 'dist/*.*']);
+    return del(['dist/*.*']);
 });
 
 gulp.task('scripts:app', function () {
