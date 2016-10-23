@@ -40,8 +40,8 @@ var config = {
         'js/owl.carousel.min.js',
         'js/smoothscroll.js',
         'js/jquery.vegas.min.js',
-        'js/zerif.js'
-
+        'js/zerif.js',
+        'js/jquery.signalR-2.2.1.js'
     ],
     css: [
         'css/bootstrap.min.css',

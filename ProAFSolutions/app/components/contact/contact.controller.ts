@@ -1,11 +1,10 @@
 ﻿namespace proafsolutions {
 
-    interface IContactController extends shared.IBaseController {
-
-
+    interface IContactController {
+        
     }
 
-    class ContactController {
+    class ContactController implements IContactController {
 
     }
 

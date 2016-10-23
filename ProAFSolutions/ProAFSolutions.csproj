@@ -141,6 +141,7 @@
     <Content Include="dist\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
+    <Content Include="js\jquery.signalR-2.2.1.js" />
     <Content Include="js\modernizr-custom.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -321,6 +322,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\about\about.controller.ts" />
+    <TypeScriptCompile Include="app\components\contact\chat.controller.ts" />
     <TypeScriptCompile Include="app\components\contact\contact.controller.ts" />
     <TypeScriptCompile Include="app\components\features\features.controller.ts" />
     <TypeScriptCompile Include="app\components\focus\focus.controller.ts" />
@@ -330,6 +332,7 @@
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\base.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
+    <TypeScriptCompile Include="app\definitely-typed\signalR.d.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />
     <TypeScriptCompile Include="app\components\purchase\purchase.controller.ts" />
