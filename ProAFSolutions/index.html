@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="en" ng-app="proafsolutions" ng-controller="AppController as $appController">
 <head>
 
@@ -98,10 +98,12 @@
     <!-- ============================= -->
     <div ui-view="footer"></div>
     <!-- ============================= -->
+    <!-- ============================= -->
+    <div ui-view="chat"></div>
+    <!-- ============================= -->
     <!-- =========================
            SCRIPTS
-    ============================== -->
-    <script src="http://localhost:5565/signalr/hubs"></script>
+    ============================== -->    
     <!-- inject:js -->
     <script src="/node_modules/jquery/jquery.js"></script>
     <script src="/node_modules/angular/angular.js"></script>
@@ -118,8 +120,7 @@
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/smoothscroll.js"></script>
     <script src="/js/jquery.vegas.min.js"></script>
-    <script src="/js/zerif.js"></script>
-    <script src="/js/jquery.signalR-2.2.1.js"></script>
+    <script src="/js/zerif.js"></script>    
     <script src="/build/proafsolutions.js"></script>
     <script src="/build/components/shared/base.controller.js"></script>
     <script src="/build/config/language.js"></script>
@@ -129,6 +130,7 @@
     <script src="/build/models/product.js"></script>
     <script src="/build/services/dataprovider.service.js"></script>
     <script src="/build/components/about/about.controller.js"></script>
+    <script src="/build/components/contact/chat.controller.js"></script>
     <script src="/build/components/contact/contact.controller.js"></script>
     <script src="/build/components/features/features.controller.js"></script>
     <script src="/build/components/focus/focus.controller.js"></script>

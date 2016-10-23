@@ -12,7 +12,6 @@ namespace ProAFSolutionsAPI
     {
         public void Configuration(IAppBuilder app)
         {
-            app.MapSignalR();
             ConfigureAuth(app);
         }
     }

@@ -29,7 +29,8 @@ var config = {
         'node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
         'node_modules/angular-sanitize/angular-sanitize.js',
         'js/modernizr-custom.js',               
-        'node_modules/angular-ui-router/release/angular-ui-router.js',         
+        'node_modules/angular-ui-router/release/angular-ui-router.js',
+        'node_modules/angular-chat/angular-chat.js',
         'node_modules/underscore/underscore.js',
         
         //Template's plugins       
@@ -40,8 +41,7 @@ var config = {
         'js/owl.carousel.min.js',
         'js/smoothscroll.js',
         'js/jquery.vegas.min.js',
-        'js/zerif.js',
-        'js/jquery.signalR-2.2.1.js'
+        'js/zerif.js'
     ],
     css: [
         'css/bootstrap.min.css',

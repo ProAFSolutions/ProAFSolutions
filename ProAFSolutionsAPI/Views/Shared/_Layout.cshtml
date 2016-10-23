@@ -11,16 +11,19 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
+                <a href="http://localhost:2891">
+                    <img src="~/Content/logo.png" />
+                </a>                
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @*@Html.ActionLink("ProAFSolutionsAPI", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
+                @*@Html.ActionLink("Web API", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">                  
-                    <li>@Html.ActionLink("ProAFSolutions Web API", "Index", "Help", new { area = "" }, null)</li>
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Web API", "Index", "Help", new { area = "" }, null)</li>
                 </ul>
             </div>
         </div>
@@ -29,7 +32,10 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - ProAFSolutions</p>
+            <center>
+                <p>&copy; @DateTime.Now.Year - ProAFSolutions</p>
+            </center>
+            
         </footer>
     </div>
 
