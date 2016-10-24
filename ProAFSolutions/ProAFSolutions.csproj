@@ -334,6 +334,7 @@
     <TypeScriptCompile Include="app\components\shared\base.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
     <TypeScriptCompile Include="app\definitely-typed\angular-chat.d.ts" />
+    <TypeScriptCompile Include="app\models\contact-message.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />
     <TypeScriptCompile Include="app\components\purchase\purchase.controller.ts" />
@@ -348,6 +349,7 @@
     <TypeScriptCompile Include="app\config\routes.ts" />
     <TypeScriptCompile Include="app\models\product.ts" />
     <TypeScriptCompile Include="app\services\dataprovider.service.ts" />
+    <TypeScriptCompile Include="app\services\message.service.ts" />
     <TypeScriptCompile Include="typings\underscore.d.ts" />
   </ItemGroup>
   <ItemGroup>

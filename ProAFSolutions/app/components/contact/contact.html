@@ -18,19 +18,19 @@
             <form role="form" class="contact-form" id="contact-form">
                 <div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                     <div class="col-lg-4 col-sm-4">
-                        <input type="text" name="name" placeholder="Your Name" class="form-control input-box" id="name">
+                        <input type="text" name="name" ng-model="vm.contactMessage.name" placeholder="Your Name" class="form-control input-box" id="name">
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <input type="email" name="email" placeholder="Your Email" class="form-control input-box" id="email">
+                        <input type="email" name="email" ng-model="vm.contactMessage.email" placeholder="Your Email" class="form-control input-box" id="email">
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <input type="text" name="subject" placeholder="Subject" class="form-control input-box" id="subject">
+                        <input type="text" name="subject" ng-model="vm.contactMessage.subject" placeholder="Subject" class="form-control input-box" id="subject">
                     </div>
                 </div>
 
                 <div class="clearfix">
                     <div class="col-md-12 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                        <textarea name="message" class="form-control textarea-box" placeholder="Your Message" id="message"></textarea>
+                        <textarea name="message" ng-model="vm.contactMessage.message"  class="form-control textarea-box" placeholder="Your Message" id="message"></textarea>
                     </div>
                 </div>
                 <!-- IF MAIL SENT SUCCESSFULLY -->
@@ -42,7 +42,7 @@
                 <h4 class="error pull-left white-text">
                     E-mail must be valid and message must be longer than 1 character.
                 </h4>
-                <button class="btn btn-primary custom-button red-btn wow fadeInLeft animated" id="submit" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">Send Message</button>
+                <button class="btn btn-primary custom-button red-btn wow fadeInLeft animated" ng-click="vm.sendContactMessage()" id="submit" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">Send Message</button>
             </form>
         </div>
         <!-- / END CONTACT FORM-->
