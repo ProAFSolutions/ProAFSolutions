@@ -24,7 +24,7 @@ namespace proafsolutions {
         }      
    }
 
-    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "chat"])
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate"])
            .config(ProAFSolutionsApp.config);
             
 }

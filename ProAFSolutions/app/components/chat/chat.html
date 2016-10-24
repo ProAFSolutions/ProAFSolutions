@@ -1,3 +1,28 @@
-﻿<section class="chat-room" id="chat-room">
-    
-</section> 
+﻿
+<div class="row chat" id="chat-room">
+
+    <i ng-show="!vm.isVisible" ng-click="vm.showClick()" class="chat-tray-icon icon-fontawesome-webfont-73" title="Chat"></i>
+
+    <div ng-show="vm.isVisible" class="chat-window col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="chat-header">
+            <i ng-click="vm.hideClick()" class="close icon-fontawesome-webfont-249" title="Close"></i>
+            <h4>Welcome to our Chat Room!</h4>
+        </div>
+        <div class="chat-messages">
+            <ul>
+                <li>Messages1</li>
+                <li>Messages2</li>
+                <li>Messages3</li>
+                <li>Messages4</li>
+                <li>Messages5</li>
+                <li>Messages6</li>
+            </ul>
+        </div>
+        <div class="chat-input">
+            <input type="text" value="" />
+            <a class="btn btn-primary green-btn">
+                <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
+            </a>
+        </div>
+    </div>
+</div> 

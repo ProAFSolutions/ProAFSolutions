@@ -1,18 +1,20 @@
 var proafsolutions;
 (function (proafsolutions) {
     var ChatController = (function () {
-        function ChatController(Messages, $scope) {
-            this.Messages = Messages;
+        function ChatController($scope) {
             this.$scope = $scope;
             this.init();
         }
         ChatController.prototype.init = function () {
-            this.Messages.send = function () {
-            };
-            this.Messages.receive = function (message) {
-            };
+            this.isVisible = false;
         };
-        ChatController.$inject = ['Messages', '$scope'];
+        ChatController.prototype.showClick = function () {
+            this.isVisible = true;
+        };
+        ChatController.prototype.hideClick = function () {
+            this.isVisible = false;
+        };
+        ChatController.$inject = ['$scope'];
         return ChatController;
     }());
     angular.module("proafsolutions").controller("ChatController", ChatController);

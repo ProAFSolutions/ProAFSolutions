@@ -2,32 +2,35 @@
 
     interface IChatController {
 
-       
+        isVisible: boolean;
+
+        showClick(): void;
+        hideClick(): void;
     }
 
     class ChatController implements IChatController {
 
 
-        static $inject = ['Messages', '$scope']; 
-      
+        static $inject = ['$scope']; 
 
-        constructor(private Messages: AngularChat, private $scope: ng.IScope) {
+        public isVisible: boolean;
+
+        constructor(private $scope: ng.IScope) {
             this.init();           
         }
 
         private init(): void {
-
-            this.Messages.send = () => {
-
-            };
-
-            this.Messages.receive = (message: string) => {
-
-            };
+            this.isVisible = false;
         }
 
         
+        public showClick(): void {
+            this.isVisible = true;
+        }
 
+        public hideClick(): void {
+            this.isVisible = false;
+        }
        
     }
 

@@ -35,9 +35,104 @@ body {
         }
     }
 
-    .chat-room{
+   
+   .chat{
 
-    }
+       .chat-tray-icon, .chat-window{
+           position: fixed;           
+           z-index: 999999;       
+       }
+
+       .chat-tray-icon {
+           top: 45px;
+           right: 70px;
+           font-size: 36px;
+           color: #818181;
+           cursor: pointer;
+
+           &:hover{
+               color: #ccc;
+               font-size: 42px;
+
+           }
+       }    
+
+       .chat-window {         
+           bottom: 0;  
+           right: 0;
+           height: calc(100% - 30px);           
+           padding: 0;           
+
+           .chat-header{
+               height: 50px;          
+               position: relative;
+               border-top-left-radius: 15px;
+               border-top-right-radius: 15px;
+               border-bottom: solid 1px #fff;
+
+               h4{
+                   line-height: 45px;
+               }
+
+               i {
+                   position: absolute;              
+                   color: #fff;
+                   opacity: 1;
+                   cursor: pointer;
+
+                   &:hover{
+                       color: #ccc;
+                   }
+
+                   &.close{
+                      right: 2px;
+                       top: 3px;
+                       font-size: 36px;
+                   }                  
+               }
+           }
+
+           .chat-messages{           
+                height: calc(100% - 90px);
+                overflow: auto;
+                color: #fff;
+
+                ul{
+                    padding: 20px !important;
+                    text-align: left;
+
+                    li{
+                        padding-bottom: 10px;
+                    }
+                }
+           }
+
+           .chat-header, .chat-messages,  .chat-input{
+               background-color: #000;
+               opacity: 0.8;
+           }
+
+           .chat-input{
+               height: 40px;
+           
+               input{
+                   float: left;
+                   height: 40px;
+                   line-height: 40px;
+                   padding-left: 10px;            
+                   width: calc(100% - 90px);
+               }   
+           
+               .btn{
+                   float: right;
+                   cursor: pointer;
+                   margin-right: 8px;
+               }        
+           }
+       }
+   }
+
+   
 
     .about-us{
 
