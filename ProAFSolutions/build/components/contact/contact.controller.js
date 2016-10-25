@@ -15,6 +15,7 @@ var proafsolutions;
         }
         ContactController.prototype.init = function () { };
         ContactController.prototype.sendContactMessage = function () {
+            //todo: callback 
             this.$messageService.sendMessage(this.contactMessage);
         };
         ContactController.$inject = ['$scope', '$dataContext', '$messageService'];

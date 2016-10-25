@@ -20,6 +20,7 @@
         init(): void { }
 
         public sendContactMessage(): void {
+            //todo: callback 
             this.$messageService.sendMessage(this.contactMessage);
         }
     }

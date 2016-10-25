@@ -7,7 +7,9 @@ var proafsolutions;
                 this.$http = $http;
             }
             MessageService.prototype.sendMessage = function (contactMessage) {
-                return this.$http.post("http://localhost:5565/api/messages/contact", contactMessage);
+                //todo: add API url to app setting 
+                var apiBaseUrl = "http://localhost:5565";
+                return this.$http.post(apiBaseUrl + "/api/messages/contact", contactMessage);
             };
             MessageService.$inject = ['$http'];
             return MessageService;
