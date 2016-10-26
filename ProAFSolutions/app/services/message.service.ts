@@ -9,14 +9,12 @@
 
         static $inject = ['$http'];      
 
+        private SERVICE_BASE_URL = AppSettings.API_URL + "/messages";
+
         constructor(private $http: ng.IHttpService) { }
 
         public sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}> {
-
-            //todo: add API url to app setting 
-            var apiBaseUrl = "http://localhost:5565";
-
-            return this.$http.post(apiBaseUrl + "/api/messages/contact", contactMessage);                
+            return this.$http.post(this.SERVICE_BASE_URL + "/contact", contactMessage);                
         }       
 
     }

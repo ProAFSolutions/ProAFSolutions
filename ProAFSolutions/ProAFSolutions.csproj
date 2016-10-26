@@ -142,7 +142,7 @@
     <Content Include="dist\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
-    <Content Include="js\jquery.signalR-2.2.1.js" />
+    <Content Include="js\jquery.signalr.js" />
     <Content Include="js\modernizr-custom.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">

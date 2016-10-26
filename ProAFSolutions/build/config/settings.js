@@ -8,6 +8,8 @@ var proafsolutions;
         AppSettings.COMPONENTS_FOLDER = "app/components";
         AppSettings.DIST_FOLDER = "dist";
         AppSettings.DATA_FOLDER = "data";
+        AppSettings.API_URL = "http://localhost:5565/api";
+        AppSettings.API_HUBS_URL = "http://localhost:5565/signalr/hubs";
         AppSettings.METADATA_KEYWORDS = [
             'ProAFSolutions',
             'Alejandro Clavijo',

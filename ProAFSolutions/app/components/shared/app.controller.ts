@@ -3,7 +3,7 @@
     interface IAppController {
         keywords: string;
         authors: string;
-        description: string;
+        description: string;      
     }
 
     class AppController implements IAppController {
@@ -13,13 +13,14 @@
         public keywords: string;
         public authors: string;
         public description: string;
+       
 
         constructor(private $dataContext: shared.IDataContextService) {          
            this.init();
         }
 
         init(): void {
-            this.setupMetadata();
+            this.setupMetadata();           
         }       
 
         private setupMetadata(): void {

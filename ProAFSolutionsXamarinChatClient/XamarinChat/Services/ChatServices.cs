@@ -17,7 +17,7 @@ namespace XamarinChat
 		public ChatServices ()
 		{
 			_connection = new HubConnection ("<server address here...>");
-			_proxy = _connection.CreateHubProxy ("ChatHub");
+			_proxy = _connection.CreateHubProxy ("ChatRoomHub");
 		}
 
 		#region IChatServices implementation

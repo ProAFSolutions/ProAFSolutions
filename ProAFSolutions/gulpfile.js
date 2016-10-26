@@ -11,8 +11,7 @@ var rename = require('gulp-rename');
 var flatten = require('gulp-flatten');
 var del = require('del');
 var runSequence = require('run-sequence');
-var amdOptimize = require("amd-optimize") 
-
+var amdOptimize = require("amd-optimize");
 
 var config = {
     //Include all js files but exclude any min.js files
@@ -31,6 +30,7 @@ var config = {
         'js/modernizr-custom.js',               
         'node_modules/angular-ui-router/release/angular-ui-router.js',       
         'node_modules/underscore/underscore.js',
+        'js/jquery.signalr.js',       
         
         //Template's plugins       
         'js/bootstrap.min.js',
@@ -40,7 +40,7 @@ var config = {
         'js/owl.carousel.min.js',
         'js/smoothscroll.js',
         'js/jquery.vegas.min.js',
-        'js/zerif.js'
+        'js/zerif.js'        
     ],
     css: [
         'css/bootstrap.min.css',
