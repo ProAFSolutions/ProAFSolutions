@@ -40,7 +40,7 @@ namespace ProAFSolutionsAPI.Controllers
             if (message.RestException != null)
             {
                 var error = message.RestException.Message;
-                Debug.WriteLine("Error: " + message);
+                Debug.WriteLine("Error: " + error);
             }
         }
 
