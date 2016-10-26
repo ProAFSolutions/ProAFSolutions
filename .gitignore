@@ -4,4 +4,10 @@
 /ProAFSolutions/obj
 /ProAFSolutionsAPI/bin
 /ProAFSolutionsAPI/obj
+/ProAFSolutionsXamarinChatClient/XamarinChat/bin
+/ProAFSolutionsXamarinChatClient/XamarinChat/obj
+/ProAFSolutionsXamarinChatClient/Droid/bin
+/ProAFSolutionsXamarinChatClient/Droid/obj
+/ProAFSolutionsXamarinChatClient/iOS/bin
+/ProAFSolutionsXamarinChatClient/iOS/obj
 /.vs
