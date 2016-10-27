@@ -142,6 +142,8 @@
     <Content Include="dist\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
+    <Content Include="images\team\alex.jpg" />
+    <Content Include="images\team\fily.jpg" />
     <Content Include="js\jquery.signalr.js" />
     <Content Include="js\modernizr-custom.js" />
     <Content Include="packages.config" />
@@ -163,6 +165,7 @@
     <Content Include="dist\fonts\712-icon-fonts.eot" />
     <Content Include="dist\fonts\712-icon-fonts.ttf" />
     <Content Include="dist\fonts\712-icon-fonts.woff" />
+    <Content Include="data\team.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -316,6 +319,8 @@
     <Content Include="js\smoothscroll.js" />
     <Content Include="js\wow.min.js" />
     <Content Include="js\zerif.js" />
+    <Content Include="sounds\receive.mp3" />
+    <Content Include="sounds\send.mp3" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -333,8 +338,11 @@
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\base.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
-    <TypeScriptCompile Include="app\definitely-typed\angular-chat.d.ts" />
+    <TypeScriptCompile Include="app\definitely-typed\ngaudio.d.ts" />
+    <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />
     <TypeScriptCompile Include="app\models\contact-message.ts" />
+    <TypeScriptCompile Include="app\models\chat-message.ts" />
+    <TypeScriptCompile Include="app\models\team-member.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />
     <TypeScriptCompile Include="app\components\purchase\purchase.controller.ts" />
@@ -350,7 +358,7 @@
     <TypeScriptCompile Include="app\models\product.ts" />
     <TypeScriptCompile Include="app\services\dataprovider.service.ts" />
     <TypeScriptCompile Include="app\services\message.service.ts" />
-    <TypeScriptCompile Include="typings\underscore.d.ts" />
+    <TypeScriptCompile Include="app\definitely-typed\underscore.d.ts" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
@@ -358,6 +366,7 @@
   <ItemGroup>
     <Folder Include="app\directives\" />
     <Folder Include="build\" />
+    <Folder Include="typings\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

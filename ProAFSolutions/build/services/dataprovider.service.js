@@ -9,6 +9,9 @@ var proafsolutions;
             DataProviderService.prototype.getProductsPromise = function () {
                 return this.$http.get(proafsolutions.AppSettings.DATA_FOLDER + "/products.json");
             };
+            DataProviderService.prototype.getTeamMembersPromise = function () {
+                return this.$http.get(proafsolutions.AppSettings.DATA_FOLDER + "/team.json");
+            };
             DataProviderService.$inject = ['$http'];
             return DataProviderService;
         }());

@@ -9,6 +9,7 @@ var proafsolutions;
                 suffix: '.json'
             });
             $translateProvider.preferredLanguage('es-ES');
+            $translateProvider.useLocalStorage();
         };
         return AppLanguageConfig;
     }());

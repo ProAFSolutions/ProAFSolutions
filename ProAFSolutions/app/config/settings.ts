@@ -13,6 +13,9 @@ namespace proafsolutions {
         static API_URL = "http://localhost:5565/api";
         static API_HUBS_URL = "http://localhost:5565/signalr/hubs";
 
+        static MP3_FILE_SEND = "/sounds/send.mp3";
+        static MP3_FILE_RECEIVE = "/sounds/receive.mp3";
+
         static METADATA_KEYWORDS = [
             'ProAFSolutions',
             'Alejandro Clavijo',

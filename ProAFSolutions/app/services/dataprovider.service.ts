@@ -16,8 +16,12 @@
             return this.$http.get<models.IProduct[]>(AppSettings.DATA_FOLDER + "/products.json");
         }
 
-    }       
+        public getTeamMembersPromise(): ng.IHttpPromise<models.ITeamMember[]> {
+            return this.$http.get<models.ITeamMember[]>(AppSettings.DATA_FOLDER + "/team.json");
+        }
 
+    }       
+    
     angular.module("proafsolutions").service("$dataProvider", DataProviderService);
     
 }

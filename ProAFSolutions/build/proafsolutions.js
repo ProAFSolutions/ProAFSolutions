@@ -3,8 +3,8 @@
 ///<reference path="../node_modules/definitely-typed-angular-ui-router/angular-ui-router.d.ts" />
 ///<reference path="../node_modules/definitely-typed-jquery/jquery.d.ts" />
 ///<reference path="../node_modules/retyped-modernizr-tsd-ambient/modernizr.d.ts" />
-///<reference path="../typings/underscore.d.ts" />
-/// <reference path="definitely-typed/angular-chat.d.ts" />
+///<reference path="definitely-typed/underscore.d.ts" />
+///<reference path="definitely-typed/signalr.d.ts" />
 var proafsolutions;
 (function (proafsolutions) {
     var ProAFSolutionsApp = (function () {
@@ -17,7 +17,7 @@ var proafsolutions;
         };
         return ProAFSolutionsApp;
     }());
-    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate"])
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies", "ngAudio"])
         .config(ProAFSolutionsApp.config);
 })(proafsolutions || (proafsolutions = {}));
 //# sourceMappingURL=proafsolutions.js.map

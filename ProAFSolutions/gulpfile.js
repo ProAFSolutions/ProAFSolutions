@@ -25,11 +25,15 @@ var config = {
         'node_modules/jquery/jquery.js',
         'node_modules/angular/angular.js',
         'node_modules/angular-translate/dist/angular-translate.js',
+        'node_modules/angular-cookies/angular-cookies.js',
         'node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
+        'node_modules/angular-translate-storage-local/angular-translate-storage-local.js',
+        'node_modules/angular-translate-storage-cookie/angular-translate-storage-cookie.js',
         'node_modules/angular-sanitize/angular-sanitize.js',
         'js/modernizr-custom.js',               
         'node_modules/angular-ui-router/release/angular-ui-router.js',       
         'node_modules/underscore/underscore.js',
+        'node_modules/angular-audio/app/angular.audio.js',
         'js/jquery.signalr.js',       
         
         //Template's plugins       
