@@ -145,6 +145,7 @@
     <Content Include="images\i18n\es.gif" />
     <Content Include="images\team\alex.jpg" />
     <Content Include="images\team\fily.jpg" />
+    <Content Include="js\jquery-1.6.4.min.js" />
     <Content Include="js\jquery.signalr.js" />
     <Content Include="js\modernizr-custom.js" />
     <Content Include="packages.config" />

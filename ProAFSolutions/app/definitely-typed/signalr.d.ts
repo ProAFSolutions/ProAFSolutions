@@ -365,7 +365,7 @@ interface ChatClient {
     getMessage:(name: string, message: string) => void;
 }
 
-interface ChatRoomHub {
+interface ChatRoomHub {   
     client: ChatClient;
     server: ChatServer;
 }

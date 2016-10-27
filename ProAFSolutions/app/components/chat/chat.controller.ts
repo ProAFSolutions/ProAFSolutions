@@ -9,7 +9,7 @@
         welcomeMessage: string;
         conversation: Array<models.IChatMessage>;       
         soundEnabled: boolean;
-        chatRoomHub: ChatRoomHub;
+        chatRoomHub: any;
 
         //Actions
         showWelcomeMessage(): void;
@@ -31,7 +31,7 @@
         public message: string;
         public conversation: Array<models.IChatMessage>;        
         public soundEnabled: boolean;
-        public chatRoomHub: ChatRoomHub;
+        public chatRoomHub: any;
 
         constructor(private $scope: ng.IScope) {
             this.init();
@@ -48,7 +48,7 @@
         }
 
         public initHub(): void {
-
+            $.connection.hub.url = 'http://localhost:5565/signalr';
             this.chatRoomHub = $.connection.chatRoomHub;
 
             this.chatRoomHub.client.getMessage = (name: string, message: string) => {

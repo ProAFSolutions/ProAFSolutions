@@ -16,6 +16,7 @@ var proafsolutions;
         };
         ChatController.prototype.initHub = function () {
             var _this = this;
+            $.connection.hub.url = 'http://localhost:5565/signalr';
             this.chatRoomHub = $.connection.chatRoomHub;
             this.chatRoomHub.client.getMessage = function (name, message) {
                 _this.isVisible = true;
