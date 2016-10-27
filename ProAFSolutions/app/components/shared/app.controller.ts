@@ -35,6 +35,12 @@
                 }               
             });
         }
+
+        public magicShortcut(event: KeyboardEvent): void {
+            if (event.ctrlKey && event.altKey && event.shiftKey && event.keyCode == 13) {
+                window.open("/admin-chat.html", "AdminChat", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");                          
+            }
+        }
     }
 
     angular.module("proafsolutions").controller("AppController", AppController);

@@ -1,15 +1,13 @@
 ﻿namespace proafsolutions {
 
-    
-    
+       
     interface IChatController {
 
         isVisible: boolean;
         roomName: string;
         message: string;
         welcomeMessage: string;
-        conversation: Array<models.IChatMessage>;
-        sounds: Array<NgAudioObject>;
+        conversation: Array<models.IChatMessage>;       
         soundEnabled: boolean;
         chatRoomHub: ChatRoomHub;
 
@@ -23,10 +21,7 @@
         initHub(): void;
     }
 
-
-
     class ChatController implements IChatController {
-
 
         static $inject = ['$scope'];
 
@@ -34,8 +29,7 @@
         public roomName: string;
         public welcomeMessage: string;
         public message: string;
-        public conversation: Array<models.IChatMessage>;
-        public sounds: Array<NgAudioObject>;
+        public conversation: Array<models.IChatMessage>;        
         public soundEnabled: boolean;
         public chatRoomHub: ChatRoomHub;
 
@@ -99,12 +93,12 @@
 
         //action: send|receive
         public playSound(action: string): void {
-            var audioFile: any;
-            audioFile = action == "send" ? document.getElementById("sound-send")
-                                         : document.getElementById("sound-receive");
-            audioFile.play();
-        }
-       
+            if (this.soundEnabled) {                
+                var audioFile: HTMLElement = action == "send" ? document.getElementById("sound-send")
+                                                              : document.getElementById("sound-receive");
+                (<NgAudioObject>audioFile).play();
+            }
+        }       
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);

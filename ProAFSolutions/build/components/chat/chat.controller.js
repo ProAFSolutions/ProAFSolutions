@@ -51,10 +51,11 @@ var proafsolutions;
         };
         //action: send|receive
         ChatController.prototype.playSound = function (action) {
-            var audioFile;
-            audioFile = action == "send" ? document.getElementById("sound-send")
-                : document.getElementById("sound-receive");
-            audioFile.play();
+            if (this.soundEnabled) {
+                var audioFile = action == "send" ? document.getElementById("sound-send")
+                    : document.getElementById("sound-receive");
+                audioFile.play();
+            }
         };
         ChatController.$inject = ['$scope'];
         return ChatController;
