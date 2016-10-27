@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IFeaturesController extends shared.IBaseController {
+    interface IFeaturesController {
 
 
     }

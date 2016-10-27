@@ -125,15 +125,15 @@
   <ItemGroup>
     <Content Include="app\components\chat\chat.html" />
     <Content Include="assets\icon-fonts\icons.css" />
-    <Content Include="css\animate.min.css" />
-    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
     <Content Include="css\custom.css">
       <DependentUpon>custom.scss</DependentUpon>
     </Content>
     <Content Include="css\custom.min.css">
       <DependentUpon>custom.css</DependentUpon>
     </Content>
-    <Content Include="css\jquery.vegas.min.css" />
+    <Content Include="css\jquery.vegas.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\owl.theme.css" />
     <Content Include="css\pixeden-icons.css" />
@@ -336,7 +336,6 @@
     <TypeScriptCompile Include="app\components\home\home.controller.ts" />
     <TypeScriptCompile Include="app\components\newsetter\newsetter.controller.ts" />
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
-    <TypeScriptCompile Include="app\components\shared\base.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
     <TypeScriptCompile Include="app\definitely-typed\ngaudio.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />

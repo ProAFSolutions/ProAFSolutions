@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IPurchaseController extends shared.IBaseController {
+    interface IPurchaseController {
 
 
     }

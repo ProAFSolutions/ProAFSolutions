@@ -1,6 +1,9 @@
 ﻿
 <div class="row chat" id="chat-room">
 
+    <audio id="sound-send" src="/sounds/send.mp3"></audio>
+    <audio id="sound-receive" src="/sounds/receive.mp3"></audio>
+
     <i ng-show="!vm.isVisible" ng-click="vm.showClick()" class="chat-tray-icon icon-fontawesome-webfont-73" title="Chat"></i>
 
     <div ng-show="vm.isVisible" class="chat-window col-lg-4 col-md-4 col-sm-6 col-xs-12">

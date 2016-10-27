@@ -17,7 +17,7 @@ var proafsolutions;
         };
         return ProAFSolutionsApp;
     }());
-    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies", "ngAudio"])
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies"])
         .config(ProAFSolutionsApp.config);
 })(proafsolutions || (proafsolutions = {}));
 //# sourceMappingURL=proafsolutions.js.map

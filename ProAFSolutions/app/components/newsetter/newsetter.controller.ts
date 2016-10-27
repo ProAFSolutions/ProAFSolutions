@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface INewsetterController extends shared.IBaseController {
+    interface INewsetterController {
 
 
     }

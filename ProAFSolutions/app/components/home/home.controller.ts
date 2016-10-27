@@ -1,21 +1,21 @@
 ﻿namespace proafsolutions {
 
-    interface IHomeController extends shared.IBaseController {
+    interface IHomeController {
 
         changeAppLanguageClick(lang: string): void;
     }
 
-    class HomeController extends shared.BaseController implements IHomeController {
+    class HomeController implements IHomeController {
 
         static $inject = ['$scope', '$dataContext', '$dataProvider', '$translate'];  
 
         public currentLang: string;
 
 
-        constructor($scope: ng.IScope, $dataContext: shared.IDataContextService,
+        constructor(private $scope: ng.IScope,
+                    private $dataContext: shared.IDataContextService,
                     private $dataProvider: services.IDataProviderService,
-                    private $translateProvider: angular.translate.ITranslateProvider) {
-            super($scope, $dataContext);
+                    private $translateProvider: angular.translate.ITranslateProvider) {           
             this.init();
         }
 

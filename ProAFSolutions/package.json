@@ -21,7 +21,7 @@
     "bootstrap": "3.3.5",
     "jquery": "1.9.1",
     "underscore": "^1.8.3",
-    "angular-audio": "1.7.3" 
+    "ng-audio": "0.0.2" 
   },
   "devDependencies": {
     "amd-optimize": "0.6.1",

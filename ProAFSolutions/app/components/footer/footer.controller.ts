@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IFooterController extends shared.IBaseController {
+    interface IFooterController {
 
 
     }

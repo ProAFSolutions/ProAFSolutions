@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface ITeamController extends shared.IBaseController {
+    interface ITeamController {
 
 
     }

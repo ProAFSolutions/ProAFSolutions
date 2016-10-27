@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IStatsController extends shared.IBaseController {
+    interface IStatsController {
 
 
     }

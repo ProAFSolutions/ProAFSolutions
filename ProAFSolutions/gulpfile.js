@@ -16,9 +16,11 @@ var amdOptimize = require("amd-optimize");
 var config = {
     //Include all js files but exclude any min.js files
     src: [       
-        'build/proafsolutions.js',        
-        'build/components/shared/base.controller.js',        
-        'build/**/*.js' 
+        'build/proafsolutions.js',              
+        'build/**/*.js',
+
+         //Template's scripts      
+        'js/zerif.js'
     ],
     libs: [
         //Core
@@ -32,26 +34,22 @@ var config = {
         'node_modules/angular-sanitize/angular-sanitize.js',
         'js/modernizr-custom.js',               
         'node_modules/angular-ui-router/release/angular-ui-router.js',       
-        'node_modules/underscore/underscore.js',
-        'node_modules/angular-audio/app/angular.audio.js',
-        'js/jquery.signalr.js',       
-        
-        //Template's plugins       
+        'node_modules/underscore/underscore.js',     
+        'js/jquery.signalr.js',
         'js/bootstrap.min.js',
         'js/wow.min.js',
         'js/jquery.nav.js',
         'js/jquery.knob.js',
         'js/owl.carousel.min.js',
         'js/smoothscroll.js',
-        'js/jquery.vegas.min.js',
-        'js/zerif.js'        
+        'js/jquery.vegas.min.js'
     ],
     css: [
-        'css/bootstrap.min.css',
+        'css/bootstrap.css',
         'css/owl.theme.css',
         'css/owl.carousel.css',
-        'css/jquery.vegas.min.css',
-        'css/animate.min.css',
+        'css/jquery.vegas.css',
+        'css/animate.css',
         'assets/icon-fonts/icons.css',
         'css/pixeden-icons.css',   
         'css/site.css',

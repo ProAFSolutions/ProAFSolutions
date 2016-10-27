@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IFocusController extends shared.IBaseController {
+    interface IFocusController {
 
 
     }

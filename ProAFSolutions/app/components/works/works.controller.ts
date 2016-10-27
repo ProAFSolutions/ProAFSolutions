@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IWorksController extends shared.IBaseController {
+    interface IWorksController {
 
 
     }

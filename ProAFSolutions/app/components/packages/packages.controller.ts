@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface IPackagesController extends shared.IBaseController {
+    interface IPackagesController {
 
 
     }

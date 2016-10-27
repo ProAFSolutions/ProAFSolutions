@@ -1,7 +1,7 @@
 ﻿
 namespace proafsolutions {
 
-    interface IAboutController extends shared.IBaseController {
+    interface IAboutController {
 
 
     }

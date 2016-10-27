@@ -1,6 +1,6 @@
 ﻿namespace proafsolutions {
 
-    interface ITestimonialController extends shared.IBaseController {
+    interface ITestimonialController {
 
 
     }

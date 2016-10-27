@@ -10,8 +10,6 @@ var proafsolutions;
         AppSettings.DATA_FOLDER = "data";
         AppSettings.API_URL = "http://localhost:5565/api";
         AppSettings.API_HUBS_URL = "http://localhost:5565/signalr/hubs";
-        AppSettings.MP3_FILE_SEND = "/sounds/send.mp3";
-        AppSettings.MP3_FILE_RECEIVE = "/sounds/receive.mp3";
         AppSettings.METADATA_KEYWORDS = [
             'ProAFSolutions',
             'Alejandro Clavijo',

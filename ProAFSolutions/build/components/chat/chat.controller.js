@@ -1,9 +1,8 @@
 var proafsolutions;
 (function (proafsolutions) {
     var ChatController = (function () {
-        function ChatController($scope, ngAudio) {
+        function ChatController($scope) {
             this.$scope = $scope;
-            this.ngAudio = ngAudio;
             this.init();
         }
         ChatController.prototype.init = function () {
@@ -12,8 +11,8 @@ var proafsolutions;
             this.message = '';
             this.conversation = new Array();
             this.roomName = '';
-            //this.initHub();
-            this.loadSounds();
+            this.soundEnabled = true;
+            //this.initHub();             
         };
         ChatController.prototype.initHub = function () {
             var _this = this;
@@ -21,7 +20,7 @@ var proafsolutions;
             this.chatRoomHub.client.getMessage = function (name, message) {
                 _this.isVisible = true;
                 _this.conversation.push(new proafsolutions.models.ChatMessage(name, message, new Date().toTimeString(), ""));
-                _this.sounds[1].play();
+                _this.playSound("receive");
                 _this.$scope.$apply();
             };
             $.connection.hub.start().done(function () {
@@ -37,8 +36,8 @@ var proafsolutions;
         ChatController.prototype.send = function () {
             if (this.chatRoomHub) {
                 this.chatRoomHub.server.sendMessage("", "", "");
+                this.playSound("send");
                 this.message = '';
-                this.sounds[0].play();
             }
         };
         ChatController.prototype.showClick = function () {
@@ -50,13 +49,14 @@ var proafsolutions;
         ChatController.prototype.enableSound = function () {
             this.soundEnabled = !this.soundEnabled;
         };
-        ChatController.prototype.loadSounds = function () {
-            this.soundEnabled = true;
-            this.sounds = new Array(2);
-            this.sounds.push(this.ngAudio.load(proafsolutions.AppSettings.MP3_FILE_SEND));
-            this.sounds.push(this.ngAudio.load(proafsolutions.AppSettings.MP3_FILE_RECEIVE));
+        //action: send|receive
+        ChatController.prototype.playSound = function (action) {
+            var audioFile;
+            audioFile = action == "send" ? document.getElementById("sound-send")
+                : document.getElementById("sound-receive");
+            audioFile.play();
         };
-        ChatController.$inject = ['$scope', 'ngAudio'];
+        ChatController.$inject = ['$scope'];
         return ChatController;
     }());
     angular.module("proafsolutions").controller("ChatController", ChatController);
