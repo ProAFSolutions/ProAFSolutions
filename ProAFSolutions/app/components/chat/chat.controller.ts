@@ -1,10 +1,12 @@
 ﻿namespace proafsolutions {
 
-       
-    interface IChatController {
 
+    interface IChatController {
+        access: number;
         isVisible: boolean;
-        roomName: string;
+        isJoined: boolean;
+        name: string; //user name
+        roomName: string; //Email
         message: string;
         welcomeMessage: string;
         conversation: Array<models.IChatMessage>;       
@@ -12,6 +14,7 @@
         chatRoomHub: any;
 
         //Actions
+        join(): void;
         showWelcomeMessage(): void;
         showClick(): void;
         hideClick(): void;
@@ -25,24 +28,30 @@
 
         static $inject = ['$scope'];
 
+        public access: number;
         public isVisible: boolean;
+        public isJoined: boolean;
+        public name: string;
         public roomName: string;
         public welcomeMessage: string;
         public message: string;
         public conversation: Array<models.IChatMessage>;        
         public soundEnabled: boolean;
-        public chatRoomHub: any;
+        public chatRoomHub: ChatRoomHub;
 
         constructor(private $scope: ng.IScope) {
             this.init();
         }
 
         init(): void {
+            this.access = 0;
             this.isVisible = false;
-            this.welcomeMessage = 'Put something here';
-            this.message = '';
+            this.isJoined = false;
+            this.welcomeMessage = 'Put something here';           
             this.conversation = new Array<models.IChatMessage>();
+            this.name = '';
             this.roomName = '';
+            this.message = '';
             this.soundEnabled = true; 
             //this.initHub();             
         }
@@ -56,11 +65,13 @@
                 this.conversation.push(new models.ChatMessage(name, message, new Date().toTimeString(), ""));
                 this.playSound("receive");
                 this.$scope.$apply();
-            };
+            };            
+        }
 
+        public join(): void {
             $.connection.hub.start().done(() => {
                 this.chatRoomHub.server.joinRoom(this.roomName);
-                console.log("Connected");
+                this.isJoined = true;
             }).fail(() => {
                 this.chatRoomHub = null;
                 console.log("Connection failed");
@@ -72,8 +83,8 @@
         }
 
         public send(): void {
-            if (this.chatRoomHub) {
-                this.chatRoomHub.server.sendMessage("", "", "");
+            if (this.isJoined && this.roomName && this.name) {
+                this.chatRoomHub.server.sendMessage(this.name, this.message, this.roomName);
                 this.playSound("send");
                 this.message = '';                        
             }           
@@ -81,6 +92,10 @@
         
         public showClick(): void {
             this.isVisible = true;
+            if (this.access == 0)
+                this.playSound("welcome");
+
+            this.access++;
         }
 
         public hideClick(): void {
@@ -93,9 +108,21 @@
 
         //action: send|receive
         public playSound(action: string): void {
-            if (this.soundEnabled) {                
-                var audioFile: HTMLElement = action == "send" ? document.getElementById("sound-send")
-                                                              : document.getElementById("sound-receive");
+            if (this.soundEnabled) {    
+                var audioFile = null;
+                switch (action) {
+                    case "welcome": {
+                        audioFile = document.getElementById("sound-welcome");
+                    } break;
+
+                    case "send": {
+                        audioFile = document.getElementById("sound-send");
+                    } break;
+
+                    case "receive": {
+                        audioFile = document.getElementById("sound-receive");
+                    } break;
+                }               
                 (<NgAudioObject>audioFile).play();
             }
         }       

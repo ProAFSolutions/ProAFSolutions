@@ -89,6 +89,10 @@
       <HintPath>..\packages\Microsoft.Owin.Cors.3.0.1\lib\net45\Microsoft.Owin.Cors.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="NVelocity, Version=1.0.3.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\packages\NVelocity.1.0.3\lib\NVelocity.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="RestSharp, Version=105.2.2.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\RestSharp.105.2.2\lib\net45\RestSharp.dll</HintPath>
       <Private>True</Private>
@@ -275,7 +279,17 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
+    <Compile Include="Providers\AppServicesProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
+    <Compile Include="Services\Mail\HtmlMailTemplate.cs" />
+    <Compile Include="Services\Mail\MailAttachment.cs" />
+    <Compile Include="Services\Mail\MailConfig.cs" />
+    <Compile Include="Services\Mail\MailData.cs" />
+    <Compile Include="Services\Mail\MailHelper.cs" />
+    <Compile Include="Services\Mail\MailSender.cs" />
+    <Compile Include="Services\Mail\NVelocityTemplateUtil.cs" />
+    <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\SMSService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -340,6 +354,7 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="settings.config" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

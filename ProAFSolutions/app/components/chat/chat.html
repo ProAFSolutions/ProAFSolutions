@@ -3,29 +3,63 @@
 
     <audio id="sound-send" src="/sounds/send.mp3"></audio>
     <audio id="sound-receive" src="/sounds/receive.mp3"></audio>
+    <audio id="sound-welcome" src="/sounds/welcome.mp3"></audio>
 
     <i ng-show="!vm.isVisible" ng-click="vm.showClick()" class="chat-tray-icon icon-fontawesome-webfont-73" title="Chat"></i>
 
     <div ng-show="vm.isVisible" class="chat-window col-lg-4 col-md-4 col-sm-6 col-xs-12">
         <div class="chat-header">
             <i ng-click="vm.hideClick()" class="close icon-fontawesome-webfont-249" title="Close"></i>
-            <h4>Welcome to our Chat Room!</h4>
+            <div ng-show="vm.isJoined" class="options-bar">
+                <i ng-click="vm.enableSound()" ng-class="{ 'icon-fontawesome-webfont-253': vm.soundEnabled, 'icon-fontawesome-webfont-156': !vm.soundEnabled }" title="{{ vm.soundEnabled ? 'Sound is On' : 'Sound is Off'}}"></i>
+                <i class="icon-fontawesome-webfont-189" title="Save Conversation"></i>
+                <i class="icon-mail" title="Email this conversation"></i>
+            </div>
+            <h4>Chat Room</h4>
         </div>
-        <div class="chat-messages">
+        <div class="join-view" ng-show="!vm.isJoined">
+
+            <h4>Welcome to our Chat Room!!!</h4>
+
+            <p>
+                <i class="icon-bulb"></i>&nbsp;&nbsp;
+                Please feel free to ask questions and get in touch with us through this chat, we will be very pleased to answer.
+                Don't waste time, join us by providing your name and a valid email address and then click the button below. We'll get back to you as soon as possible. 
+            </p>
             <ul>
-                <li>Messages1</li>
-                <li>Messages2</li>
-                <li>Messages3</li>
-                <li>Messages4</li>
-                <li>Messages5</li>
-                <li>Messages6</li>
+                <li>
+                    <label>Name:</label>
+                    <input type="text" ng-model="vm.name" />
+                </li>
+                <li>
+                    <label>Email:</label>
+                    <input type="email" ng-model="vm.roomName" />
+                </li>
+                <li>
+                    <a class="btn btn-primary green-btn" ng-click="vm.join()">
+                        <i class="icon-fontawesome-webfont-316"></i>&nbsp;&nbsp;Join now!
+                    </a>
+                </li>
             </ul>
         </div>
-        <div class="chat-input">
-            <input type="text" value="" />
-            <a class="btn btn-primary green-btn">
-                <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
-            </a>
+        <div class="chat-view" ng-show="vm.isJoined">
+            <div class="chat-messages">
+                <ul class="conversation-area">
+                    <li>Messages1</li>
+                    <li>Messages2</li>
+                    <li>Messages3</li>
+                    <li>Messages4</li>
+                    <li>Messages5</li>
+                    <li>Messages6</li>
+                </ul>
+            </div>
+            <div class="chat-input">
+                <input type="text" value="" />
+                <a class="btn btn-primary green-btn">
+                    <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
+                </a>
+            </div>
         </div>
+
     </div>
 </div> 

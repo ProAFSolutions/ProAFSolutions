@@ -43,6 +43,16 @@ body .chat .chat-window {
     border-bottom: solid 1px #fff; }
     body .chat .chat-window .chat-header h4 {
       line-height: 45px; }
+    body .chat .chat-window .chat-header .options-bar {
+      position: absolute;
+      top: 14px;
+      left: 10px; }
+      body .chat .chat-window .chat-header .options-bar i {
+        font-size: 22px; }
+        body .chat .chat-window .chat-header .options-bar i:nth-child(2) {
+          margin-left: 30px; }
+        body .chat .chat-window .chat-header .options-bar i:nth-child(3) {
+          margin-left: 60px; }
     body .chat .chat-window .chat-header i {
       position: absolute;
       color: #fff;
@@ -54,30 +64,52 @@ body .chat .chat-window {
         right: 2px;
         top: 3px;
         font-size: 36px; }
-  body .chat .chat-window .chat-messages {
-    height: calc(100% - 90px);
-    overflow: auto;
-    color: #fff; }
-    body .chat .chat-window .chat-messages ul {
-      padding: 20px !important;
-      text-align: left; }
-      body .chat .chat-window .chat-messages ul li {
-        padding-bottom: 10px; }
-  body .chat .chat-window .chat-header, body .chat .chat-window .chat-messages, body .chat .chat-window .chat-input {
+  body .chat .chat-window .join-view {
+    height: 100%; }
+    body .chat .chat-window .join-view h4 {
+      padding-top: 15px; }
+    body .chat .chat-window .join-view p {
+      padding: 20px;
+      text-align: justify; }
+    body .chat .chat-window .join-view .icon-bulb {
+      font-size: 18px; }
+    body .chat .chat-window .join-view input {
+      width: 250px;
+      padding: 5px;
+      border-radius: 5px;
+      margin-bottom: 15px; }
+      body .chat .chat-window .join-view input:hover, body .chat .chat-window .join-view input:active, body .chat .chat-window .join-view input:focus {
+        outline: none;
+        -webkit-appearance: none;
+        border: solid 1px #ccc !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important; }
+  body .chat .chat-window .chat-view {
+    height: 100%; }
+    body .chat .chat-window .chat-view .chat-messages {
+      height: calc(100% - 90px);
+      overflow: auto;
+      color: #fff; }
+      body .chat .chat-window .chat-view .chat-messages .conversation-area {
+        padding: 20px !important;
+        text-align: left; }
+        body .chat .chat-window .chat-view .chat-messages .conversation-area li {
+          padding-bottom: 10px; }
+    body .chat .chat-window .chat-view .chat-input {
+      height: 40px; }
+      body .chat .chat-window .chat-view .chat-input input {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        padding-left: 10px;
+        width: calc(100% - 90px); }
+      body .chat .chat-window .chat-view .chat-input .btn {
+        float: right;
+        cursor: pointer;
+        margin-right: 8px; }
+  body .chat .chat-window .chat-header, body .chat .chat-window .chat-view, body .chat .chat-window .join-view {
     background-color: #000;
-    opacity: 0.8; }
-  body .chat .chat-window .chat-input {
-    height: 40px; }
-    body .chat .chat-window .chat-input input {
-      float: left;
-      height: 40px;
-      line-height: 40px;
-      padding-left: 10px;
-      width: calc(100% - 90px); }
-    body .chat .chat-window .chat-input .btn {
-      float: right;
-      cursor: pointer;
-      margin-right: 8px; }
+    opacity: 0.9; }
 
 body .about-us .skill .skill-count i {
   font-size: 48px;

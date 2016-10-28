@@ -61,8 +61,8 @@ body {
            bottom: 0;  
            right: 0;
            height: calc(100% - 30px);           
-           padding: 0;           
-
+           padding: 0;
+         
            .chat-header{
                height: 50px;          
                position: relative;
@@ -72,6 +72,26 @@ body {
 
                h4{
                    line-height: 45px;
+               }
+
+               .options-bar {
+                   position: absolute;
+                   top: 14px;
+                   left: 10px;
+
+                   i {
+                       font-size: 22px;        
+                       
+                       &:nth-child(2){
+                           margin-left: 30px;
+                       }  
+                       
+                        &:nth-child(3){
+                           margin-left: 60px;
+                       }              
+                   }
+
+                   
                }
 
                i {
@@ -92,43 +112,84 @@ body {
                }
            }
 
-           .chat-messages{           
-                height: calc(100% - 90px);
-                overflow: auto;
-                color: #fff;
+           .join-view{
+               height: 100%;  
+               
+               h4{
+                   padding-top: 15px;
+               }             
 
-                ul{
-                    padding: 20px !important;
-                    text-align: left;
+               p{
+                   padding: 20px;
+                   text-align: justify;
+               }
 
-                    li{
-                        padding-bottom: 10px;
+               .icon-bulb{
+                   font-size: 18px;
+               }
+
+               input{
+                   width: 250px;
+                   padding: 5px;
+                   border-radius: 5px;
+                   margin-bottom: 15px;
+
+                   &:hover, &:active, &:focus {
+                        outline: none;                     
+                        -webkit-appearance: none;
+                         border: solid 1px #ccc !important;
+                        -webkit-box-shadow: none !important;
+                        box-shadow: none !important;
+                  }
+               }
+           }
+
+           .chat-view {
+
+                height: 100%;
+
+                .chat-messages{           
+                    height: calc(100% - 90px);
+                    overflow: auto;
+                    color: #fff;
+
+                    .conversation-area{
+                        padding: 20px !important;
+                        text-align: left;
+
+                        li{
+                            padding-bottom: 10px;
+                        }
                     }
                 }
+
+                .chat-input{
+                    height: 40px;
+           
+                    input{
+                        float: left;
+                        height: 40px;
+                        line-height: 40px;
+                        padding-left: 10px;            
+                        width: calc(100% - 90px);
+                    }   
+           
+                    .btn{
+                        float: right;
+                        cursor: pointer;
+                        margin-right: 8px;
+                    }        
+               }
            }
 
-           .chat-header, .chat-messages,  .chat-input{
+           
+
+           .chat-header, .chat-view, .join-view{
                background-color: #000;
-               opacity: 0.8;
+               opacity: 0.9;
            }
 
-           .chat-input{
-               height: 40px;
            
-               input{
-                   float: left;
-                   height: 40px;
-                   line-height: 40px;
-                   padding-left: 10px;            
-                   width: calc(100% - 90px);
-               }   
-           
-               .btn{
-                   float: right;
-                   cursor: pointer;
-                   margin-right: 8px;
-               }        
-           }
        }
    }
 

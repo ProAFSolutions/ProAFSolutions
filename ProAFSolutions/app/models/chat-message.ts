@@ -2,6 +2,7 @@
 
     export interface IChatMessage {
         name: string;
+        roomName: string;
         text: string;
         datetime: string;
         avatarUrl: string;
@@ -9,7 +10,9 @@
 
     export class ChatMessage implements IChatMessage {
 
-        constructor(public name: string,            
+        public roomName: string;
+
+        constructor(public name: string,                              
                     public text: string,
                     public datetime: string,
                     public avatarUrl: string) {

@@ -6,11 +6,14 @@ var proafsolutions;
             this.init();
         }
         ChatController.prototype.init = function () {
+            this.access = 0;
             this.isVisible = false;
+            this.isJoined = false;
             this.welcomeMessage = 'Put something here';
-            this.message = '';
             this.conversation = new Array();
+            this.name = '';
             this.roomName = '';
+            this.message = '';
             this.soundEnabled = true;
             //this.initHub();             
         };
@@ -24,9 +27,12 @@ var proafsolutions;
                 _this.playSound("receive");
                 _this.$scope.$apply();
             };
+        };
+        ChatController.prototype.join = function () {
+            var _this = this;
             $.connection.hub.start().done(function () {
                 _this.chatRoomHub.server.joinRoom(_this.roomName);
-                console.log("Connected");
+                _this.isJoined = true;
             }).fail(function () {
                 _this.chatRoomHub = null;
                 console.log("Connection failed");
@@ -35,14 +41,17 @@ var proafsolutions;
         ChatController.prototype.showWelcomeMessage = function () {
         };
         ChatController.prototype.send = function () {
-            if (this.chatRoomHub) {
-                this.chatRoomHub.server.sendMessage("", "", "");
+            if (this.isJoined && this.roomName && this.name) {
+                this.chatRoomHub.server.sendMessage(this.name, this.message, this.roomName);
                 this.playSound("send");
                 this.message = '';
             }
         };
         ChatController.prototype.showClick = function () {
             this.isVisible = true;
+            if (this.access == 0)
+                this.playSound("welcome");
+            this.access++;
         };
         ChatController.prototype.hideClick = function () {
             this.isVisible = false;
@@ -53,8 +62,24 @@ var proafsolutions;
         //action: send|receive
         ChatController.prototype.playSound = function (action) {
             if (this.soundEnabled) {
-                var audioFile = action == "send" ? document.getElementById("sound-send")
-                    : document.getElementById("sound-receive");
+                var audioFile = null;
+                switch (action) {
+                    case "welcome":
+                        {
+                            audioFile = document.getElementById("sound-welcome");
+                        }
+                        break;
+                    case "send":
+                        {
+                            audioFile = document.getElementById("sound-send");
+                        }
+                        break;
+                    case "receive":
+                        {
+                            audioFile = document.getElementById("sound-receive");
+                        }
+                        break;
+                }
                 audioFile.play();
             }
         };
