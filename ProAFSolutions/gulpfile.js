@@ -35,7 +35,7 @@ var config = {
         'js/modernizr-custom.js',               
         'node_modules/angular-ui-router/release/angular-ui-router.js',       
         'node_modules/underscore/underscore.js',     
-        'js/jquery.signalr.js',
+        'js/jquery.signalr.js',       
         'js/bootstrap.min.js',
         'js/wow.min.js',
         'js/jquery.nav.js',

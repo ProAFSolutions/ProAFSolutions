@@ -2,26 +2,36 @@
 <html style="height: 95%">
 <head>
     <title>Admin Chat</title>
-    <script src="js/jquery-1.6.4.min.js"></script>
+    <script src="node_modules/jquery/jquery.js"></script>
     <script src="js/jquery.signalr.js"></script>
     <script src="http://localhost:5565/signalr/hubs"></script>  
 
     <script type="text/javascript">
-        $.connection.hub.url = 'http://localhost:5565/signalr';
-        var chatRoomHub = $.connection.chatRoomHub;
 
-        chatRoomHub.client.getMessage = function (name, message) {
-           //do something...
-        };
+        $(document).ready(function () {
 
-        $.connection.hub.start().done(function () {
-            chatRoomHub.server.joinRoom("");
-            console.log("Connected!!!!!!!!!!!!!!!!!");
-        });
+            $.connection.hub.url = 'http://localhost:5565/signalr';
+            var chatRoomHub = $.connection.chatRoomHub;
 
-        function send(){
-            chatRoomHub.server.sendMessage("", "", "");
-        }
+            chatRoomHub.client.getMessage = function (name, message) {
+                console.log("hitting here!!!");
+                $("#messages-content").append("<li><span>" + name + ":</span>" + message + "</li>");
+            };            
+
+            $("#join-button").click(function () {
+                $.connection.hub.start().done(function () {
+                    chatRoomHub.server.joinRoom($("#room-code").val());
+                    $("#messages-content").append("<li><b>Connected!!!</b></li>");
+                });
+            });
+
+            $("#send-button").click(function () {
+                chatRoomHub.server.sendMessage($("#admin-code").val(), $("#message-text").val(), $("#room-code").val());
+                $("#message-text").val("");
+            });
+        });       
+
+       
     </script>
 
 
@@ -31,22 +41,22 @@
         <table>
             <tr>
                 <td>Admin Code:</td>
-                <td><input /></td>
+                <td><input id="admin-code" /></td>
             </tr>
             <tr>
                 <td>Chat Room Code:</td>
-                <td><input /></td>
+                <td><input id="room-code" /></td>
             </tr>
             <tr>
                 <td></td>
-                <td><button>Join</button></td>
+                <td><button id="join-button">Join</button></td>
             </tr>
         </table>
     </div>
-    <ul id="message-content" style="height: calc(100% - 120px); list-style-type: none; background: #ccc; overflow:auto; clear: right"></ul>
+    <ul id="messages-content" style="height: calc(100% - 120px); list-style-type: none; background: #ccc; overflow:auto; clear: right"></ul>
     <div style="width: 100%; height: 40px; margin-bottom: 10px;">
-        <input style="width: 75%; float: left; margin-left: 10px; margin-right: 10px; height: 100%" />
-        <button onclick="send()" style="width: 15%; height: 35px;">Send</button>
+        <input id="message-text" style="width: 75%; float: left; margin-left: 10px; margin-right: 10px; height: 100%" />
+        <button id="send-button" style="width: 15%; height: 35px;">Send</button>
     </div>
 </body>
 </html>

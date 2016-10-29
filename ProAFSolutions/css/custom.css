@@ -85,7 +85,7 @@ body .chat .chat-window {
         -webkit-box-shadow: none !important;
         box-shadow: none !important; }
   body .chat .chat-window .chat-view {
-    height: 100%; }
+    height: calc(100% - 50px); }
     body .chat .chat-window .chat-view .chat-messages {
       height: calc(100% - 90px);
       overflow: auto;

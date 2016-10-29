@@ -146,7 +146,7 @@ body {
 
            .chat-view {
 
-                height: 100%;
+                height: calc(100% - 50px);
 
                 .chat-messages{           
                     height: calc(100% - 90px);

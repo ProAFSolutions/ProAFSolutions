@@ -43,19 +43,19 @@
             </ul>
         </div>
         <div class="chat-view" ng-show="vm.isJoined">
+            <p ng-show="vm.showWaitingMessage">
+                Dear customer, we're glad to have you in, please hold on while we connect you with the person who will assist you today.
+            </p>
             <div class="chat-messages">
                 <ul class="conversation-area">
-                    <li>Messages1</li>
-                    <li>Messages2</li>
-                    <li>Messages3</li>
-                    <li>Messages4</li>
-                    <li>Messages5</li>
-                    <li>Messages6</li>
+                    <li ng-repeat="message in vm.conversation">
+                        <span>{{message.name}}:</span><span>{{message.text}}</span> 
+                    </li>              
                 </ul>
             </div>
             <div class="chat-input">
-                <input type="text" value="" />
-                <a class="btn btn-primary green-btn">
+                <input type="text" ng-model="vm.message" />
+                <a class="btn btn-primary green-btn" ng-disabled="!vm.message" ng-click="vm.send()">
                     <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
                 </a>
             </div>

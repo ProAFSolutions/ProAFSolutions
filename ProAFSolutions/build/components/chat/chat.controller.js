@@ -9,17 +9,17 @@ var proafsolutions;
             this.access = 0;
             this.isVisible = false;
             this.isJoined = false;
-            this.welcomeMessage = 'Put something here';
+            this.showWaitingMessage = false;
             this.conversation = new Array();
             this.name = '';
             this.roomName = '';
             this.message = '';
             this.soundEnabled = true;
-            //this.initHub();             
+            this.initHub();
         };
         ChatController.prototype.initHub = function () {
             var _this = this;
-            $.connection.hub.url = 'http://localhost:5565/signalr';
+            $.connection.hub.url = proafsolutions.AppSettings.API_HUBS_URL;
             this.chatRoomHub = $.connection.chatRoomHub;
             this.chatRoomHub.client.getMessage = function (name, message) {
                 _this.isVisible = true;
@@ -31,14 +31,22 @@ var proafsolutions;
         ChatController.prototype.join = function () {
             var _this = this;
             $.connection.hub.start().done(function () {
+                console.log("Hub connected!!!");
                 _this.chatRoomHub.server.joinRoom(_this.roomName);
                 _this.isJoined = true;
+                _this.showWelcomeMessage();
             }).fail(function () {
                 _this.chatRoomHub = null;
                 console.log("Connection failed");
             });
         };
         ChatController.prototype.showWelcomeMessage = function () {
+            var _this = this;
+            setTimeout(function () {
+                _this.showWaitingMessage = true;
+                _this.$scope.$apply();
+                _this.playSound("receive");
+            }, 3000);
         };
         ChatController.prototype.send = function () {
             if (this.isJoined && this.roomName && this.name) {

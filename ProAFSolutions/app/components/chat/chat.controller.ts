@@ -8,7 +8,7 @@
         name: string; //user name
         roomName: string; //Email
         message: string;
-        welcomeMessage: string;
+        showWaitingMessage: boolean;
         conversation: Array<models.IChatMessage>;       
         soundEnabled: boolean;
         chatRoomHub: any;
@@ -33,7 +33,7 @@
         public isJoined: boolean;
         public name: string;
         public roomName: string;
-        public welcomeMessage: string;
+        public showWaitingMessage: boolean;
         public message: string;
         public conversation: Array<models.IChatMessage>;        
         public soundEnabled: boolean;
@@ -47,17 +47,17 @@
             this.access = 0;
             this.isVisible = false;
             this.isJoined = false;
-            this.welcomeMessage = 'Put something here';           
+            this.showWaitingMessage = false;           
             this.conversation = new Array<models.IChatMessage>();
             this.name = '';
             this.roomName = '';
             this.message = '';
             this.soundEnabled = true; 
-            //this.initHub();             
+            this.initHub();             
         }
 
         public initHub(): void {
-            $.connection.hub.url = 'http://localhost:5565/signalr';
+            $.connection.hub.url = AppSettings.API_HUBS_URL;
             this.chatRoomHub = $.connection.chatRoomHub;
 
             this.chatRoomHub.client.getMessage = (name: string, message: string) => {
@@ -70,8 +70,10 @@
 
         public join(): void {
             $.connection.hub.start().done(() => {
+                console.log("Hub connected!!!");
                 this.chatRoomHub.server.joinRoom(this.roomName);
                 this.isJoined = true;
+                this.showWelcomeMessage();
             }).fail(() => {
                 this.chatRoomHub = null;
                 console.log("Connection failed");
@@ -79,7 +81,12 @@
         }
 
         public showWelcomeMessage(): void {
-           
+            let _this = this;
+            setTimeout(() => {
+                _this.showWaitingMessage = true;
+                _this.$scope.$apply();
+                _this.playSound("receive");
+            }, 3000);
         }
 
         public send(): void {
