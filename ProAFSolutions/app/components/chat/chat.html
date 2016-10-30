@@ -55,14 +55,14 @@
             </p>
             <div class="chat-messages">
                 <ul class="conversation-area">
-                    <li ng-repeat="message in vm.conversation" ng-class="{ 'blue': message.name === vm.name, 'yellow': message.name !== vm.name }">
+                    <li ng-repeat="message in vm.conversation" ng-class="message.name === vm.name? 'blue slideInLeft animated' : 'yellow slideInRight animated'">
                        {{message.text}}
                     </li>              
                 </ul>
             </div>
             <div ng-show="vm.conversation.length > 0" class="chat-input">
                 <input type="text" ng-model="vm.message" />
-                <a class="btn btn-primary green-btn" ng-disabled="!vm.message" ng-click="vm.send()">
+                <a class="btn btn-primary" ng-disabled="!vm.message" ng-click="vm.send()">
                     <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
                 </a>
             </div>

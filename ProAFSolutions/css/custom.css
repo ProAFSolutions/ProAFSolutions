@@ -5,7 +5,7 @@
     cursor: pointer;
     padding-left: 5px; }
     body .home .navbar .lang-selector .lang-item span {
-      color: #000;
+      color: black;
       font-size: 12px; }
     body .home .navbar .lang-selector .lang-item img {
       width: 24px; }
@@ -40,7 +40,7 @@ body .chat .chat-window {
     position: relative;
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
-    border-bottom: solid 1px #fff; }
+    border-bottom: solid 1px white; }
     body .chat .chat-window .chat-header h4 {
       line-height: 45px; }
     body .chat .chat-window .chat-header .options-bar {
@@ -56,7 +56,7 @@ body .chat .chat-window {
           margin-left: 60px; }
     body .chat .chat-window .chat-header i {
       position: absolute;
-      color: #fff;
+      color: white;
       opacity: 1;
       cursor: pointer; }
       body .chat .chat-window .chat-header i:hover {
@@ -97,34 +97,55 @@ body .chat .chat-window {
       padding: 20px;
       text-align: justify; }
     body .chat .chat-window .chat-view .chat-messages {
-      height: calc(100% - 40px);
+      height: calc(100% - 45px);
       overflow: auto;
-      color: #fff; }
+      overflow-x: hidden;
+      color: white;
+      margin-bottom: 3px;
+      border-bottom: solid 1px white; }
       body .chat .chat-window .chat-view .chat-messages .conversation-area {
         padding: 20px !important;
         text-align: left; }
         body .chat .chat-window .chat-view .chat-messages .conversation-area li {
           margin-top: 10px;
           padding: 10px;
-          color: #000;
+          color: white;
           position: relative;
           text-align: left;
-          background-color: #fff;
-          border: 3px solid #666;
-          -webkit-border-radius: 30px;
-          -moz-border-radius: 30px;
-          border-radius: 30px;
-          -webkit-box-shadow: 2px 2px 4px #888;
-          -moz-box-shadow: 2px 2px 4px #888;
-          box-shadow: 2px 2px 4px #888; }
+          background-color: white;
+          border: 1px solid #818181;
+          -webkit-border-radius: 10px;
+          -moz-border-radius: 10px;
+          border-radius: 10px; }
           body .chat .chat-window .chat-view .chat-messages .conversation-area li:first-child {
             margin-top: 0px; }
           body .chat .chat-window .chat-view .chat-messages .conversation-area li.blue {
-            background: #3ab0e2;
-            color: #fff; }
+            background: #3ab0e2; }
+            body .chat .chat-window .chat-view .chat-messages .conversation-area li.blue:after {
+              content: "";
+              position: absolute;
+              top: 13px;
+              right: -15px;
+              left: auto;
+              bottom: auto;
+              display: block;
+              width: 0;
+              border-style: solid;
+              border-width: 9px 0 9px 21px;
+              border-color: transparent #3ab0e2; }
           body .chat .chat-window .chat-view .chat-messages .conversation-area li.yellow {
-            background: #E7AC44;
-            color: #fff; }
+            background: #E7AC44; }
+            body .chat .chat-window .chat-view .chat-messages .conversation-area li.yellow:after {
+              content: "";
+              position: absolute;
+              top: 13px;
+              left: -15px;
+              bottom: auto;
+              display: block;
+              width: 0;
+              border-style: solid;
+              border-width: 9px 21px 9px 0;
+              border-color: transparent #E7AC44; }
     body .chat .chat-window .chat-view .chat-input {
       height: 40px; }
       body .chat .chat-window .chat-view .chat-input input {
@@ -132,18 +153,27 @@ body .chat .chat-window {
         height: 40px;
         line-height: 40px;
         padding-left: 10px;
-        width: calc(100% - 90px); }
+        width: calc(100% - 90px);
+        border-radius: 5px;
+        margin-left: 3px;
+        color: white;
+        background: #20AA73; }
       body .chat .chat-window .chat-view .chat-input .btn {
         float: right;
         cursor: pointer;
-        margin-right: 8px; }
+        color: #FFF;
+        background: #3ab0e2;
+        margin-right: 6px;
+        margin-top: 2px; }
+        body .chat .chat-window .chat-view .chat-input .btn:hover {
+          background: #337ab7; }
   body .chat .chat-window .chat-header, body .chat .chat-window .chat-view, body .chat .chat-window .join-view {
-    background-color: #000;
+    background-color: black;
     opacity: 0.9; }
 
 body .about-us .skill .skill-count i {
   font-size: 48px;
-  color: #fff; }
+  color: white; }
 
 body .focus .other-focuses .section-footer-title {
   text-transform: uppercase; }

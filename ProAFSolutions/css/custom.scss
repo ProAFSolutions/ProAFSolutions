@@ -1,4 +1,14 @@
 ﻿
+//Colors Definition
+$color-blue: #3ab0e2;
+$color-blue2: #337ab7;
+$color-green: #20AA73;
+$color-red: #e96656;
+$color-yellow: #E7AC44;
+$color-gray: #818181;
+$color-light-gray: #ccc;
+
+
 body {
 
     
@@ -14,7 +24,7 @@ body {
                     padding-left: 5px;
                
                      span{
-                         color: #000;
+                         color: black;
                          font-size: 12px;
                      }
 
@@ -47,11 +57,11 @@ body {
            top: 45px;
            right: 70px;
            font-size: 36px;
-           color: #818181;
+           color: $color-gray;
            cursor: pointer;
 
            &:hover{
-               color: #ccc;
+               color: $color-light-gray;
                font-size: 42px;
 
            }
@@ -68,7 +78,7 @@ body {
                position: relative;
                border-top-left-radius: 15px;
                border-top-right-radius: 15px;
-               border-bottom: solid 1px #fff;
+               border-bottom: solid 1px white;
 
                h4{
                    line-height: 45px;
@@ -97,12 +107,12 @@ body {
 
                i {
                    position: absolute;              
-                   color: #fff;
+                   color: white;
                    opacity: 1;
                    cursor: pointer;
 
                    &:hover{
-                       color: #ccc;
+                       color: $color-light-gray;
                    }
 
                    &.close{
@@ -139,7 +149,7 @@ body {
                    &:hover, &:active, &:focus {
                         outline: none;                     
                         -webkit-appearance: none;
-                         border: solid 1px #ccc !important;
+                         border: solid 1px $color-light-gray !important;
                         -webkit-box-shadow: none !important;
                         box-shadow: none !important;
                   }
@@ -163,9 +173,12 @@ body {
                 }
 
                 .chat-messages{           
-                    height: calc(100% - 40px);
+                    height: calc(100% - 45px);
                     overflow: auto;
-                    color: #fff;
+                    overflow-x:hidden;
+                    color: white;
+                    margin-bottom: 3px;
+                    border-bottom: solid 1px white;
 
                     .conversation-area{
                         padding: 20px !important;
@@ -174,30 +187,52 @@ body {
                         li{
                             margin-top: 10px;
                             padding: 10px;
-                            color: #000;
+                            color: white;
                             position: relative;                                                    
                             text-align: left;                           
-                            background-color: #fff;
-                            border: 3px solid #666;
-                            -webkit-border-radius: 30px;
-                            -moz-border-radius: 30px;
-                            border-radius: 30px;
-                            -webkit-box-shadow: 2px 2px 4px #888;
-                            -moz-box-shadow: 2px 2px 4px #888;
-                            box-shadow: 2px 2px 4px #888;
+                            background-color: white;
+                            border: 1px solid $color-gray;
+                            -webkit-border-radius: 10px;
+                            -moz-border-radius: 10px;
+                            border-radius: 10px;                           
 
                             &:first-child{
                                 margin-top: 0px;
                             }
 
                             &.blue{
-                                background: #3ab0e2;
-                                color: #fff;
+                                background: $color-blue;                               
+
+                                &:after{
+                                    content: "";
+                                    position: absolute;                          
+                                    top: 13px;  
+                                    right: -15px;  
+                                    left: auto;  
+                                    bottom: auto;                                           
+                                    display: block;
+                                    width: 0;                          
+                                    border-style: solid;     
+                                    border-width: 9px 0 9px 21px;
+                                    border-color: transparent $color-blue;
+                                }
                             }
 
                             &.yellow{
-                                background: #E7AC44;
-                                color: #fff;
+                                background: $color-yellow;                               
+
+                               &:after{
+                                    content: "";
+                                    position: absolute;                                    
+                                    top: 13px;
+                                    left: -15px;    
+                                    bottom: auto;                          
+                                    display: block;
+                                    width: 0;                                                                
+                                    border-style: solid;   
+                                    border-width: 9px 21px 9px 0;
+                                    border-color: transparent $color-yellow;
+                               }
                             }
                         }
                     }
@@ -212,12 +247,23 @@ body {
                         line-height: 40px;
                         padding-left: 10px;            
                         width: calc(100% - 90px);
+                        border-radius: 5px;
+                        margin-left: 3px;
+                        color: white;
+                        background: $color-green;
                     }   
            
                     .btn{
                         float: right;
                         cursor: pointer;
-                        margin-right: 8px;
+                        color: #FFF;
+                        background: $color-blue;
+                        margin-right: 6px;
+                        margin-top: 2px;
+                        
+                        &:hover{                            
+                            background: $color-blue2;
+                        }
                     }        
                }
            }
@@ -225,7 +271,7 @@ body {
            
 
            .chat-header, .chat-view, .join-view{
-               background-color: #000;
+               background-color: black;
                opacity: 0.9;
            }
 
@@ -241,7 +287,7 @@ body {
             .skill-count{
                 i {
                     font-size: 48px;
-                    color: #fff;
+                    color: white;
                 }
             }
         }
