@@ -148,6 +148,7 @@
     <Content Include="js\jquery-1.6.4.min.js" />
     <Content Include="js\jquery.signalr.js" />
     <Content Include="js\modernizr-custom.js" />
+    <Content Include="js\signalr.hubs.js" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

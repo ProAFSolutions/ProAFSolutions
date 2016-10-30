@@ -13,6 +13,8 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var amdOptimize = require("amd-optimize");
 
+var signalRHubsUrl = "http://localhost:5565/signalr/hubs";
+
 var config = {
     //Include all js files but exclude any min.js files
     src: [       
@@ -35,7 +37,8 @@ var config = {
         'js/modernizr-custom.js',               
         'node_modules/angular-ui-router/release/angular-ui-router.js',       
         'node_modules/underscore/underscore.js',     
-        'js/jquery.signalr.js',       
+        'js/jquery.signalr.js',
+        'js/signalr.hubs.js',
         'js/bootstrap.min.js',
         'js/wow.min.js',
         'js/jquery.nav.js',
@@ -75,7 +78,15 @@ gulp.task('index', function () {
         css = gulp.src(config.css, { read: false });
     }
     return target.pipe(inject(css))
-                 .pipe(inject(sources))
+                 .pipe(inject(sources, {
+                     transform: function (filepath, file, index, length) {                        
+                         if (filepath.indexOf("signalr.hubs") > -1) {
+                             return '<script src="' + signalRHubsUrl + '"></script>';
+                         }
+                         // Use the default transform as fallback:
+                         return inject.transform.apply(inject.transform, arguments);
+                     }
+                 }))
                  .pipe(gulp.dest('./'));
 });
 

@@ -19,41 +19,48 @@
         </div>
         <div class="join-view" ng-show="!vm.isJoined">
 
-            <h4>Welcome to our Chat Room!!!</h4>
+            <div ng-show="!vm.isLoading">
+                <h4>Welcome to our Chat Room!!!</h4>
+                <p>
+                    <i class="icon-bulb"></i>&nbsp;&nbsp;
+                    Please feel free to ask questions and get in touch with us through this chat, we will be very pleased to answer.
+                    Don't waste time, join us by providing your name and a valid email address and then click the button below. We'll get back to you as soon as possible.
+                </p>
+                <ul>
+                    <li>
+                        <label>Name:</label>
+                        <input type="text" ng-model="vm.name" />
+                    </li>
+                    <li>
+                        <label>Email:</label>
+                        <input type="email" ng-model="vm.roomName" />
+                    </li>
+                    <li>
+                        <a class="btn btn-primary green-btn" ng-click="vm.join()">
+                            <i class="icon-fontawesome-webfont-316"></i>&nbsp;&nbsp;Join now!
+                        </a>
+                    </li>
+                </ul>
+            </div>
 
-            <p>
-                <i class="icon-bulb"></i>&nbsp;&nbsp;
-                Please feel free to ask questions and get in touch with us through this chat, we will be very pleased to answer.
-                Don't waste time, join us by providing your name and a valid email address and then click the button below. We'll get back to you as soon as possible. 
-            </p>
-            <ul>
-                <li>
-                    <label>Name:</label>
-                    <input type="text" ng-model="vm.name" />
-                </li>
-                <li>
-                    <label>Email:</label>
-                    <input type="email" ng-model="vm.roomName" />
-                </li>
-                <li>
-                    <a class="btn btn-primary green-btn" ng-click="vm.join()">
-                        <i class="icon-fontawesome-webfont-316"></i>&nbsp;&nbsp;Join now!
-                    </a>
-                </li>
-            </ul>
+            <div class="wait-screen" ng-show="vm.isLoading">
+                <img src="/images/wait.gif" />
+                <div>Please wait while you are being connected</div>
+            </div>
+            
         </div>
         <div class="chat-view" ng-show="vm.isJoined">
-            <p ng-show="vm.showWaitingMessage">
-                Dear customer, we're glad to have you in, please hold on while we connect you with the person who will assist you today.
+            <p ng-hide="vm.conversation.length > 0" class="waiting-message" ng-show="vm.showWaitingMessage">
+                Dear customer, we're glad to have you in. Shortly we will assist you. Thanks for your patience.
             </p>
             <div class="chat-messages">
                 <ul class="conversation-area">
-                    <li ng-repeat="message in vm.conversation">
-                        <span>{{message.name}}:</span><span>{{message.text}}</span> 
+                    <li ng-repeat="message in vm.conversation" ng-class="{ 'blue': message.name === vm.name, 'yellow': message.name !== vm.name }">
+                       {{message.text}}
                     </li>              
                 </ul>
             </div>
-            <div class="chat-input">
+            <div ng-show="vm.conversation.length > 0" class="chat-input">
                 <input type="text" ng-model="vm.message" />
                 <a class="btn btn-primary green-btn" ng-disabled="!vm.message" ng-click="vm.send()">
                     <i class="icon-paperplane"></i>&nbsp;&nbsp;Send

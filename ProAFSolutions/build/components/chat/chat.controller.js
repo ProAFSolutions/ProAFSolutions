@@ -9,6 +9,7 @@ var proafsolutions;
             this.access = 0;
             this.isVisible = false;
             this.isJoined = false;
+            this.isLoading = false;
             this.showWaitingMessage = false;
             this.conversation = new Array();
             this.name = '';
@@ -30,7 +31,9 @@ var proafsolutions;
         };
         ChatController.prototype.join = function () {
             var _this = this;
+            this.isLoading = true;
             $.connection.hub.start().done(function () {
+                _this.isLoading = false;
                 console.log("Hub connected!!!");
                 _this.chatRoomHub.server.joinRoom(_this.roomName);
                 _this.isJoined = true;

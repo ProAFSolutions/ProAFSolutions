@@ -50,7 +50,8 @@ body .chat .chat-window {
       body .chat .chat-window .chat-header .options-bar i {
         font-size: 22px; }
         body .chat .chat-window .chat-header .options-bar i:nth-child(2) {
-          margin-left: 30px; }
+          margin-left: 30px;
+          font-size: 20px; }
         body .chat .chat-window .chat-header .options-bar i:nth-child(3) {
           margin-left: 60px; }
     body .chat .chat-window .chat-header i {
@@ -65,6 +66,7 @@ body .chat .chat-window {
         top: 3px;
         font-size: 36px; }
   body .chat .chat-window .join-view {
+    position: relative;
     height: 100%; }
     body .chat .chat-window .join-view h4 {
       padding-top: 15px; }
@@ -84,17 +86,45 @@ body .chat .chat-window {
         border: solid 1px #ccc !important;
         -webkit-box-shadow: none !important;
         box-shadow: none !important; }
+    body .chat .chat-window .join-view .wait-screen {
+      width: 200px;
+      position: absolute;
+      top: calc(50% - 100px);
+      left: calc(50% - 100px); }
   body .chat .chat-window .chat-view {
     height: calc(100% - 50px); }
+    body .chat .chat-window .chat-view .waiting-message {
+      padding: 20px;
+      text-align: justify; }
     body .chat .chat-window .chat-view .chat-messages {
-      height: calc(100% - 90px);
+      height: calc(100% - 40px);
       overflow: auto;
       color: #fff; }
       body .chat .chat-window .chat-view .chat-messages .conversation-area {
         padding: 20px !important;
         text-align: left; }
         body .chat .chat-window .chat-view .chat-messages .conversation-area li {
-          padding-bottom: 10px; }
+          margin-top: 10px;
+          padding: 10px;
+          color: #000;
+          position: relative;
+          text-align: left;
+          background-color: #fff;
+          border: 3px solid #666;
+          -webkit-border-radius: 30px;
+          -moz-border-radius: 30px;
+          border-radius: 30px;
+          -webkit-box-shadow: 2px 2px 4px #888;
+          -moz-box-shadow: 2px 2px 4px #888;
+          box-shadow: 2px 2px 4px #888; }
+          body .chat .chat-window .chat-view .chat-messages .conversation-area li:first-child {
+            margin-top: 0px; }
+          body .chat .chat-window .chat-view .chat-messages .conversation-area li.blue {
+            background: #3ab0e2;
+            color: #fff; }
+          body .chat .chat-window .chat-view .chat-messages .conversation-area li.yellow {
+            background: #E7AC44;
+            color: #fff; }
     body .chat .chat-window .chat-view .chat-input {
       height: 40px; }
       body .chat .chat-window .chat-view .chat-input input {

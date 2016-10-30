@@ -5,6 +5,7 @@
         access: number;
         isVisible: boolean;
         isJoined: boolean;
+        isLoading: boolean;
         name: string; //user name
         roomName: string; //Email
         message: string;
@@ -31,6 +32,7 @@
         public access: number;
         public isVisible: boolean;
         public isJoined: boolean;
+        public isLoading: boolean;
         public name: string;
         public roomName: string;
         public showWaitingMessage: boolean;
@@ -47,6 +49,7 @@
             this.access = 0;
             this.isVisible = false;
             this.isJoined = false;
+            this.isLoading = false;
             this.showWaitingMessage = false;           
             this.conversation = new Array<models.IChatMessage>();
             this.name = '';
@@ -69,7 +72,9 @@
         }
 
         public join(): void {
+            this.isLoading = true;
             $.connection.hub.start().done(() => {
+                this.isLoading = false;
                 console.log("Hub connected!!!");
                 this.chatRoomHub.server.joinRoom(this.roomName);
                 this.isJoined = true;

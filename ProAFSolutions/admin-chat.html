@@ -7,21 +7,21 @@
     <script src="http://localhost:5565/signalr/hubs"></script>  
 
     <script type="text/javascript">
-
         $(document).ready(function () {
-
             $.connection.hub.url = 'http://localhost:5565/signalr';
             var chatRoomHub = $.connection.chatRoomHub;
 
-            chatRoomHub.client.getMessage = function (name, message) {
-                console.log("hitting here!!!");
+            chatRoomHub.client.getMessage = function (name, message) {               
                 $("#messages-content").append("<li><span>" + name + ":</span>" + message + "</li>");
             };            
 
             $("#join-button").click(function () {
                 $.connection.hub.start().done(function () {
-                    chatRoomHub.server.joinRoom($("#room-code").val());
+                    chatRoomHub.server.joinRoomFromAdminApp($("#admin-code").val(), $("#room-code").val());
                     $("#messages-content").append("<li><b>Connected!!!</b></li>");
+                    $("#admin-code").prop("disabled", true);
+                    $("#room-code").prop("disabled", true);
+                    $("#join-button").hide();
                 });
             });
 
@@ -29,24 +29,21 @@
                 chatRoomHub.server.sendMessage($("#admin-code").val(), $("#message-text").val(), $("#room-code").val());
                 $("#message-text").val("");
             });
-        });       
-
-       
+        });     
     </script>
-
-
 </head>
+
 <body style="height: 100%">
     <div style="float: right; height: 75px;">
         <table>
             <tr>
-                <td>Admin Code:</td>
-                <td><input id="admin-code" /></td>
-            </tr>
-            <tr>
-                <td>Chat Room Code:</td>
+                <td>Chat Room Code <i>(Client's Email):</i>:</td>
                 <td><input id="room-code" /></td>
             </tr>
+            <tr>
+                <td align="right">Admin Code:</td>
+                <td><input type="password" id="admin-code" /></td>
+            </tr>           
             <tr>
                 <td></td>
                 <td><button id="join-button">Join</button></td>
