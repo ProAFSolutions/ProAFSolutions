@@ -13,9 +13,6 @@ namespace ProAFSolutionsAPI
     {
         public static void Register(HttpConfiguration config)
         {   
-            // Web API cross domain configuration         
-            config.EnableCors(new EnableCorsAttribute("*", "*", "*"));
-
             // Web API configuration and services
             // Configure Web API to use only bearer token authentication.
             config.SuppressDefaultHostAuthentication();

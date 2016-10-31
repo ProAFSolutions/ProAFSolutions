@@ -16,7 +16,8 @@ using System.Configuration;
 namespace ProAFSolutionsAPI.Controllers
 {
     //[Authorize]
-    [RoutePrefix("api/messages")]  
+    [EnableCors("*", "*", "*")]
+    [RoutePrefix("api/messages")]    
     public class MessagesController : ApiController
     {
 
