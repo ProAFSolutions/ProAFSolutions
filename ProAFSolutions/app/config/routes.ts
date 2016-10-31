@@ -34,11 +34,11 @@ namespace proafsolutions {
                            controllerAs: "vm"
                        },
 
-                       "features": {
-                           templateUrl: RoutesConfig.getTemplatePath('features'),
-                           controller: "FeaturesController",
-                           controllerAs: "vm"
-                       },
+                       //"features": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('features'),
+                       //    controller: "FeaturesController",
+                       //    controllerAs: "vm"
+                       //},
 
                        "focus": {
                            templateUrl: RoutesConfig.getTemplatePath('focus'),
@@ -46,11 +46,11 @@ namespace proafsolutions {
                            controllerAs: "vm"
                        },
 
-                       "newsetter": {
-                           templateUrl: RoutesConfig.getTemplatePath('newsetter'),
-                           controller: "NewsetterController",
-                           controllerAs: "vm"
-                       },
+                       //"newsetter": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('newsetter'),
+                       //    controller: "NewsetterController",
+                       //    controllerAs: "vm"
+                       //},
 
                        "packages": {
                            templateUrl: RoutesConfig.getTemplatePath('packages'),
@@ -64,11 +64,11 @@ namespace proafsolutions {
                            controllerAs: "vm"
                        },
 
-                       "purchase": {
-                           templateUrl: RoutesConfig.getTemplatePath('purchase'),
-                           controller: "PurchaseController",
-                           controllerAs: "vm"
-                       },
+                       //"purchase": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('purchase'),
+                       //    controller: "PurchaseController",
+                       //    controllerAs: "vm"
+                       //},
 
                        "separator": {
                            templateUrl: RoutesConfig.getTemplatePath('separator'),
@@ -76,29 +76,29 @@ namespace proafsolutions {
                            controllerAs: "vm"
                        },
 
-                       "stats": {
-                           templateUrl: RoutesConfig.getTemplatePath('stats'),
-                           controller: "StatsController",
-                           controllerAs: "vm"
-                       },
+                       //"stats": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('stats'),
+                       //    controller: "StatsController",
+                       //    controllerAs: "vm"
+                       //},
 
-                       "team": {
-                           templateUrl: RoutesConfig.getTemplatePath('team'),
-                           controller: "TeamController",
-                           controllerAs: "vm"
-                       },
+                       //"team": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('team'),
+                       //    controller: "TeamController",
+                       //    controllerAs: "vm"
+                       //},
 
-                       "testimonial": {
-                           templateUrl: RoutesConfig.getTemplatePath('testimonial'),
-                           controller: "TestimonialController",
-                           controllerAs: "vm"
-                       },
+                       //"testimonial": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('testimonial'),
+                       //    controller: "TestimonialController",
+                       //    controllerAs: "vm"
+                       //},
 
-                       "works": {
-                           templateUrl: RoutesConfig.getTemplatePath('works'),
-                           controller: "WorksController",
-                           controllerAs: "vm"
-                       },
+                       //"works": {
+                       //    templateUrl: RoutesConfig.getTemplatePath('works'),
+                       //    controller: "WorksController",
+                       //    controllerAs: "vm"
+                       //},
 
                        "footer": {
                            templateUrl: RoutesConfig.getTemplatePath('footer'),

@@ -60,15 +60,21 @@
         }
 
         public initHub(): void {
-            $.connection.hub.url = AppSettings.API_HUBS_URL;
-            this.chatRoomHub = $.connection.chatRoomHub;
 
-            this.chatRoomHub.client.getMessage = (name: string, message: string) => {
-                this.isVisible = true;
-                this.conversation.push(new models.ChatMessage(name, message, new Date().toTimeString(), ""));
-                this.playSound("receive");
-                this.$scope.$apply();
-            };            
+            try {
+
+                $.connection.hub.url = AppSettings.API_HUBS_URL;
+                this.chatRoomHub = $.connection.chatRoomHub;
+
+                this.chatRoomHub.client.getMessage = (name: string, message: string) => {
+                    this.isVisible = true;
+                    this.conversation.push(new models.ChatMessage(name, message, new Date().toTimeString(), ""));
+                    this.playSound("receive");
+                    this.$scope.$apply();
+                };
+            } catch (ex){
+                console.log("Coudn't reach the server , check if the server is running");
+            }                    
         }
 
         public join(): void {

@@ -45,7 +45,12 @@ body {
         }
     }
 
-   
+   .chat-red-section{
+      background: $color-red;
+      padding-top: 70px;
+      padding-bottom: 70px;
+   }
+
    .chat{
 
        .chat-tray-icon, .chat-window{
@@ -322,7 +327,8 @@ body {
     }
 
     .separator-one{
-
+        background: rgba(52, 210, 147, 0.95);
+        padding: 100px 0 100px 0;
     }
 
     .stats {

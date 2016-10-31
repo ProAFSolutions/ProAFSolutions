@@ -28,21 +28,21 @@ var proafsolutions;
                         controller: "ContactController",
                         controllerAs: "vm"
                     },
-                    "features": {
-                        templateUrl: RoutesConfig.getTemplatePath('features'),
-                        controller: "FeaturesController",
-                        controllerAs: "vm"
-                    },
+                    //"features": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('features'),
+                    //    controller: "FeaturesController",
+                    //    controllerAs: "vm"
+                    //},
                     "focus": {
                         templateUrl: RoutesConfig.getTemplatePath('focus'),
                         controller: "FocusController",
                         controllerAs: "vm"
                     },
-                    "newsetter": {
-                        templateUrl: RoutesConfig.getTemplatePath('newsetter'),
-                        controller: "NewsetterController",
-                        controllerAs: "vm"
-                    },
+                    //"newsetter": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('newsetter'),
+                    //    controller: "NewsetterController",
+                    //    controllerAs: "vm"
+                    //},
                     "packages": {
                         templateUrl: RoutesConfig.getTemplatePath('packages'),
                         controller: "NewsetterController",
@@ -53,36 +53,36 @@ var proafsolutions;
                         controller: "ProductsController",
                         controllerAs: "vm"
                     },
-                    "purchase": {
-                        templateUrl: RoutesConfig.getTemplatePath('purchase'),
-                        controller: "PurchaseController",
-                        controllerAs: "vm"
-                    },
+                    //"purchase": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('purchase'),
+                    //    controller: "PurchaseController",
+                    //    controllerAs: "vm"
+                    //},
                     "separator": {
                         templateUrl: RoutesConfig.getTemplatePath('separator'),
                         controller: "SeparatorController",
                         controllerAs: "vm"
                     },
-                    "stats": {
-                        templateUrl: RoutesConfig.getTemplatePath('stats'),
-                        controller: "StatsController",
-                        controllerAs: "vm"
-                    },
-                    "team": {
-                        templateUrl: RoutesConfig.getTemplatePath('team'),
-                        controller: "TeamController",
-                        controllerAs: "vm"
-                    },
-                    "testimonial": {
-                        templateUrl: RoutesConfig.getTemplatePath('testimonial'),
-                        controller: "TestimonialController",
-                        controllerAs: "vm"
-                    },
-                    "works": {
-                        templateUrl: RoutesConfig.getTemplatePath('works'),
-                        controller: "WorksController",
-                        controllerAs: "vm"
-                    },
+                    //"stats": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('stats'),
+                    //    controller: "StatsController",
+                    //    controllerAs: "vm"
+                    //},
+                    //"team": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('team'),
+                    //    controller: "TeamController",
+                    //    controllerAs: "vm"
+                    //},
+                    //"testimonial": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('testimonial'),
+                    //    controller: "TestimonialController",
+                    //    controllerAs: "vm"
+                    //},
+                    //"works": {
+                    //    templateUrl: RoutesConfig.getTemplatePath('works'),
+                    //    controller: "WorksController",
+                    //    controllerAs: "vm"
+                    //},
                     "footer": {
                         templateUrl: RoutesConfig.getTemplatePath('footer'),
                         controller: "FooterController",

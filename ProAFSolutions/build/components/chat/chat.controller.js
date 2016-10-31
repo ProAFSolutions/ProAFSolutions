@@ -20,14 +20,19 @@ var proafsolutions;
         };
         ChatController.prototype.initHub = function () {
             var _this = this;
-            $.connection.hub.url = proafsolutions.AppSettings.API_HUBS_URL;
-            this.chatRoomHub = $.connection.chatRoomHub;
-            this.chatRoomHub.client.getMessage = function (name, message) {
-                _this.isVisible = true;
-                _this.conversation.push(new proafsolutions.models.ChatMessage(name, message, new Date().toTimeString(), ""));
-                _this.playSound("receive");
-                _this.$scope.$apply();
-            };
+            try {
+                $.connection.hub.url = proafsolutions.AppSettings.API_HUBS_URL;
+                this.chatRoomHub = $.connection.chatRoomHub;
+                this.chatRoomHub.client.getMessage = function (name, message) {
+                    _this.isVisible = true;
+                    _this.conversation.push(new proafsolutions.models.ChatMessage(name, message, new Date().toTimeString(), ""));
+                    _this.playSound("receive");
+                    _this.$scope.$apply();
+                };
+            }
+            catch (ex) {
+                console.log("Coudn't reach the server , check if the server is running");
+            }
         };
         ChatController.prototype.join = function () {
             var _this = this;

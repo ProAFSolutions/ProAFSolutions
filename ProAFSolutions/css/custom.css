@@ -16,6 +16,11 @@ body .home .navbar .navbar-brand {
 body .home .navbar .navbar-toggle {
   margin-top: 50px !important; }
 
+body .chat-red-section {
+  background: #e96656;
+  padding-top: 70px;
+  padding-bottom: 70px; }
+
 body .chat .chat-tray-icon, body .chat .chat-window {
   position: fixed;
   z-index: 999999; }
@@ -177,4 +182,8 @@ body .about-us .skill .skill-count i {
 
 body .focus .other-focuses .section-footer-title {
   text-transform: uppercase; }
+
+body .separator-one {
+  background: rgba(52, 210, 147, 0.95);
+  padding: 100px 0 100px 0; }
 

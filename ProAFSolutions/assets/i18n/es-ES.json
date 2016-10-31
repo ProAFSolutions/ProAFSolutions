@@ -51,11 +51,7 @@
   "separator.tools3": "Pasarela de pago (Paypal,MasterCard, Visa)",
 
 
-  "purchase.title1": "Necesita ayuda, tiene alguna pregunta?  Siempre estamos online para usted.",
-  "purchase.button": "Open Chat"
-
-
-
-
+  "chat.section.title1": "Necesita ayuda, tiene alguna pregunta?  Siempre estamos online para usted.",
+  "chat.section.button": "Open Chat"
     
 }
