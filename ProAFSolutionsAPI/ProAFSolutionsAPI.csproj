@@ -289,6 +289,7 @@
     <Compile Include="Services\Mail\MailSender.cs" />
     <Compile Include="Services\Mail\NVelocityTemplateUtil.cs" />
     <Compile Include="Services\EmailService.cs" />
+    <Compile Include="Services\ResourceService.cs" />
     <Compile Include="Services\SMSService.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -300,6 +301,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Resources\basic-email-template.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />

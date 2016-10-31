@@ -11,5 +11,6 @@ namespace ProAFSolutionsAPI.Models
         public string Email { set; get; }
         public string Subject { set; get; }
         public string Message { set; get; }
+        public string Phone { set; get; }
     }
 }

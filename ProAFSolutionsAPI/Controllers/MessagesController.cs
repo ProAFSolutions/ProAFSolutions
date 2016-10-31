@@ -12,6 +12,8 @@ using System.Diagnostics;
 using System.Net.Mail;
 using ProAFSolutionsAPI.Providers;
 using System.Configuration;
+using ProAFSolutionsAPI.Services.Mail;
+using ProAFSolutionsAPI.Services;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -30,20 +32,28 @@ namespace ProAFSolutionsAPI.Controllers
         public IHttpActionResult SendContactMessage(ContactModel contact)
         {
             var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
-                                         contact.Name, contact.Email, "", contact.Subject, contact.Message);
+                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
 
-            AppServicesProvider.EmailService.SendTextEmail(
-                "Somebody wants to get in touch with you!",
+            var parameters = new Dictionary<string, object>();
+            parameters.Add("message", message);
+
+            AppServicesProvider.EmailService.SendHtmlEmail(
+                ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
                 ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                message
-            );
+                new HtmlMailTemplate(ResourceService.GetEmailTemplatePath("basic-email-template.html"), parameters));
+
+            //AppServicesProvider.EmailService.SendTextEmail(
+            //    "Somebody wants to get in touch with you!",
+            //    ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
+            //    message
+            //);
 
             //var phones = ConfigurationManager.AppSettings["adminPhones"].Split(new char[] { ',' });
             //phones.ToList().ForEach(phone =>
             //{
             //    AppServicesProvider.SMSService.Send(message, phone);
             //});
-          
+
             return Ok();
         }         
     }
