@@ -1,0 +1,10 @@
+{
+  "name": "io.cordova.proafsolutions.chat",
+  "app_id": "",
+  "gulpDependantTasks": [
+    "tsc"
+  ],
+  "gulpStartupTasks": [
+    "watch"
+  ]
+}

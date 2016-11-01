@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "scss/ionic.app.css",
+    "inputFile": "scss/ionic.app.scss"
+  },
+  {
+    "outputFile": "www/css/ionic.app.css",
+    "inputFile": "www/css/ionic.app.scss"
+  }
+]
