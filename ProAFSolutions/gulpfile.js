@@ -28,7 +28,7 @@ var config = {
         //Core
         'node_modules/jquery/jquery.js',
         'node_modules/angular/angular.js',
-        'node_modules/angular-translate/dist/angular-translate.js',
+        'node_modules/angular-translate/www/angular-translate.js',
         'node_modules/angular-cookies/angular-cookies.js',
         'node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js',
         'node_modules/angular-translate-storage-local/angular-translate-storage-local.js',
@@ -70,8 +70,8 @@ gulp.task('index', function () {
     var sources;
     var css;
     if (process.env.NODE_ENV && process.env.NODE_ENV === 'Release') {
-        sources = gulp.src(['./dist/libs.min.js', './dist/app.min.js'], { read: false });
-        css = gulp.src(['./dist/styles.min.css'], { read: false });
+        sources = gulp.src(['./www/libs.min.js', './www/app.min.js'], { read: false });
+        css = gulp.src(['./www/styles.min.css'], { read: false });
     }
     else {
         sources = gulp.src(config.libs.concat(config.src), { read: false });
@@ -91,7 +91,7 @@ gulp.task('index', function () {
 });
 
 gulp.task('clean',function () {
-    return del(['dist/*.*']);
+    return del(['www/*.*']);
 });
 
 gulp.task('scripts:app', function () {
@@ -99,7 +99,7 @@ gulp.task('scripts:app', function () {
         return gulp.src(config.src)
          .pipe(concat('app.min.js'))
          .pipe(uglify({ mangle: false }))
-         .pipe(gulp.dest('dist/'));
+         .pipe(gulp.dest('www/'));
     }
 });
 
@@ -108,7 +108,7 @@ gulp.task('scripts:libs', function () {
         return gulp.src(config.libs)
           .pipe(concat('libs.min.js'))
           .pipe(uglify({ mangle: false }))
-          .pipe(gulp.dest('dist/'));
+          .pipe(gulp.dest('www/'));
     }
 });
 
@@ -117,7 +117,7 @@ gulp.task('css:minify', function () {
         return gulp.src(config.css)
                    .pipe(cleanCSS({ compatibility: 'ie8' }))
                    .pipe(concat('styles.min.css'))
-                   .pipe(gulp.dest('dist/'));
+                   .pipe(gulp.dest('www/'));
     }
 });
 
@@ -129,7 +129,7 @@ gulp.task('html:minify', function () {
                        suffix: '.min'                   
                    }))
                    .pipe(flatten())
-                   .pipe(gulp.dest('dist/'));
+                   .pipe(gulp.dest('www/'));
     }
 });
 

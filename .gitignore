@@ -6,7 +6,6 @@
 /ProAFSolutionsAPI/obj
 /ProAFSolutions.IonicChatClient/bin
 /ProAFSolutions.IonicChatClient/obj
-/ProAFSolutions.IonicChatClient/www/js
 /ProAFSolutions.IonicChatClient/www/lib
 /ProAFSolutionsXamarinChatClient/XamarinChat/bin
 /ProAFSolutionsXamarinChatClient/XamarinChat/obj
@@ -16,10 +15,5 @@
 /ProAFSolutionsXamarinChatClient/iOS/obj
 /.vs
 /ProAFSolutions.IonicChatClient/node_modules
-/ProAFSolutions.IonicChatClient/platforms/ios
-/ProAFSolutions.IonicChatClient/plugins/ionic-plugin-keyboard
-/ProAFSolutions.IonicChatClient/plugins/cordova-plugin-console
-/ProAFSolutions.IonicChatClient/plugins/cordova-plugin-device
-/ProAFSolutions.IonicChatClient/plugins/cordova-plugin-splashscreen
-/ProAFSolutions.IonicChatClient/plugins/cordova-plugin-statusbar
-/ProAFSolutions.IonicChatClient/plugins/cordova-plugin-whitelist
+/ProAFSolutions.IonicChatClient/platforms
+/ProAFSolutions.IonicChatClient/plugins

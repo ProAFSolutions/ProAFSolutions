@@ -1,10 +1,7 @@
 /// <binding BeforeBuild='default' />
 var gulp = require('gulp');
-//var sass = require('gulp-sass');
-var minifyCss = require('gulp-minify-css');
 var rename = require('gulp-rename');
-var paths = {
-    //sass: ['./scss/**/*.scss'],
+var paths = {  
     tsc: ['./app/**/*.ts']
 };
 
@@ -12,22 +9,11 @@ gulp.task('serve:before', ['watch']);
 
 gulp.task('default', ['tsc']);
 
-//gulp.task('sass', function (done) {
-//    gulp.src('./scss/ionic.app.scss')
-//      .pipe(sass())
-//      .on('error', sass.logError)
-//      .pipe(gulp.dest('./www/css/'))
-//      .pipe(minifyCss({
-//          keepSpecialComments: 0
-//      }))
-//      .pipe(rename({ extname: '.min.css' }))
-//      .pipe(gulp.dest('./www/css/'))
-//      .on('end', done);
-//});
+
 
 // Run gulp watch in conjunction with Ionic serve to 
 // reflect live changes to TypeScript files in app directory
-gulp.task('watch', function () {   
+gulp.task('watch', function () {  
     gulp.watch(paths.tsc, ['tsc']);
 });
 
@@ -37,17 +23,16 @@ gulp.task('tsc', function () {
     var sourcemaps = require("gulp-sourcemaps");
     var ts = require('gulp-typescript');
     var tsProject = ts.createProject('tsconfig.json');
-    return tsProject
-        .src('app')
+    return tsProject.src('app')
         .pipe(sourcemaps.init())
         .pipe(ts(tsProject))
         .js
         .pipe(sourcemaps.write('./',
-        {
-            includeContent: true,
-            sourceRoot: function (file) {
-                return file.cwd + '../../app/';
-            }
-        }))
+            {
+                includeContent: true,
+                sourceRoot: function (file) {
+                    return file.cwd + '../../app/';
+                }
+            }))
         .pipe(gulp.dest('www/js/'));
 });

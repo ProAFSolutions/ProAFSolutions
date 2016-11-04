@@ -1,10 +1,10 @@
 {
-  "name": "io.cordova.proafsolutions.chat",
+  "name": "io.cordova.myapp50060b",
   "app_id": "",
-  "gulpDependantTasks": [
-    "tsc"
-  ],
-  "gulpStartupTasks": [
+  "gulpDependantTasks" : [
+    "tsc", "sass"
+  ],  
+   "gulpStartupTasks": [        
     "watch"
   ]
 }

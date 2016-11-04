@@ -1,5 +1,6 @@
 {
-  "name": "ionic-ts-sidemenu",
+  "name": "ionic-ts-tabs",
+  "version": false,
   "dependencies": {},
   "globalDependencies": {
     "angular": "registry:dt/angular#1.5.0+20160602160139",

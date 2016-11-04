@@ -2,8 +2,6 @@
 namespace proafsolutions {
 
     interface IAboutController {
-
-
     }
 
     class AboutController {

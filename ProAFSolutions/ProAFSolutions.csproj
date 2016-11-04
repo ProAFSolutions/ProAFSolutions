@@ -140,7 +140,7 @@
     <Content Include="css\pixeden-icons.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
-    <Content Include="dist\fonts\712-icon-fonts.svg" />
+    <Content Include="www\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
     <Content Include="images\team\alex.jpg" />
@@ -166,9 +166,9 @@
     </None>
     <Content Include="css\custom.scss" />
     <Content Include="data\products.json" />
-    <Content Include="dist\fonts\712-icon-fonts.eot" />
-    <Content Include="dist\fonts\712-icon-fonts.ttf" />
-    <Content Include="dist\fonts\712-icon-fonts.woff" />
+    <Content Include="www\fonts\712-icon-fonts.eot" />
+    <Content Include="www\fonts\712-icon-fonts.ttf" />
+    <Content Include="www\fonts\712-icon-fonts.woff" />
     <Content Include="data\team.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -370,7 +370,6 @@
   <ItemGroup>
     <Folder Include="app\directives\" />
     <Folder Include="build\" />
-    <Folder Include="typings\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

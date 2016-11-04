@@ -1,4 +1,4 @@
-# Ionic SideMenu Template
+# Ionic Tabs Template
 
 An application using Apache Cordova, Ionic Framework, and Typescript. Currently supporting iOS, Android and Windows 10.
 
@@ -32,22 +32,25 @@ With VS Code:
 * Launch the VS Code Command Palette – (Ctrl+Shift+P on Windows, Cmd+Shift+P on Mac) – and type the following command and hit Enter: 
 > ext install cordova-tools
 
+
 With Visual Studio:
 * Clone this repository.
-* Open the ionic-typescript-sidemenu.sln in Visual Studio.
+* Open the ionic-typescript-tabs.sln in Visual Studio.
 * Open Task Runner window by pressing Ctrl+Alt+Bkspce. 
 ** Note: It is important that the task runner window be open in VS while building the project. You can also use "gulp watch" task to enable live reload in browser based debugging scenarios.    
 * Install npm packages by going to your Solution Explorer -> Dependencies -> npm and clicking on 'Restore Packages'. 
-* Once packages are restored, build the project and deploy it on Ripple or an android emulator.
+* Once packages are restored, build the project and deploy it on Ripple or an android emulator. 
 * Success
+
 
 ## File Structure of App
 
 ```
-ionic-typescript-sidemenu/
+ionic-typescript-tabs/
 ├── app/                               * Working directory for TypeScript files
 │   ├── app.ts                         * Main Application configuration
-│   └── controllers.ts                 * App logic
+│   ├── controllers.ts                 * App logic
+│   └── services.ts                    * Helper Service methods
 │
 ├── node_modules/                      * Node dependencies
 |
@@ -63,7 +66,8 @@ ionic-typescript-sidemenu/
 │   │   
 │   ├── js/                            * Contains transpiled JS files from TS files
 │   │    ├── app.js                         
-│   │    └── controllers.js                 
+│   │    ├── controllers.js                 
+│   │    └── services.js                
 │   │
 │   ├── css/                           * Compiled CSS
 │   │
@@ -79,9 +83,9 @@ ionic-typescript-sidemenu/
 ├── gulpfile.js                        * Contains gulp tasks for compiling ts files, scss files and more..
 ├── ionic.project                      * Ionic configuration file
 ├── package.json                       * Our javascript dependencies
-├── ionic-typescript-sidemenu.sln         * VS solution
-├── ionic-typescript-sidemenu.jsproj        
-├── ionic-typescript-sidemenu.jsproj.user     
+├── ionic-typescript-tabs.sln         * VS solution
+├── ionic-typescript-tabs.jsproj        
+├── ionic-typescript-tabs.jsproj.user     
 └── README.md                          * This file
 ```
 
