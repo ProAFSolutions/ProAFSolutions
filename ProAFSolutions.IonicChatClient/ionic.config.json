@@ -1,5 +1,5 @@
 {
-  "name": "io.cordova.myapp50060b",
+  "name": "io.cordova.proaffsolutions",
   "app_id": "",
   "gulpDependantTasks" : [
     "tsc", "sass"

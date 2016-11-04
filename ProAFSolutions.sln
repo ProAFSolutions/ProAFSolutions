@@ -25,8 +25,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3- Identity Server", "3- Id
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4- Mobile Clients", "4- Mobile Clients", "{0D46455B-89DF-4757-B2D7-453931A4ED8A}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ProAFSolutionsIonicChatClient", "ProAFSolutionsIonicChatClient\ProAFSolutionsIonicChatClient.jsproj", "{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}"
-EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ProAFSolutions.IonicChatClient", "ProAFSolutions.IonicChatClient\ProAFSolutions.IonicChatClient.jsproj", "{95FD0C88-A72F-492C-BB5F-E8810F282D18}"
 EndProject
 Global
@@ -279,60 +277,6 @@ Global
 		{10864106-5667-487D-BCC1-CAB26FF8766A}.Release|Windows-ARM.ActiveCfg = Release|iPhoneSimulator
 		{10864106-5667-487D-BCC1-CAB26FF8766A}.Release|Windows-x64.ActiveCfg = Release|iPhoneSimulator
 		{10864106-5667-487D-BCC1-CAB26FF8766A}.Release|Windows-x86.ActiveCfg = Release|iPhoneSimulator
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Android.ActiveCfg = Debug|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Android.Build.0 = Debug|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Android.Deploy.0 = Debug|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Any CPU.ActiveCfg = Debug|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|iOS.ActiveCfg = Debug|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|iOS.Build.0 = Debug|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|iOS.Deploy.0 = Debug|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|iPhone.ActiveCfg = Debug|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|iPhoneSimulator.ActiveCfg = Debug|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone (Universal).ActiveCfg = Debug|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone (Universal).Build.0 = Debug|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone (Universal).Deploy.0 = Debug|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone 8.ActiveCfg = Debug|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone 8.Build.0 = Debug|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows Phone 8.Deploy.0 = Debug|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-AnyCPU.ActiveCfg = Debug|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-AnyCPU.Build.0 = Debug|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-AnyCPU.Deploy.0 = Debug|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-ARM.ActiveCfg = Debug|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-ARM.Build.0 = Debug|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-ARM.Deploy.0 = Debug|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x64.ActiveCfg = Debug|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x64.Build.0 = Debug|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x64.Deploy.0 = Debug|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x86.ActiveCfg = Debug|Windows-x86
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x86.Build.0 = Debug|Windows-x86
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Debug|Windows-x86.Deploy.0 = Debug|Windows-x86
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Android.ActiveCfg = Release|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Android.Build.0 = Release|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Android.Deploy.0 = Release|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Any CPU.ActiveCfg = Release|Android
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|iOS.ActiveCfg = Release|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|iOS.Build.0 = Release|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|iOS.Deploy.0 = Release|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|iPhone.ActiveCfg = Release|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|iPhoneSimulator.ActiveCfg = Release|iOS
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone (Universal).ActiveCfg = Release|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone (Universal).Build.0 = Release|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone (Universal).Deploy.0 = Release|Windows Phone (Universal)
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone 8.ActiveCfg = Release|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone 8.Build.0 = Release|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows Phone 8.Deploy.0 = Release|Windows Phone 8
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-AnyCPU.ActiveCfg = Release|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-AnyCPU.Build.0 = Release|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-AnyCPU.Deploy.0 = Release|Windows-AnyCPU
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-ARM.ActiveCfg = Release|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-ARM.Build.0 = Release|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-ARM.Deploy.0 = Release|Windows-ARM
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x64.ActiveCfg = Release|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x64.Build.0 = Release|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x64.Deploy.0 = Release|Windows-x64
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x86.ActiveCfg = Release|Windows-x86
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x86.Build.0 = Release|Windows-x86
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2}.Release|Windows-x86.Deploy.0 = Release|Windows-x86
 		{95FD0C88-A72F-492C-BB5F-E8810F282D18}.Debug|Android.ActiveCfg = Debug|Android
 		{95FD0C88-A72F-492C-BB5F-E8810F282D18}.Debug|Android.Build.0 = Debug|Android
 		{95FD0C88-A72F-492C-BB5F-E8810F282D18}.Debug|Android.Deploy.0 = Debug|Android
@@ -399,7 +343,6 @@ Global
 		{EABEFB5B-266E-4FC0-9F1E-0C43CCF43211} = {F9E996C4-9484-405B-B4F1-BEA133E376B1}
 		{10864106-5667-487D-BCC1-CAB26FF8766A} = {F9E996C4-9484-405B-B4F1-BEA133E376B1}
 		{B8A5BAAD-B870-45CC-9E34-8FB96D203666} = {0D46455B-89DF-4757-B2D7-453931A4ED8A}
-		{689CBE9E-BE82-4EA2-951F-4B0C20AAF6B2} = {B8A5BAAD-B870-45CC-9E34-8FB96D203666}
 		{95FD0C88-A72F-492C-BB5F-E8810F282D18} = {B8A5BAAD-B870-45CC-9E34-8FB96D203666}
 	EndGlobalSection
 EndGlobal
