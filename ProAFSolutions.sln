@@ -27,7 +27,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4- Mobile Clients", "4- Mob
 EndProject
 Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "ProAFSolutions.IonicChatClient", "ProAFSolutions.IonicChatClient\ProAFSolutions.IonicChatClient.jsproj", "{95FD0C88-A72F-492C-BB5F-E8810F282D18}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5-Test", "5-Test", "{573E0099-9257-43A0-BFCC-C1F8B05BAE86}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5- Test", "5- Test", "{573E0099-9257-43A0-BFCC-C1F8B05BAE86}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console", "Console\Console.csproj", "{A4592CAB-DB82-4F3D-A892-FDA84E7A5B83}"
 EndProject
