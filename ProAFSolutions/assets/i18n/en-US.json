@@ -52,5 +52,37 @@
 
 
   "chat.section.title1": "Need help?, any question?  We are here for you",
-  "chat.section.button": "Open Chat"
+  "chat.section.button": "Open Chat",
+
+  "packages.title": "Packages",
+   "packages.title.subtitle": "We have 4 friendly packages for you. Check all the packages and choose the right one for you.",
+
+  "packages.package1.title": "Tienda Online",
+  "packages.package1.section1": "Hosting + Dominio (1 año)",
+  "packages.package1.section2": "Migración de productos a nuestro sistema",
+  "packages.package1.section3": "Reportes personalizados",
+  "packages.package1.section4": "Nuevas funcionalidades",
+  "packages.package1.section5": "Panel de administración",
+  "packages.package1.section6": "Acceso desde dispositivos móviles",
+  "packages.package1.section7": "Soporte 24/7 (6 meses)",
+
+  "packages.package2.title": "Aplicaciones Moviles",
+  "packages.package2.section1": "Multiplataforma(iOS/Android)",
+  "packages.package2.section2": "Web Api",
+  "packages.package2.section3": "Base de Datos(SQLite)",
+  "packages.package2.section4": "Soporte para la publicación de la App en las tiendas",
+  "packages.package2.section5": "Soporte 24/7 (6 meses)",
+
+  "packages.package3.title": "Aplicaciones Web",
+  "packages.package3.section1": "Hosting + Dominio (1 año)",
+  "packages.package3.section2": "Plantilla personalizada",
+  "packages.package3.section3": "Base de datos",
+  "packages.package3.section4": "Acceso desde dispositivos móviles",
+  "packages.package3.section5": "Soporte 24/7 (6 meses)",
+
+  "packages.package4.title": "Sitios Presentacion",
+  "packages.package4.section1": "Hosting + Dominio (1 año)",
+  "packages.package4.section2": "Panel de administración",
+  "packages.package4.section3": "Plantilla personalizada",
+  "packages.package4.section4": "Acceso desde dispositivos móviles"
 }

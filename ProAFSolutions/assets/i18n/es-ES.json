@@ -18,11 +18,11 @@
   "focus.title": "Nuestros Servicios",
   "focus.title.second": "Diseñamos y desarrollamos soluciones de software simples, fiables y de alta calidad orientadas a pequeñas compañías.",
   "focus.focus1.title": "Aplicaciones Moviles",
-  "focus.focus1.description": "Diseño y desarrollo de soluciones móviles, orientadas a cualquier plataforma (IOS, ANDROID, WINDOWS) o tamaño de dispositivo.",
+  "focus.focus1.description": "Diseño y desarrollo de soluciones móviles, orientadas a cualquier plataforma (IOS, ANDROID, WINDOWS).",
   "focus.focus2.title": "Tienda online",
-  "focus.focus2.description": "Diseño y desarrollo de soluciones E-Commerce ajustadas a las necesidades de tu negocio y orientadas a impulsar la eficiencia y rentabilidad del mismo.",
-  "focus.focus3.title": "Sitio web corporativo",
-  "focus.focus3.description": "Diseño y desarrollo de sitios corporativos o personales utilizados como tu carta de presentación en Internet.",
+  "focus.focus2.description": "Diseño y desarrollo de tiendas onlines ajustadas a las necesidades de tu negocio y orientadas a impulsar la eficiencia y rentabilidad del mismo. Vende tus productos en internet.",
+  "focus.focus3.title": "Sitio web presentacion",
+  "focus.focus3.description": "Diseño y desarrollo de sitios personales o de negocios utilizados como tu carta de presentación en Internet.",
   "focus.focus4.title": "Soporte",
   "focus.focus4.description": "Brindamos soporte completo en el ciclo de vida de la aplicación, desde su implementación hasta puesta en marcha en producción. Además de mantenimiento y monitorización de la App.",
   "focus.also": "Ademas nos especializamos en",
@@ -50,9 +50,43 @@
   "separator.tools1": "Manejo de productos (fotos, precio, comparaciones, valoraciones, nuevos productos)",
   "separator.tools2": "Carro de compras (listado de productos, órdenes en PDF)",
   "separator.tools3": "Pasarela de pago (Paypal,MasterCard, Visa)",
+  "separator.tools4": "Lo más importante, migramos tu data hacia el sistema nuevo.",
 
 
-  "chat.section.title1": "Necesita ayuda, tiene alguna pregunta?  Siempre estamos online para usted.",
-  "chat.section.button": "Open Chat"
+  "chat.section.title1": "Siempre estamos online para usted.",
+  "chat.section.button": "Open Chat",
+
+  "packages.title": "Paquetes",
+  "packages.title.subtitle": "Tenemos 4 paquetes para usted. Revise todos los paquetes y seleccione el que se ajuste a su desarrollo.",
+
+  "packages.package1.title": "Tienda Online",
+  "packages.package1.section1": "Hosting + Dominio (1 año)",
+  "packages.package1.section2": "Migración de productos a nuestro sistema",
+  "packages.package1.section3": "Reportes personalizados",
+  "packages.package1.section4": "Nuevas funcionalidades",
+  "packages.package1.section5": "Panel de administración",
+  "packages.package1.section6": "Acceso desde dispositivos móviles",
+  "packages.package1.section7": "Soporte 24/7 (6 meses)",
+
+  "packages.package2.title": "Aplicaciones Moviles",
+  "packages.package2.section1": "Multiplataforma(iOS/Android)",
+  "packages.package2.section2": "Web Api",
+  "packages.package2.section3": "Base de Datos(SQLite)",
+  "packages.package2.section4": "Soporte para la publicación de la App en las tiendas",
+  "packages.package2.section5": "Soporte 24/7 (6 meses)",
+
+  "packages.package3.title": "Aplicaciones Web",
+  "packages.package3.section1": "Hosting + Dominio (1 año)",
+  "packages.package3.section2": "Plantilla personalizada",
+  "packages.package3.section3": "Base de datos",
+  "packages.package3.section4": "Acceso desde dispositivos móviles",
+  "packages.package3.section5": "Soporte 24/7 (6 meses)",
+
+  "packages.package4.title": "Sitios Presentacion",
+  "packages.package4.section1": "Hosting + Dominio (1 año)",
+  "packages.package4.section2": "Panel de administración",
+  "packages.package4.section3": "Plantilla personalizada",
+  "packages.package4.section4": "Acceso desde dispositivos móviles"
+
 
 }
