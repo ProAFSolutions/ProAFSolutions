@@ -17,3 +17,5 @@
 /ProAFSolutions.IonicChatClient/node_modules
 /ProAFSolutions.IonicChatClient/platforms
 /ProAFSolutions.IonicChatClient/plugins
+/Console/bin
+/Console/obj
