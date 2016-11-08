@@ -1,0 +1,11 @@
+<ion-view view-title="Users">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="client in vm.users" type="item-text-wrap" href="#/tab/users/{{client.name}}/{{client.room}}">      
+        <h2>{{client.name}}</h2>
+        <p>{{client.room}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>       
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>

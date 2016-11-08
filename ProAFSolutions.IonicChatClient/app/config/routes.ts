@@ -6,8 +6,6 @@ namespace proafsolutions.chat {
        public static setupRoutes($stateProvider: angular.ui.IStateProvider, $urlRouterProvider: angular.ui.IUrlRouterProvider): void {
 
            $stateProvider
-
-           $stateProvider
                // setup an abstract state for the tabs directive
                .state("tab", {
                    url: "/tab",
@@ -15,31 +13,31 @@ namespace proafsolutions.chat {
                    templateUrl: "templates/tabs.html"
                })
                // each tab has its own nav history stack:
-               .state("tab.dash", {
-                   url: "/dash",
-                   views: {
-                       "tab-dash": {
-                           templateUrl: "templates/tab-dash.html",
-                           controller: "DashboardController as dash"
-                       }
-                   }
-               })
+               //.state("tab.dash", {
+               //    url: "/dash",
+               //    views: {
+               //        "tab-dash": {
+               //            templateUrl: "templates/tab-dash.html",
+               //            controller: "DashboardController as vm"
+               //        }
+               //    }
+               //})
 
-               .state("tab.chats", {
-                   url: "/chats",
+               .state("tab.users", {
+                   url: "/users",
                    views: {
-                       "tab-chats": {
-                           templateUrl: "templates/tab-chats.html",
-                           controller: "UsersController as chats"
+                       "tab-users": {
+                           templateUrl: "templates/tab-users.html",
+                           controller: "UsersController as vm"
                        }
                    }
                })
-               .state("tab.chat-detail", {
-                   url: "/chats/:chatId",
+               .state("tab.chat", {
+                   url: "/users/:name/:room",
                    views: {
-                       "tab-chats": {
-                           templateUrl: "templates/chat-detail.html",
-                           controller: "DetailsController as chat"
+                       "tab-users": {
+                           templateUrl: "templates/tab-chat.html",
+                           controller: "ChatController as vm"
                        }
                    }
                })
@@ -49,13 +47,13 @@ namespace proafsolutions.chat {
                    views: {
                        "tab-account": {
                            templateUrl: "templates/tab-account.html",
-                           controller: "AccountController as account"
+                           controller: "AccountController as vm"
                        }
                    }
                });
 
            // if none of the above states are matched, use this as the fallback
-           $urlRouterProvider.otherwise("/tab/dash");
+           $urlRouterProvider.otherwise("/tab/users");
        }       
 
    }     

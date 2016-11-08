@@ -12,23 +12,24 @@ namespace ProAFSolutionsAPI.Hubs
     public class ChatRoomHub : Hub
     {
 
-        public void SendMessage(string name, string message, string roomName)
+        public void SendMessage(string name, string message, string room)
         {
-            Clients.Group(roomName).GetMessage(name, message);
+            Clients.Group(room).GetMessage(name, message);
         }
 
-        public Task JoinRoom(string roomName)
+        public Task JoinRoom(string name, string room)
         {
-            return Groups.Add(Context.ConnectionId, roomName);
-        }
-
-        public Task JoinRoomFromAdminApp(string adminCode, string roomName)
-        {
-            if (adminCode.Equals(ConfigurationManager.AppSettings["adminCode1"]) ||
-                adminCode.Equals(ConfigurationManager.AppSettings["adminCode2"])) {
-                return Groups.Add(Context.ConnectionId, roomName);
+            if (ChatConnectionsHandler.SetUserData(Context.ConnectionId, name, room)) {
+                return Groups.Add(Context.ConnectionId, room);
             }
+            return null;  
+        }
 
+        public Task JoinRoomFromAdminApp(string adminCode, string room)
+        {
+            if (adminCode.Equals(ConfigurationManager.AppSettings["adminCode"]) && ChatConnectionsHandler.SetAdminData(Context.ConnectionId)) {
+                return Groups.Add(Context.ConnectionId, room);
+            }
             return null;
         }
 
@@ -42,20 +43,13 @@ namespace ProAFSolutionsAPI.Hubs
 
         public override Task OnConnected()
         {
-            // Add your own code here.
-            // For example: in a chat application, record the association between
-            // the current connection ID and user name, and mark the user as online.
-            // After the code in this method completes, the client is informed that
-            // the connection is established; for example, in a JavaScript client,
-            // the start().done callback is executed.
+            ChatConnectionsHandler.Connections.Add(Context.ConnectionId, null);
             return base.OnConnected();
         }
 
         public override Task OnDisconnected(bool stopCalled)
         {
-            // Add your own code here.
-            // For example: in a chat application, mark the user as offline, 
-            // delete the association between the current connection id and user name.
+            ChatConnectionsHandler.Connections.Remove(Context.ConnectionId);
             return base.OnDisconnected(stopCalled);
         }
 

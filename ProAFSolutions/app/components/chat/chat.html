@@ -48,7 +48,7 @@
                     </li>
                     <li>
                         <label>Email:</label>
-                        <input type="email" ng-model="vm.roomName" />
+                        <input type="email" ng-model="vm.room" />
                     </li>
                     <li>
                         <a class="btn btn-primary green-btn" ng-click="vm.join()">
@@ -75,7 +75,7 @@
                     </li>              
                 </ul>
             </div>
-            <div ng-show="vm.conversation.length > 0" class="chat-input">
+            <div class="chat-input">
                 <input type="text" ng-model="vm.message" />
                 <a class="btn btn-primary" ng-disabled="!vm.message" ng-click="vm.send()">
                     <i class="icon-paperplane"></i>&nbsp;&nbsp;Send

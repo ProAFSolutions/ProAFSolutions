@@ -1,0 +1,20 @@
+<ion-view view-title="{{vm.room}}">
+  <ion-content class="padding">    
+      <ul class="conversation-area">
+          <li ng-repeat="message in vm.conversation">
+              <span>{{message.name}}:</span> {{message.text}}
+          </li>
+      </ul>    
+  </ion-content>
+  <ion-footer-bar align-title="left" keyboard-attach>
+        <div class="col col-80">
+            <label class="item item-input">
+                <i class="icon ion-chatbox placeholder-icon"></i>
+                <input type="text" placeholder="Type here">
+            </label>
+        </div>
+        <div class="col col-20">
+            <button class="button icon ion-paper-airplane"></button>
+        </div>
+   </ion-footer-bar>
+</ion-view>

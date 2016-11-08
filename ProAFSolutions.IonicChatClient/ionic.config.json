@@ -1,10 +1,12 @@
 {
-  "name": "io.cordova.proaffsolutions",
+  "name": "io.cordova.proafsolutions",
   "app_id": "",
-  "gulpDependantTasks" : [
-    "tsc", "sass"
-  ],  
-   "gulpStartupTasks": [        
+  "typescript": true,
+  "defaultBrowser": "chrome",
+  "gulpDependantTasks": [
+    "tsc"
+  ],
+  "gulpStartupTasks": [
     "watch"
   ]
 }

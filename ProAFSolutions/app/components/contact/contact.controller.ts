@@ -6,13 +6,13 @@
 
     class ContactController implements IContactController {
 
-        static $inject = ['$scope', '$dataContext', '$messageService']; 
+        static $inject = ['$scope', '$dataContext', '$publicService']; 
 
         public contactMessage: models.IContactMessage;
 
         constructor(private $scope: ng.IScope,
                     protected $dataContext: shared.IDataContextService,
-                    protected $messageService: services.IMessageService) {           
+                    protected $publicService: services.IPublicService) {           
             this.init();
         }
 
@@ -20,7 +20,7 @@
 
         public sendContactMessage(): void {
             //todo: callback 
-            this.$messageService.sendMessage(this.contactMessage);
+            this.$publicService.sendMessage(this.contactMessage);
         }
 
        /*function isValidEmail(emailAddress) {

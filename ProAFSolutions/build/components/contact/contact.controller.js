@@ -1,18 +1,18 @@
 var proafsolutions;
 (function (proafsolutions) {
     var ContactController = (function () {
-        function ContactController($scope, $dataContext, $messageService) {
+        function ContactController($scope, $dataContext, $publicService) {
             this.$scope = $scope;
             this.$dataContext = $dataContext;
-            this.$messageService = $messageService;
+            this.$publicService = $publicService;
             this.init();
         }
         ContactController.prototype.init = function () { };
         ContactController.prototype.sendContactMessage = function () {
             //todo: callback 
-            this.$messageService.sendMessage(this.contactMessage);
+            this.$publicService.sendMessage(this.contactMessage);
         };
-        ContactController.$inject = ['$scope', '$dataContext', '$messageService'];
+        ContactController.$inject = ['$scope', '$dataContext', '$publicService'];
         return ContactController;
     }());
     angular.module("proafsolutions").controller("ContactController", ContactController);

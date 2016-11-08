@@ -14,20 +14,21 @@ using ProAFSolutionsAPI.Providers;
 using System.Configuration;
 using ProAFSolutionsAPI.Services.Mail;
 using ProAFSolutionsAPI.Services;
+using System.Web.Http.Description;
+using ProAFSolutionsAPI.Hubs;
 
 namespace ProAFSolutionsAPI.Controllers
 {
-    //[Authorize]
-    [EnableCors("*", "*", "*")]
-    [RoutePrefix("api/messages")]    
-    public class MessagesController : ApiController
+    //[Authorize]   
+    [RoutePrefix("api/public")]    
+    public class PublicApiController : ApiController
     {
 
         /// <summary>
         /// Sends a message from clients in order to be contacted by ProAFSolutions
         /// </summary>
         /// <param name="contact">(Required)</param>  
-        [Route("contact")]
+        [Route("contact-us")]
         [HttpPost]
         public IHttpActionResult SendContactMessage(ContactModel contact)
         {
@@ -55,6 +56,17 @@ namespace ProAFSolutionsAPI.Controllers
             //});
 
             return Ok();
-        }         
+        }
+
+
+        /// <summary>
+        /// Gets all the users currently connected to the Hub
+        /// </summary>      
+        [Route("chat-users")]
+        [HttpGet]
+        [ResponseType(typeof(ChatUserData))]
+        public IHttpActionResult GetChatUsers() {
+            return Ok(ChatConnectionsHandler.Users);
+        }
     }
 }

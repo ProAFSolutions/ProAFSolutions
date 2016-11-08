@@ -8,7 +8,7 @@ var proafsolutions;
                 this.SERVICE_BASE_URL = proafsolutions.AppSettings.API_URL + "/messages";
             }
             MessageService.prototype.sendMessage = function (contactMessage) {
-                return this.$http.post(this.SERVICE_BASE_URL + "/contact", contactMessage);
+                return this.$http.post(this.SERVICE_BASE_URL + "/contact-us", contactMessage);
             };
             MessageService.$inject = ['$http'];
             return MessageService;

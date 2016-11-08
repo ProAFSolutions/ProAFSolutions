@@ -7,7 +7,7 @@
         isJoined: boolean;
         isLoading: boolean;
         name: string; //user name
-        roomName: string; //Email
+        room: string; //Email
         message: string;
         showWaitingMessage: boolean;
         conversation: Array<models.IChatMessage>;       
@@ -34,7 +34,7 @@
         public isJoined: boolean;
         public isLoading: boolean;
         public name: string;
-        public roomName: string;
+        public room: string;
         public showWaitingMessage: boolean;
         public message: string;
         public conversation: Array<models.IChatMessage>;        
@@ -53,7 +53,7 @@
             this.showWaitingMessage = false;           
             this.conversation = new Array<models.IChatMessage>();
             this.name = '';
-            this.roomName = '';
+            this.room = '';
             this.message = '';
             this.soundEnabled = true; 
             this.initHub();             
@@ -81,8 +81,7 @@
             this.isLoading = true;
             $.connection.hub.start().done(() => {
                 this.isLoading = false;
-                console.log("Hub connected!!!");
-                this.chatRoomHub.server.joinRoom(this.roomName);
+                this.chatRoomHub.server.joinRoom(this.name, this.room);
                 this.isJoined = true;
                 this.showWelcomeMessage();
             }).fail(() => {
@@ -101,8 +100,8 @@
         }
 
         public send(): void {
-            if (this.isJoined && this.roomName && this.name) {
-                this.chatRoomHub.server.sendMessage(this.name, this.message, this.roomName);
+            if (this.isJoined && this.room && this.name) {
+                this.chatRoomHub.server.sendMessage(this.name, this.message, this.room);
                 this.playSound("send");
                 this.message = '';                        
             }           

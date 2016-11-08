@@ -6,37 +6,27 @@ var proafsolutions;
             function RoutesConfig() {
             }
             RoutesConfig.setupRoutes = function ($stateProvider, $urlRouterProvider) {
-                $stateProvider;
                 $stateProvider
                     .state("tab", {
                     url: "/tab",
                     abstract: true,
                     templateUrl: "templates/tabs.html"
                 })
-                    .state("tab.dash", {
-                    url: "/dash",
+                    .state("tab.users", {
+                    url: "/users",
                     views: {
-                        "tab-dash": {
-                            templateUrl: "templates/tab-dash.html",
-                            controller: "DashboardController as dash"
+                        "tab-users": {
+                            templateUrl: "templates/tab-users.html",
+                            controller: "UsersController as vm"
                         }
                     }
                 })
-                    .state("tab.chats", {
-                    url: "/chats",
+                    .state("tab.chat", {
+                    url: "/users/:name/:room",
                     views: {
-                        "tab-chats": {
-                            templateUrl: "templates/tab-chats.html",
-                            controller: "UsersController as chats"
-                        }
-                    }
-                })
-                    .state("tab.chat-detail", {
-                    url: "/chats/:chatId",
-                    views: {
-                        "tab-chats": {
-                            templateUrl: "templates/chat-detail.html",
-                            controller: "DetailsController as chat"
+                        "tab-users": {
+                            templateUrl: "templates/tab-chat.html",
+                            controller: "ChatController as vm"
                         }
                     }
                 })
@@ -45,12 +35,12 @@ var proafsolutions;
                     views: {
                         "tab-account": {
                             templateUrl: "templates/tab-account.html",
-                            controller: "AccountController as account"
+                            controller: "AccountController as vm"
                         }
                     }
                 });
                 // if none of the above states are matched, use this as the fallback
-                $urlRouterProvider.otherwise("/tab/dash");
+                $urlRouterProvider.otherwise("/tab/users");
             };
             return RoutesConfig;
         }());

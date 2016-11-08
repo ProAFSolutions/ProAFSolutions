@@ -358,6 +358,7 @@ interface SignalR {
 interface ChatServer {
     sendMessage(name: string, message: string, roomName: string): void;
     joinRoom(roomName: string): void;
+    joinRoomFromAdminApp(roomName: string): void;
     leaveRoom(roomName: string): void;
 }
 

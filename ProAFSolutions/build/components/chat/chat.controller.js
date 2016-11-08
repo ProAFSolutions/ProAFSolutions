@@ -13,7 +13,7 @@ var proafsolutions;
             this.showWaitingMessage = false;
             this.conversation = new Array();
             this.name = '';
-            this.roomName = '';
+            this.room = '';
             this.message = '';
             this.soundEnabled = true;
             this.initHub();
@@ -39,8 +39,7 @@ var proafsolutions;
             this.isLoading = true;
             $.connection.hub.start().done(function () {
                 _this.isLoading = false;
-                console.log("Hub connected!!!");
-                _this.chatRoomHub.server.joinRoom(_this.roomName);
+                _this.chatRoomHub.server.joinRoom(_this.name, _this.room);
                 _this.isJoined = true;
                 _this.showWelcomeMessage();
             }).fail(function () {
@@ -57,8 +56,8 @@ var proafsolutions;
             }, 3000);
         };
         ChatController.prototype.send = function () {
-            if (this.isJoined && this.roomName && this.name) {
-                this.chatRoomHub.server.sendMessage(this.name, this.message, this.roomName);
+            if (this.isJoined && this.room && this.name) {
+                this.chatRoomHub.server.sendMessage(this.name, this.message, this.room);
                 this.playSound("send");
                 this.message = '';
             }

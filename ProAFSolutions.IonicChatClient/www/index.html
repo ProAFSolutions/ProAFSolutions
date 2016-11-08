@@ -9,6 +9,11 @@
     <link href="css/style.css" rel="stylesheet">
 
     
+    <script src="lib/jquery/dist/jquery.js"></script>
+    <script src="lib/signalr/jquery.signalR.js"></script>
+
+    <script src="http://localhost:5565/signalr/hubs"></script>  
+
     <!--For users deploying their apps to Windows 8.1 or Android Gingerbread, platformOverrided.js
      will inject platform-specific code from the /merges folder -->
     <script src="js/platformOverrides.js"></script>
@@ -16,17 +21,22 @@
     <!-- ionic/angularjs js -->
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
+    <!-- AngularJS wrappers for the most popular Cordova plugins available-->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+
+    <!--<script src="lib/angular-signalr/angular-signalr.js"></script>-->
+
     <!-- cordova script (this will be a 404 during development) -->
     <script src="cordova.js"></script>
 
     <!-- your app's js -->
-      <script src="js/config/routes.js"></script>
-      <script src="js/proafsolutions.chat.js"></script>
-      <script src="js/services/services.js"></script>
-      <script src="js/controllers/account.controller.js"></script>
-      <script src="js/controllers/dashboard.controller.js"></script>
-      <script src="js/controllers/details.controller.js"></script>
-      <script src="js/controllers/users.controller.js"></script>
+    <script src="js/config/settings.js"></script>
+    <script src="js/config/routes.js"></script>
+    <script src="js/proafsolutions.chat.js"></script>   
+    <script src="js/controllers/account.controller.js"></script>
+    <script src="js/controllers/dashboard.controller.js"></script>
+    <script src="js/controllers/chat.controller.js"></script>
+    <script src="js/controllers/users.controller.js"></script>
   </head>
   <body ng-app="proafsolutions">
     

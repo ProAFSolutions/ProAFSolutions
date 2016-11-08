@@ -356,9 +356,9 @@ interface SignalR {
 }
 
 interface ChatServer {
-    sendMessage(name: string, message: string, roomName: string): void;
-    joinRoom(roomName: string): void;
-    leaveRoom(roomName: string): void;
+    sendMessage(name: string, message: string, room: string): void;
+    joinRoom(name: string, room: string): void;
+    leaveRoom(room: string): void;
 }
 
 interface ChatClient {
