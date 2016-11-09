@@ -14,6 +14,8 @@
   "home.title.One": "Grow your business",
   "home.title.Two": "Low costs",
   "home.title.Three": "Connect with customers",
+  "home.button.services": "Our Services",
+  "home.button.packages": "Our Packages",
 
   "focus.title": "Services",
   "focus.title.second": "Diseñamos y desarrollamos soluciones de software simples, fiables y de alta calidad orientadas a pequeñas compañías.",
@@ -49,13 +51,15 @@
   "separator.tools1": "Manejo de productos (fotos, precio, comparaciones, valoraciones, nuevos productos)",
   "separator.tools2": "Carro de compras (listado de productos, órdenes en PDF)",
   "separator.tools3": "Pasarela de pago (Paypal, MasterCard, Visa)",
-
+  "separator.tools4": "Migramos toda tu data hacia el sistema nuevo.",
 
   "chat.section.title1": "Need help?, any question?  We are here for you",
   "chat.section.button": "Open Chat",
 
   "packages.title": "Packages",
-   "packages.title.subtitle": "We have 4 friendly packages for you. Check all the packages and choose the right one for you.",
+  "packages.title.subtitle": "We have 4 friendly packages for you. Check all the packages and choose the right one for you.",
+
+  "packages.price": "Starts at ",
 
   "packages.package1.title": "Tienda Online",
   "packages.package1.section1": "Hosting + Dominio (1 año)",
@@ -84,5 +88,15 @@
   "packages.package4.section1": "Hosting + Dominio (1 año)",
   "packages.package4.section2": "Panel de administración",
   "packages.package4.section3": "Plantilla personalizada",
-  "packages.package4.section4": "Acceso desde dispositivos móviles"
+  "packages.package4.section4": "Acceso desde dispositivos móviles",
+
+  "contact.title": "Get in touch",
+  "contact.title.subtitle": "Have any question? Drop us a message. We will get back to you in 24 hours.",
+  "contact.form.name": "Your Name",
+  "contact.form.email": "Your Email",
+  "contact.form.subject": "Subject",
+  "contact.form.message": "Message",
+  "contact.button": "Send Message",
+  "contact.message.sucessfully": "Your message has been sent successfully.",
+  "contact.message.error": "E-mail must be valid and message must be longer than 1 character."
 }
