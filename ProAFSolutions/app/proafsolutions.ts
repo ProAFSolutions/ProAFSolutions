@@ -22,9 +22,25 @@ namespace proafsolutions {
 
            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
         }      
+
+       public static run($http: ng.IHttpService, $cookies: ng.cookies.ICookiesService): void {
+
+           var lastAccess = $cookies.get('lastAccess');
+
+           var now = new Date();
+           var currentDate = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
+
+
+           if (!lastAccess || lastAccess != currentDate) {
+
+               $http.post(AppSettings.API_URL + "/public/register-access-stats", {}).success((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                   $cookies.put('lastAccess', currentDate);
+               });
+           }
+       }    
    }
 
     angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies"])
-           .config(ProAFSolutionsApp.config);
+        .config(ProAFSolutionsApp.config).run(ProAFSolutionsApp.run);
             
 }

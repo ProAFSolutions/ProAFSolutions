@@ -16,6 +16,10 @@ using ProAFSolutionsAPI.Services.Mail;
 using ProAFSolutionsAPI.Services;
 using System.Web.Http.Description;
 using ProAFSolutionsAPI.Hubs;
+using ProAFSolutionsAPI.Helpers;
+using System.IO;
+using ProAFSolutionsAPI.Util;
+using System.Web;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -41,7 +45,7 @@ namespace ProAFSolutionsAPI.Controllers
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
                 ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceService.GetEmailTemplatePath("basic-email-template.html"), parameters));
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));
 
             //AppServicesProvider.EmailService.SendTextEmail(
             //    "Somebody wants to get in touch with you!",
@@ -67,6 +71,42 @@ namespace ProAFSolutionsAPI.Controllers
         [ResponseType(typeof(ChatUserData))]
         public IHttpActionResult GetChatUsers() {
             return Ok(ChatConnectionsHandler.Users);
+        }
+
+        /// <summary>
+        /// Register access stats
+        /// </summary>     
+        [Route("register-access-stats")]
+        public IHttpActionResult Ping()
+        {
+            var path = ResourceHelper.GetStatsPath("site-stats.json");
+
+            var statsList = new List<StatsModel>();
+
+            if (File.Exists(path))
+            {
+                var statsJson = File.ReadAllText(path);
+
+                statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
+            }
+
+            string ip = !HttpContext.Current.Request.UserHostAddress.Equals("::1") ?
+                ResourceHelper.GetIP4Address() :
+                "75.115.76.92";
+
+            var client = new WebClient();
+
+            var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
+
+            var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
+            statsModel.IP = ip;
+            statsModel.UtcDate = DateTime.UtcNow;
+
+            statsList.Add(statsModel);
+
+            File.WriteAllText(path, JsonHelper.Serialize(statsList));
+
+            return Ok();
         }
     }
 }

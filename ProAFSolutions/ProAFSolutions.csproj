@@ -342,6 +342,7 @@
     <TypeScriptCompile Include="app\components\newsetter\newsetter.controller.ts" />
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
+    <TypeScriptCompile Include="app\definitely-typed\angular-cookie.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\audio.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />
     <TypeScriptCompile Include="app\models\contact-message.ts" />
