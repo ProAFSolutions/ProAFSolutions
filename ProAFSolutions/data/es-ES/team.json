@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "Alejandro Clavijo",
+    "title":  "Creador - Ingeniero de Software",
+    "description": "Esta es la desc",
+    "picUrl": "/images/team/alex.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/alexclavijo85"]
+  },
+
+  {
+    "name": "Filiberto Lopez",
+    "title":  "Creador - Analista de Sistemas",
+    "description": "Esta es la desc",
+    "picUrl": "/images/team/fily.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/filibertolopez30"]
+  },
+
+  {
+    "name": "Alain Espaigne",
+    "title": "Ingeniero de Software - Analista de Datos",
+    "description": "Esta es la desc",
+    "picUrl": "/images/team/alain.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/alain-espaigne-00903484"]
+  }
+
+]
+

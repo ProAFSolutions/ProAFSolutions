@@ -161,6 +161,7 @@
     <Content Include="css\pixeden-icons.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
+    <Content Include="images\team\alain.jpg" />
     <Content Include="www\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
@@ -186,11 +187,13 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="css\custom.scss" />
-    <Content Include="data\products.json" />
+    <Content Include="data\en-US\products.json" />
     <Content Include="www\fonts\712-icon-fonts.eot" />
     <Content Include="www\fonts\712-icon-fonts.ttf" />
     <Content Include="www\fonts\712-icon-fonts.woff" />
-    <Content Include="data\team.json" />
+    <Content Include="data\en-US\team.json" />
+    <Content Include="data\es-ES\products.json" />
+    <Content Include="data\es-ES\team.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

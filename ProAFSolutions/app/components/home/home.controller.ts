@@ -20,12 +20,7 @@
         }
 
         init(): void {
-            this.$dataContext.currentLanguage = this.$translateProvider.use();
-            this.$dataProvider.getProductsPromise().then((response: ng.IHttpPromiseCallbackArg<models.IProduct[]>) => {
-                _.each(response.data, (product: models.IProduct) => {
-                    console.info(product.name + " " + product.description);
-                });
-            });
+            this.$dataContext.currentLanguage = this.$translateProvider.use();          
         } 
 
         public changeAppLanguageClick(lang: string) {
