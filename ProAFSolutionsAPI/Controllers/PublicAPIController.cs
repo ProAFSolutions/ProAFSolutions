@@ -77,34 +77,32 @@ namespace ProAFSolutionsAPI.Controllers
         /// Register access stats
         /// </summary>     
         [Route("register-access-stats")]
+        [HttpGet]
         public IHttpActionResult Ping()
         {
-            var path = ResourceHelper.GetStatsPath("site-stats.json");
+            var httpRequest = HttpContext.Current.Request;
 
-            var statsList = new List<StatsModel>();
+            if (!httpRequest.Url.Host.ToLower().Equals("localhost") && !httpRequest.UserHostAddress.Equals("::1")) {
 
-            if (File.Exists(path))
-            {
-                var statsJson = File.ReadAllText(path);
+                using (var client = new WebClient())
+                {
+                    string ip = ResourceHelper.GetClientIPAddress();
+                    var path = ResourceHelper.GetStatsPath("site-stats.json");
+                    var statsList = new List<StatsModel>();
+                    if (File.Exists(path))
+                    {
+                        var statsJson = File.ReadAllText(path);
+                        statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
+                    }
 
-                statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
+                    var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
+                    var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
+                    statsModel.IP = ip;
+                    statsModel.UtcDate = DateTime.UtcNow;
+                    statsList.Add(statsModel);
+                    File.WriteAllText(path, JsonHelper.Serialize(statsList));
+                }
             }
-
-            string ip = !HttpContext.Current.Request.UserHostAddress.Equals("::1") ?
-                ResourceHelper.GetIP4Address() :
-                "75.115.76.92";
-
-            var client = new WebClient();
-
-            var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
-
-            var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
-            statsModel.IP = ip;
-            statsModel.UtcDate = DateTime.UtcNow;
-
-            statsList.Add(statsModel);
-
-            File.WriteAllText(path, JsonHelper.Serialize(statsList));
 
             return Ok();
         }

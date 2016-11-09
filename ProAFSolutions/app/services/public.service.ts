@@ -2,7 +2,10 @@
 
 
     export interface IPublicService {
+
         sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}>;
+
+        pingServer(): ng.IHttpPromise<{}>;
     }
 
     export class PublicService implements IPublicService {
@@ -14,8 +17,12 @@
         constructor(private $http: ng.IHttpService) { }
 
         public sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}> {
-            return this.$http.post(AppSettings.API_URL + "/contact-us", contactMessage);                
-        }       
+            return this.$http.post(this.SERVICE_BASE_URL + "/contact-us", contactMessage);                
+        }      
+
+        public pingServer(): ng.IHttpPromise<{}> {
+            return this.$http.get(this.SERVICE_BASE_URL + "/register-access-stats");
+        }
 
     }
 

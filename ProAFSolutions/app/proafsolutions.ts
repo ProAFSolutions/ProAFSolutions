@@ -10,11 +10,11 @@ namespace proafsolutions {
 
     class ProAFSolutionsApp {        
 
-       public static config($stateProvider: angular.ui.IStateProvider,
-                         $urlRouterProvider: angular.ui.IUrlRouterProvider,
-                         $locationProvider: ng.ILocationProvider,
-                         $compileProvider: ng.ICompileProvider,
-                         $translateProvider: angular.translate.ITranslateProvider): void {          
+       static config($stateProvider: angular.ui.IStateProvider,
+                    $urlRouterProvider: angular.ui.IUrlRouterProvider,
+                    $locationProvider: ng.ILocationProvider,
+                    $compileProvider: ng.ICompileProvider,
+                    $translateProvider: angular.translate.ITranslateProvider): void {          
 
            RoutesConfig.setupRoutes($stateProvider, $urlRouterProvider);
 
@@ -23,21 +23,20 @@ namespace proafsolutions {
            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
         }      
 
-       public static run($http: ng.IHttpService, $cookies: ng.cookies.ICookiesService): void {
+       static run($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService): void {
+           ProAFSolutionsApp.pingServer($publicService, $cookies);
+       } 
 
-           var lastAccess = $cookies.get('lastAccess');
-
+       static pingServer($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService) {
+           var lastAccess = $cookies.get('PROAF_LAST_ACCESS');
            var now = new Date();
            var currentDate = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
-
-
            if (!lastAccess || lastAccess != currentDate) {
-
-               $http.post(AppSettings.API_URL + "/public/register-access-stats", {}).success((response: ng.IHttpPromiseCallbackArg<{}>) => {
-                   $cookies.put('lastAccess', currentDate);
-               });
+               $publicService.pingServer().then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                   $cookies.put('PROAF_LAST_ACCESS', currentDate);
+               });               
            }
-       }    
+       }
    }
 
     angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies"])
