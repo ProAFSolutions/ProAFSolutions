@@ -14,6 +14,8 @@
   "home.title.One": "Haga crecer su negocio",
   "home.title.Two": "Bajos costos",
   "home.title.Three": "Conectate con los clientes",
+  "home.button.services": "Nuestros Servicios",
+  "home.button.packages": "Nuestros Paquetes",
 
   "focus.title": "Nuestros Servicios",
   "focus.title.second": "Diseñamos y desarrollamos soluciones de software simples, fiables y de alta calidad orientadas a pequeñas compañías.",
@@ -50,18 +52,20 @@
   "separator.tools1": "Manejo de productos (fotos, precio, comparaciones, valoraciones, nuevos productos)",
   "separator.tools2": "Carro de compras (listado de productos, órdenes en PDF)",
   "separator.tools3": "Pasarela de pago (Paypal,MasterCard, Visa)",
-  "separator.tools4": "Lo más importante, migramos tu data hacia el sistema nuevo.",
+  "separator.tools4": "Migramos toda tu data hacia el sistema nuevo.",
 
 
   "chat.section.title1": "Siempre estamos online para usted.",
-  "chat.section.button": "Open Chat",
+  "chat.section.button": "Abrir Chat",
 
   "packages.title": "Paquetes",
   "packages.title.subtitle": "Tenemos 4 paquetes para usted. Revise todos los paquetes y seleccione el que se ajuste a su desarrollo.",
 
+  "packages.price": "Empieza en ",
+
   "packages.package1.title": "Tienda Online",
   "packages.package1.section1": "Hosting + Dominio (1 año)",
-  "packages.package1.section2": "Migración de productos a nuestro sistema",
+  "packages.package1.section2": "Migración de productos a nuestro sistema desde sus bases de datos",
   "packages.package1.section3": "Reportes personalizados",
   "packages.package1.section4": "Nuevas funcionalidades",
   "packages.package1.section5": "Panel de administración",
@@ -72,12 +76,12 @@
   "packages.package2.section1": "Multiplataforma(iOS/Android)",
   "packages.package2.section2": "Web Api",
   "packages.package2.section3": "Base de Datos(SQLite)",
-  "packages.package2.section4": "Soporte para la publicación de la App en las tiendas",
+  "packages.package2.section4": "Soporte para la publicación de las App en las tiendas",
   "packages.package2.section5": "Soporte 24/7 (6 meses)",
 
   "packages.package3.title": "Aplicaciones Web",
   "packages.package3.section1": "Hosting + Dominio (1 año)",
-  "packages.package3.section2": "Plantilla personalizada",
+  "packages.package3.section2": "Plantilla personalizada (seleccione el diseño que desea)",
   "packages.package3.section3": "Base de datos",
   "packages.package3.section4": "Acceso desde dispositivos móviles",
   "packages.package3.section5": "Soporte 24/7 (6 meses)",
@@ -85,8 +89,18 @@
   "packages.package4.title": "Sitios Presentacion",
   "packages.package4.section1": "Hosting + Dominio (1 año)",
   "packages.package4.section2": "Panel de administración",
-  "packages.package4.section3": "Plantilla personalizada",
-  "packages.package4.section4": "Acceso desde dispositivos móviles"
+  "packages.package4.section3": "Plantilla personalizada (seleccione el diseño que desea)",
+  "packages.package4.section4": "Acceso desde dispositivos móviles",
+
+  "contact.title": "Estar en contacto",
+  "contact.title.subtitle": "Tiene alguna pregunta? Envíenos un mensaje. Nosotros le responderemos antes de 24 horas.",
+  "contact.form.name": "Su Nombre",
+  "contact.form.email": "Su Correo",
+  "contact.form.subject": "Asunto",
+  "contact.form.message": "Mensaje",
+  "contact.button": "Enviar Mensaje",
+  "contact.message.sucessfully": "Su mensaje fue enviado.",
+  "contact.message.error": "El correo debe ser válido y el contenido del mensaje no puede ser vacío."
 
 
 }

@@ -183,6 +183,9 @@ body .about-us .skill .skill-count i {
 body .focus .other-focuses .section-footer-title {
   text-transform: uppercase; }
 
+body .packages .price h4 {
+  font-size: 35px; }
+
 body .separator-one {
   background: rgba(52, 210, 147, 0.95);
   padding: 100px 0 100px 0; }
