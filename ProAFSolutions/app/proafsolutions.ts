@@ -29,11 +29,13 @@ namespace proafsolutions {
 
        static pingServer($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService) {
            var lastAccess = $cookies.get('PROAF_LAST_ACCESS');
-           var now = new Date();
+           var now = new Date();           
            var currentDate = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
            if (!lastAccess || lastAccess != currentDate) {
                $publicService.pingServer().then((response: ng.IHttpPromiseCallbackArg<{}>) => {
-                   $cookies.put('PROAF_LAST_ACCESS', currentDate);
+                   var tomorrow = new Date();
+                   tomorrow.setDate(tomorrow.getDate() + 1);
+                   $cookies.put('PROAF_LAST_ACCESS', currentDate, { expires: tomorrow });
                });               
            }
        }

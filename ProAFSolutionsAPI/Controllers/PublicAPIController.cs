@@ -24,7 +24,7 @@ using System.Web;
 namespace ProAFSolutionsAPI.Controllers
 {
     //[Authorize]   
-    [RoutePrefix("api/public")]    
+    [RoutePrefix("api/public")]
     public class PublicApiController : ApiController
     {
 
