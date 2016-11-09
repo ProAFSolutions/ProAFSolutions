@@ -15,8 +15,8 @@ namespace ProAFSolutionsAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
-            config.EnableCors(cors);
+            //var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
+            //config.EnableCors(cors);
 
             // Web API configuration and services
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();
