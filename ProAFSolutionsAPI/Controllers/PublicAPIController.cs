@@ -20,6 +20,7 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
+using ProAFSolutionsAPI.Core.ActionResults;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -105,6 +106,13 @@ namespace ProAFSolutionsAPI.Controllers
             }
 
             return Ok();
+        }
+
+       
+        [Route("save-conversation")]
+        public IHttpActionResult SaveConversation()
+        {
+            return new FileActionResult(new MemoryStream(), "");
         }
     }
 }
