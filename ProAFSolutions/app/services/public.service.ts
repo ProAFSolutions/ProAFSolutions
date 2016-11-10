@@ -5,8 +5,13 @@
         sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}>;
 
         pingServer(): ng.IHttpPromise<{}>;
+<<<<<<< .mine
 
         saveConversation(conversation: Array<models.IChatMessage>): ng.IPromise<models.IFile>;
+=======
+
+        emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}>; 
+>>>>>>> .theirs
     }
 
     export class PublicService implements IPublicService {
@@ -26,6 +31,11 @@
             return this.$http.get(this.SERVICE_BASE_URL + "/register-access-stats");
         }
 
+
+
+        public emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}> {            
+            return this.$http.post(this.SERVICE_BASE_URL + "/email-conversation", { room: room, messages: messages}); 
+        }
         public saveConversation(conversation: Array<models.IChatMessage>): ng.IPromise<models.IFile> {
             return this.$http.post(this.SERVICE_BASE_URL + "/save-conversation", {
                 headers: {
@@ -39,7 +49,11 @@
                 }
             });
         }
+<<<<<<< .mine
 
+=======
+
+>>>>>>> .theirs
     }
 
     angular.module("proafsolutions").service("$publicService", PublicService);

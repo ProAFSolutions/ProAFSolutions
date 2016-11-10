@@ -20,7 +20,6 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
-using ProAFSolutionsAPI.Core.ActionResults;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -46,7 +45,7 @@ namespace ProAFSolutionsAPI.Controllers
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
                 ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));         
 
             //AppServicesProvider.EmailService.SendTextEmail(
             //    "Somebody wants to get in touch with you!",
@@ -108,11 +107,22 @@ namespace ProAFSolutionsAPI.Controllers
             return Ok();
         }
 
-       
-        [Route("save-conversation")]
-        public IHttpActionResult SaveConversation()
-        {
-            return new FileActionResult(new MemoryStream(), "");
+        /// <summary>
+        /// Email Chat Conversation
+        /// </summary> 
+        [Route("email-conversation")]
+        [HttpPost]
+        public IHttpActionResult EmailConversation(ConversationModel conversation) {          
+
+            var parameters = new Dictionary<string, object>(); 
+            parameters.Add("messages", conversation.Messages);
+
+            AppServicesProvider.EmailService.SendHtmlEmail(
+                ConfigurationManager.AppSettings["chatConversationEmailSubject"],
+                new string[] { conversation.Room },
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), parameters));        
+         
+            return Ok();
         }
     }
 }

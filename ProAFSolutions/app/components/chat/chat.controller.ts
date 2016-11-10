@@ -23,11 +23,12 @@
         enableSound(): void;
         playSound(action: string): void; //action: send|receive
         initHub(): void;
+        emailConversation(): void;
     }
 
     class ChatController implements IChatController {
 
-        static $inject = ['$scope'];
+        static $inject = ['$scope', '$publicService'];
 
         public access: number;
         public isVisible: boolean;
@@ -41,7 +42,7 @@
         public soundEnabled: boolean;
         public chatRoomHub: ChatRoomHub;
 
-        constructor(private $scope: ng.IScope) {
+        constructor(private $scope: ng.IScope, protected $publicService: services.IPublicService) {
             this.init();
         }
 
@@ -142,7 +143,16 @@
                 }               
                 (<NgAudioObject>audioFile).play();
             }
-        }       
+        }    
+        
+        public emailConversation() {
+            this.$publicService.emailConversation(this.room, this.conversation).then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                alert("chat conversation was emailed successfully");
+            },
+                (error: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
+                });
+        }   
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);
