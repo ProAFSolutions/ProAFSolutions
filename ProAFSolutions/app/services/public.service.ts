@@ -6,6 +6,8 @@
         sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}>;
 
         pingServer(): ng.IHttpPromise<{}>;
+
+        emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}>; 
     }
 
     export class PublicService implements IPublicService {
@@ -24,6 +26,9 @@
             return this.$http.get(this.SERVICE_BASE_URL + "/register-access-stats");
         }
 
+        public emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}> {            
+            return this.$http.post(this.SERVICE_BASE_URL + "/email-conversation", { room: room, messages: messages}); 
+        }
     }
 
     angular.module("proafsolutions").service("$publicService", PublicService);

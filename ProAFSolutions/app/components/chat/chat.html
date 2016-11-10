@@ -28,7 +28,7 @@
             <div ng-show="vm.isJoined" class="options-bar">
                 <i ng-click="vm.enableSound()" ng-class="{ 'icon-fontawesome-webfont-253': vm.soundEnabled, 'icon-fontawesome-webfont-156': !vm.soundEnabled }" title="{{ vm.soundEnabled ? 'Sound is On' : 'Sound is Off'}}"></i>
                 <i class="icon-fontawesome-webfont-189" title="Save Conversation"></i>
-                <i class="icon-mail" title="Email this conversation"></i>
+                <i ng-click="vm.emailConversation()" class="icon-mail" title="Email this conversation"></i>
             </div>
             <h4>Chat Room</h4>
         </div>
