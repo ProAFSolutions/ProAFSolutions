@@ -82,11 +82,11 @@ namespace proafsolutions {
                        //    controllerAs: "vm"
                        //},
 
-                       //"team": {
-                       //    templateUrl: RoutesConfig.getTemplatePath('team'),
-                       //    controller: "TeamController",
-                       //    controllerAs: "vm"
-                       //},
+                       "team": {
+                           templateUrl: RoutesConfig.getTemplatePath('team'),
+                           controller: "TeamController",
+                           controllerAs: "vm"
+                       },
 
                        //"testimonial": {
                        //    templateUrl: RoutesConfig.getTemplatePath('testimonial'),

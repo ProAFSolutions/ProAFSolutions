@@ -51,7 +51,7 @@
                         <input type="email" ng-model="vm.room" />
                     </li>
                     <li>
-                        <a class="btn btn-primary green-btn" ng-click="vm.join()">
+                        <a class="btn btn-primary green-btn" ng-show="vm.name && vm.room" ng-click="vm.join()">
                             <i class="icon-fontawesome-webfont-316"></i>&nbsp;&nbsp;Join now!
                         </a>
                     </li>
