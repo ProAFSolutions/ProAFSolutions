@@ -20,7 +20,6 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
-using ProAFSolutionsAPI.Core.ActionResults;
 using System.Text;
 using System.Net.Http.Headers;
 
