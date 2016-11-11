@@ -78,6 +78,7 @@ namespace ProAFSolutionsAPI.Controllers
         public IHttpActionResult SendOnlineStoreOffer(ContactModel contact)
         {
             var parameters = new Dictionary<string, object>();
+            parameters.Add("logo", "???");
             parameters.Add("contactModel", contact);
 
             var pdfOfferAttachment = CreateOnlineStoreOfferAttachment();            
@@ -96,6 +97,7 @@ namespace ProAFSolutionsAPI.Controllers
             var docName = "ProAFSolutions - Online Store Offer";
 
             var pdfTemplateParams = new Dictionary<string, object>();
+            pdfTemplateParams.Add("logo", "???");
             pdfTemplateParams.Add("title", "Test");
             pdfTemplateParams.Add("priceDev", "$2,000.00");
 

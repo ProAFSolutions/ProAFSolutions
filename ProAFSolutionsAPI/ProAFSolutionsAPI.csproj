@@ -309,7 +309,7 @@
     <Compile Include="Helpers\ResourceHelper.cs" />
     <Compile Include="Services\SMSService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Templates\Templates.cs" />
+    <Compile Include="Templates\TemplatesConst.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -320,8 +320,9 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Templates\Email\basic-email-template.html" />
-    <Content Include="Templates\Email\email-conversation-template.html" />
+    <Content Include="Templates\Email\en-US\basic-email-template.html" />
+    <Content Include="Templates\Email\en-US\email-offer-package-store.html" />
+    <Content Include="Templates\Email\en-US\email-conversation-template.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -361,10 +362,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Templates\Pdf\en-US\offer-package-web-app.html" />
-    <Content Include="Templates\Pdf\en-US\offer-package-personal-site.html" />
-    <Content Include="Templates\Pdf\en-US\offer-package-mobile.html" />
-    <Content Include="Templates\Pdf\en-US\offer-package-store.html" />
+    <Content Include="Templates\Pdf\en-US\pdf-offer-package-web-app.html" />
+    <Content Include="Templates\Pdf\en-US\pdf-offer-package-personal-site.html" />
+    <Content Include="Templates\Pdf\en-US\pdf-offer-package-mobile.html" />
+    <Content Include="Templates\Pdf\en-US\pdf-offer-package-store.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -384,6 +385,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Stats\" />
+    <Folder Include="Templates\Email\es-ES\" />
     <Folder Include="Templates\Pdf\es-ES\" />
   </ItemGroup>
   <ItemGroup>
