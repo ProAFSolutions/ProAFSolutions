@@ -54,7 +54,7 @@ namespace proafsolutions {
 
                        "packages": {
                            templateUrl: RoutesConfig.getTemplatePath('packages'),
-                           controller: "NewsetterController",
+                           controller: "PackagesController",
                            controllerAs: "vm"
                        },
 

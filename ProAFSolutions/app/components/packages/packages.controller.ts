@@ -1,11 +1,15 @@
 ﻿namespace proafsolutions {
 
     interface IPackagesController {
-
+        selectedPackage(packageName: string): void;
 
     }
 
-    class PackagesController {
+    class PackagesController implements IPackagesController{
+
+        public selectedPackage(packageName: string): void {
+            alert(packageName);
+        }
 
     }
 
