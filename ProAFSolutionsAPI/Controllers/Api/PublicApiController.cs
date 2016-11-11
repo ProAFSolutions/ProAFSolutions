@@ -58,6 +58,12 @@ namespace ProAFSolutionsAPI.Controllers
                     statsModel.UtcDate = DateTime.UtcNow;
                     statsList.Add(statsModel);
                     File.WriteAllText(path, JsonHelper.Serialize(statsList));
+
+                    AppServicesProvider.EmailService.SendTextEmail(
+                       "ProAF Accesss Notification!",
+                       ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
+                       string.Format("Someone from the city of {0} using this IP address {1} has accessed ProAFsolutions website.", statsModel.City, statsModel.IP)
+                   );
                 }
             }
 

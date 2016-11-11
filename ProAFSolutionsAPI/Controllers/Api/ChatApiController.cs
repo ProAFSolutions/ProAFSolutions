@@ -48,8 +48,18 @@ namespace ProAFSolutionsAPI.Controllers
         [HttpPost]
         public IHttpActionResult EmailConversation(ChatConversationModel conversation) {
 
+            var messageList = new List<ChatMessage>();
+
+            conversation.Messages.ForEach(M => messageList.Add(
+                new ChatMessage
+                {
+                    Name = M.Name.Equals(ConfigurationManager.AppSettings["adminCode"]) ? "ProAF" : M.Name,
+                    Text = M.Text
+                }));
+
             var parameters = new Dictionary<string, object>();
-            parameters.Add("messages", conversation.Messages);
+            parameters.Add("messages", messageList);
+            parameters.Add("conversationDate", DateTime.Now.ToShortDateString());
 
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatConversationEmailSubject"],
