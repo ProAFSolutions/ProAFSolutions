@@ -30,7 +30,7 @@
 
     class ChatController implements IChatController {
 
-        static $inject = ['$scope', '$publicService'];
+        static $inject = ['$scope', '$chatService'];
 
         public access: number;
         public isVisible: boolean;
@@ -44,7 +44,7 @@
         public soundEnabled: boolean;
         public chatRoomHub: ChatRoomHub;
 
-        constructor(private $scope: ng.IScope, protected $publicService: services.IPublicService) {
+        constructor(private $scope: ng.IScope, protected $chatService: services.IChatService) {
             this.init();
         }
 
@@ -148,7 +148,7 @@
         }    
         
         public emailConversationClick(): void {
-            this.$publicService.emailConversation({ room: this.room, messages: this.conversation })
+            this.$chatService.emailConversation({ room: this.room, messages: this.conversation })
                 .then((response: ng.IHttpPromiseCallbackArg<{}>) => {
                     alert("chat conversation was emailed successfully");
                 },
@@ -162,9 +162,11 @@
                 this.send();
             }
         }
+
+
         public saveConversationClick(): void {
 
-            this.$publicService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
+            this.$chatService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
                 .then((response: ng.IHttpPromiseCallbackArg<models.IFile>) => {
 
                     var fileData = response.data;

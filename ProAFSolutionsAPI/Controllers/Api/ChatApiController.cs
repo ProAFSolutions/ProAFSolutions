@@ -20,51 +20,19 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
-using ProAFSolutionsAPI.Core.ActionResults;
 using System.Text;
 using System.Net.Http.Headers;
 
 namespace ProAFSolutionsAPI.Controllers
 {
+    /// <summary>
+    /// Endpoint resposibe of handling chat data-related
+    /// </summary>  
     //[Authorize]   
-    [RoutePrefix("api/public")]
-    public class PublicApiController : ApiController
+    [RoutePrefix("api/chat")]
+    public class ChatApiController : ApiController
     {
-
-        /// <summary>
-        /// Sends a message from clients in order to be contacted by ProAFSolutions
-        /// </summary>
-        /// <param name="contact">(Required)</param>  
-        [Route("contact-us")]
-        [HttpPost]
-        public IHttpActionResult SendContactMessage(ContactModel contact)
-        {
-            var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
-                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
-
-            var parameters = new Dictionary<string, object>();
-            parameters.Add("message", message);
-
-            AppServicesProvider.EmailService.SendHtmlEmail(
-                ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
-                ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));         
-
-            //AppServicesProvider.EmailService.SendTextEmail(
-            //    "Somebody wants to get in touch with you!",
-            //    ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-            //    message
-            //);
-
-            //var phones = ConfigurationManager.AppSettings["adminPhones"].Split(new char[] { ',' });
-            //phones.ToList().ForEach(phone =>
-            //{
-            //    AppServicesProvider.SMSService.Send(message, phone);
-            //});
-
-            return Ok();
-        }
-
+       
 
         /// <summary>
         /// Gets all the users currently connected to the Hub
@@ -75,41 +43,7 @@ namespace ProAFSolutionsAPI.Controllers
         public IHttpActionResult GetChatUsers() {
             return Ok(ChatConnectionsHandler.Users);
         }
-
-        /// <summary>
-        /// Register access stats
-        /// </summary>     
-        [Route("register-access-stats")]
-        [HttpGet]
-        public IHttpActionResult Ping()
-        {
-            var httpRequest = HttpContext.Current.Request;
-
-            if (!httpRequest.Url.Host.ToLower().Equals("localhost") && !httpRequest.UserHostAddress.Equals("::1")) {
-
-                using (var client = new WebClient())
-                {
-                    string ip = ResourceHelper.GetClientIPAddress();
-                    var path = ResourceHelper.GetStatsPath("site-stats.json");
-                    var statsList = new List<StatsModel>();
-                    if (File.Exists(path))
-                    {
-                        var statsJson = File.ReadAllText(path);
-                        statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
-                    }
-
-                    var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
-                    var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
-                    statsModel.IP = ip;
-                    statsModel.UtcDate = DateTime.UtcNow;
-                    statsList.Add(statsModel);
-                    File.WriteAllText(path, JsonHelper.Serialize(statsList));
-                }
-            }
-
-            return Ok();
-        }
-
+       
         /// <summary>
         /// Email Chat Conversation
         /// </summary> 
@@ -117,13 +51,23 @@ namespace ProAFSolutionsAPI.Controllers
         [HttpPost]
         public IHttpActionResult EmailConversation(ChatConversationModel conversation) {
 
+            var messageList = new List<ChatMessage>();
+
+            conversation.Messages.ForEach(M => messageList.Add(
+                new ChatMessage
+                {
+                    Name = M.Name.Equals(ConfigurationManager.AppSettings["adminCode"]) ? "ProAF" : M.Name,
+                    Text = M.Text
+                }));
+
             var parameters = new Dictionary<string, object>();
-            parameters.Add("messages", conversation.Messages);
+            parameters.Add("messages", messageList);
+            parameters.Add("conversationDate", DateTime.Now.ToShortDateString());
 
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatConversationEmailSubject"],
                 new string[] { conversation.Room },
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), 
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", "email-conversation-template.html"), 
                 parameters
             ));
 

@@ -404,6 +404,8 @@
     <TypeScriptCompile Include="app\config\routes.ts" />
     <TypeScriptCompile Include="app\models\product.ts" />
     <TypeScriptCompile Include="app\services\dataprovider.service.ts" />
+    <TypeScriptCompile Include="app\services\chat.service.ts" />
+    <TypeScriptCompile Include="app\services\contact.service.ts" />
     <TypeScriptCompile Include="app\services\public.service.ts" />
     <TypeScriptCompile Include="app\definitely-typed\underscore.d.ts" />
   </ItemGroup>

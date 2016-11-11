@@ -15,9 +15,14 @@ namespace ProAFSolutionsAPI.Helpers
                            : HttpContext.Current.Request.PhysicalApplicationPath + "/";
         }
 
-        public static string GetEmailTemplatePath(string fileName)
+        public static string GetEmailTemplatePath(string lan, string fileName)
         {
-            return string.Format("{0}/{1}/{2}", GetApplicationPath(), "Templates/Email", fileName);
+            return string.Format("{0}/{1}/{2}/{3}", GetApplicationPath(), "Templates/Email", lan, fileName);
+        }
+
+        public static string GetPdfTemplatePath(string lan, string fileName)
+        {
+            return string.Format("{0}/{1}/{2}/{3}", GetApplicationPath(), "Templates/Pdf", lan, fileName);
         }
 
         public static string GetStatsPath(string fileName)
