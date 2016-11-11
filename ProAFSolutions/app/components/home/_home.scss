@@ -1,0 +1,32 @@
+﻿
+#home {
+        .navbar{
+            .lang-selector{
+               position: absolute;
+               right: 20px;
+
+                .lang-item {                
+                    cursor: pointer;
+                    padding-left: 5px;
+               
+                     span{
+                         color: black;
+                         font-size: 12px;
+                     }
+
+                     img {
+                        width: 24px;
+                    }                
+                }
+            }
+
+            .navbar-brand{
+                margin-bottom: 20px;
+            }
+
+            .navbar-toggle{
+                margin-top: 50px !important;
+            }
+
+        }
+  }

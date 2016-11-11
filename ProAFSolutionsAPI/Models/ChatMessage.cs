@@ -10,7 +10,7 @@ namespace ProAFSolutionsAPI.Models
 
         public String Name { get; set; }
 
-        public String Message { get; set; }
+        public String Text { get; set; }
 
     }
 }

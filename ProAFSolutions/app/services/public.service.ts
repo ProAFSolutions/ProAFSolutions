@@ -1,17 +1,17 @@
 ﻿namespace proafsolutions.services {
 
+    
+
     export interface IPublicService {
 
         sendMessage(contactMessage: models.IContactMessage): ng.IHttpPromise<{}>;
 
         pingServer(): ng.IHttpPromise<{}>;
-<<<<<<< .mine
 
-        saveConversation(conversation: Array<models.IChatMessage>): ng.IPromise<models.IFile>;
-=======
+        saveConversation(conversation: models.IConversation, fileName: string): ng.IHttpPromise<models.IFile>;
 
-        emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}>; 
->>>>>>> .theirs
+        emailConversation(conversation: models.IConversation): ng.IHttpPromise<{}>; 
+
     }
 
     export class PublicService implements IPublicService {
@@ -31,29 +31,21 @@
             return this.$http.get(this.SERVICE_BASE_URL + "/register-access-stats");
         }
 
-
-
-        public emailConversation(room: string, messages: Array<models.IChatMessage>): ng.IHttpPromise<{}> {            
-            return this.$http.post(this.SERVICE_BASE_URL + "/email-conversation", { room: room, messages: messages}); 
+        public emailConversation(conversation: models.IConversation): ng.IHttpPromise<{}> {            
+            return this.$http.post(this.SERVICE_BASE_URL + "/email-conversation", conversation); 
         }
-        public saveConversation(conversation: Array<models.IChatMessage>): ng.IPromise<models.IFile> {
-            return this.$http.post(this.SERVICE_BASE_URL + "/save-conversation", {
-                headers: {
-                    "Content-Type": 'application/json'
-                },
-                responseType: 'arraybuffer',
-                cache: false,
-                data: { messages: conversation },
+
+        public saveConversation(conversation: models.IConversation, fileName: string): ng.IHttpPromise<models.IFile> {
+            return this.$http({
+                url: this.SERVICE_BASE_URL + "/save-conversation",
+                method: 'POST',
+                data: conversation,
+                responseType: 'text',
                 transformResponse: (fileContent: any) => {
-                    return new File(fileContent, name);
+                    return new models.File(fileContent, fileName);
                 }
             });
         }
-<<<<<<< .mine
-
-=======
-
->>>>>>> .theirs
     }
 
     angular.module("proafsolutions").service("$publicService", PublicService);

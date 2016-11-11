@@ -20,6 +20,9 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
+using ProAFSolutionsAPI.Core.ActionResults;
+using System.Text;
+using System.Net.Http.Headers;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -112,17 +115,63 @@ namespace ProAFSolutionsAPI.Controllers
         /// </summary> 
         [Route("email-conversation")]
         [HttpPost]
-        public IHttpActionResult EmailConversation(ConversationModel conversation) {          
+        public IHttpActionResult EmailConversation(ChatConversationModel conversation) {
 
-            var parameters = new Dictionary<string, object>(); 
+            var parameters = new Dictionary<string, object>();
             parameters.Add("messages", conversation.Messages);
 
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatConversationEmailSubject"],
                 new string[] { conversation.Room },
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), parameters));        
-         
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), 
+                parameters
+            ));
+
             return Ok();
+        }
+
+        /// <summary>
+        /// Returns a .txt file witn the conversation inside of it
+        /// </summary> 
+        [Route("save-conversation")]
+        [HttpPost]
+        public HttpResponseMessage SaveConversation(ChatConversationModel conversation)
+        {
+            if(conversation != null && conversation.Messages.Count > 0)
+            {
+                using (var stream = new MemoryStream()) {
+
+                    stream.Position = 0;
+
+                    StreamWriter conversationWriter = new StreamWriter(stream, Encoding.UTF8);
+                    conversationWriter.WriteLine("Chat conversation as of " + DateTime.Now.ToShortDateString());
+                    conversationWriter.WriteLine("******************************************************************************************************");
+
+                    conversation.Messages.ForEach(M =>
+                    {
+                        conversationWriter.WriteLine(string.Format("{0}: {1}", M.Name.Equals(ConfigurationManager.AppSettings["adminCode"]) ? "ProAF" : M.Name, M.Text));
+                        conversationWriter.WriteLine("------------------------------------------------------------------------------------------------------");
+                    });
+
+                    conversationWriter.Flush();                               
+
+                    var result = new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new ByteArrayContent(stream.GetBuffer())
+                    };
+
+                    result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
+                    {
+                        FileName = "conversation.txt"
+                    };
+                    result.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+
+                    return result;
+                }
+                
+            }
+
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
     }
 }

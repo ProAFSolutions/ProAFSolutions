@@ -149,18 +149,18 @@
     <Content Include="assets\icon-fonts\icons.css" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
-    <Content Include="css\custom.css">
-      <DependentUpon>custom.scss</DependentUpon>
-    </Content>
-    <Content Include="css\custom.min.css">
-      <DependentUpon>custom.css</DependentUpon>
-    </Content>
     <Content Include="css\jquery.vegas.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\owl.theme.css" />
     <Content Include="css\pixeden-icons.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
+    <Content Include="css\styles.css">
+      <DependentUpon>styles.scss</DependentUpon>
+    </Content>
+    <Content Include="css\styles.min.css">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
     <Content Include="images\team\alain.jpg" />
     <Content Include="www\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
@@ -182,11 +182,26 @@
     <Content Include="assets\icon-fonts\fonts\712-icon-fonts.woff" />
     <Content Include="assets\i18n\en-US.json" />
     <Content Include="assets\i18n\es-ES.json" />
+    <Content Include="app\components\home\_home.scss" />
+    <Content Include="app\components\about\_about.scss" />
+    <Content Include="app\components\chat\_chat.scss" />
+    <Content Include="app\components\contact\_contact.scss" />
+    <Content Include="app\components\features\_features.scss" />
+    <Content Include="app\components\focus\_focus.scss" />
+    <Content Include="app\components\footer\_footer.scss" />
+    <Content Include="app\components\newsetter\_newsetter.scss" />
+    <Content Include="app\components\packages\_packages.scss" />
+    <Content Include="app\components\products\_products.scss" />
+    <Content Include="app\components\purchase\_purchase.scss" />
+    <Content Include="app\components\stats\_stats.scss" />
+    <Content Include="app\components\team\_team.scss" />
+    <Content Include="app\components\testimonial\_testimonial.scss" />
+    <Content Include="app\components\works\_works.scss" />
+    <Content Include="app\components\separator\_separator.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="css\custom.scss" />
     <Content Include="data\en-US\products.json" />
     <Content Include="www\fonts\712-icon-fonts.eot" />
     <Content Include="www\fonts\712-icon-fonts.ttf" />
@@ -194,6 +209,7 @@
     <Content Include="data\en-US\team.json" />
     <Content Include="data\es-ES\products.json" />
     <Content Include="data\es-ES\team.json" />
+    <Content Include="css\styles.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -369,8 +385,10 @@
     <TypeScriptCompile Include="app\definitely-typed\angular-cookie.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\audio.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />
+    <TypeScriptCompile Include="app\models\conversation.ts" />
     <TypeScriptCompile Include="app\models\contact-message.ts" />
     <TypeScriptCompile Include="app\models\chat-message.ts" />
+    <TypeScriptCompile Include="app\models\file.ts" />
     <TypeScriptCompile Include="app\models\team-member.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />

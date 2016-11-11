@@ -23,7 +23,8 @@
         enableSound(): void;
         playSound(action: string): void; //action: send|receive
         initHub(): void;
-        emailConversation(): void;
+        emailConversationClick(): void;
+        saveConversationClick(): void;
     }
 
     class ChatController implements IChatController {
@@ -145,14 +146,46 @@
             }
         }    
         
-        public emailConversation() {
-            this.$publicService.emailConversation(this.room, this.conversation).then((response: ng.IHttpPromiseCallbackArg<{}>) => {
-                alert("chat conversation was emailed successfully");
-            },
+        public emailConversationClick(): void {
+            this.$publicService.emailConversation({ room: this.room, messages: this.conversation })
+                .then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("chat conversation was emailed successfully");
+                },
                 (error: ng.IHttpPromiseCallbackArg<{}>) => {
                     alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
                 });
         }   
+
+        public saveConversationClick(): void {
+
+            this.$publicService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
+                .then((response: ng.IHttpPromiseCallbackArg<models.IFile>) => {
+
+                    var fileData = response.data;
+
+                    var blob = new Blob([fileData.content], { type: 'text/plain' });
+
+                    //for IE
+                    if (window.navigator.msSaveOrOpenBlob) {
+                        window.navigator.msSaveBlob(blob, fileData.fileName);
+                    }
+
+                    //for Chrome, Safari, Firefox
+                    else {                        
+                        var url = URL.createObjectURL(blob);
+                        var a = window.document.createElement('a');
+                        a.href = url;                       
+                        a.setAttribute("download", fileData.fileName);
+                        a.target = '_blank';
+                        a.click();
+                    }
+                },
+                (error: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
+                });
+        } 
+
+       
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);

@@ -10,7 +10,7 @@ namespace ProAFSolutionsAPI.Models
     {
         public string Room { get; set;  }
 
-        public List<ChatMessage> Conversation { get; set; }
+        public List<ChatMessage> Messages { get; set; }
 
     }
 }

@@ -57,7 +57,7 @@ var config = {
         'css/pixeden-icons.css',   
         'css/site.css',
         'css/responsive.css',
-        'css/custom.css'
+        'css/styles.css'
     ],
     html: [
         'app/components/**/*.html'

@@ -25,6 +25,7 @@ namespace ProAFSolutionsAPI
             if (Request.Headers.AllKeys.Contains("Origin") && Request.HttpMethod == "OPTIONS")
             {
                 Response.Flush();
+                Response.End();
             }
         }
     }
