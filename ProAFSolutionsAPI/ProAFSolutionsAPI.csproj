@@ -34,6 +34,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\ProAFSolutionsAPI.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -273,10 +274,11 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
-    <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\PublicApiController.cs" />
-    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Controllers\Api\AccountController.cs" />
+    <Compile Include="Controllers\Api\ChatApiController.cs" />
+    <Compile Include="Controllers\Mvc\HomeController.cs" />
+    <Compile Include="Controllers\Api\ContactApiController.cs" />
+    <Compile Include="Controllers\Api\PublicApiController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -357,10 +359,10 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Templates\Pdf\offer-package-web-app.html" />
-    <Content Include="Templates\Pdf\offer-package-web-site.html" />
-    <Content Include="Templates\Pdf\offer-package-mobile.html" />
-    <Content Include="Templates\Pdf\offer-package-store.html" />
+    <Content Include="Templates\Pdf\en-US\offer-package-web-app.html" />
+    <Content Include="Templates\Pdf\en-US\offer-package-web-site.html" />
+    <Content Include="Templates\Pdf\en-US\offer-package-mobile.html" />
+    <Content Include="Templates\Pdf\en-US\offer-package-store.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -380,6 +382,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\Stats\" />
+    <Folder Include="Templates\Pdf\es-ES\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
