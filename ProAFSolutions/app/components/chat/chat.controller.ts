@@ -24,6 +24,7 @@
         playSound(action: string): void; //action: send|receive
         initHub(): void;
         emailConversation(): void;
+        messageTextKeyPress(e): void;
     }
 
     class ChatController implements IChatController {
@@ -145,7 +146,7 @@
             }
         }    
         
-        public emailConversation() {
+        public emailConversation(): void {
             this.$publicService.emailConversation(this.room, this.conversation).then((response: ng.IHttpPromiseCallbackArg<{}>) => {
                 alert("chat conversation was emailed successfully");
             },
@@ -153,6 +154,12 @@
                     alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
                 });
         }   
+
+        public messageTextKeyPress(e): void {
+            if (e.keyCode == '13') {
+                this.send();
+            }
+        }
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);
