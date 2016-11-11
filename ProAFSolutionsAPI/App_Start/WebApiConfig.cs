@@ -7,6 +7,7 @@ using Microsoft.Owin.Security.OAuth;
 using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
 using Newtonsoft.Json.Converters;
+using System.Configuration;
 
 namespace ProAFSolutionsAPI
 {
@@ -14,8 +15,8 @@ namespace ProAFSolutionsAPI
     {
         public static void Register(HttpConfiguration config)
         {
-            var cors = new EnableCorsAttribute("*", "*", "*");
-            config.EnableCors(cors);
+            //var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
+            //config.EnableCors(cors);
 
             // Web API configuration and services
             config.Formatters.JsonFormatter.SerializerSettings.ContractResolver = new CamelCasePropertyNamesContractResolver();

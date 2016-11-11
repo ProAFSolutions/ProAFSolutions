@@ -23,11 +23,14 @@
         enableSound(): void;
         playSound(action: string): void; //action: send|receive
         initHub(): void;
+        emailConversationClick(): void;
+        saveConversationClick(): void;
+        messageTextKeyPress(e): void;
     }
 
     class ChatController implements IChatController {
 
-        static $inject = ['$scope'];
+        static $inject = ['$scope', '$publicService'];
 
         public access: number;
         public isVisible: boolean;
@@ -41,7 +44,7 @@
         public soundEnabled: boolean;
         public chatRoomHub: ChatRoomHub;
 
-        constructor(private $scope: ng.IScope) {
+        constructor(private $scope: ng.IScope, protected $publicService: services.IPublicService) {
             this.init();
         }
 
@@ -142,7 +145,51 @@
                 }               
                 (<NgAudioObject>audioFile).play();
             }
-        }       
+        }    
+        
+        public emailConversationClick(): void {
+            this.$publicService.emailConversation({ room: this.room, messages: this.conversation })
+                .then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("chat conversation was emailed successfully");
+                },
+                (error: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
+                });
+        }   
+
+        public messageTextKeyPress(e): void {
+            if (e.keyCode == '13') {
+                this.send();
+            }
+        }
+        public saveConversationClick(): void {
+
+            this.$publicService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
+                .then((response: ng.IHttpPromiseCallbackArg<models.IFile>) => {
+
+                    var fileData = response.data;
+
+                    var blob = new Blob([fileData.content], { type: 'text/plain' });
+
+                    //for IE
+                    if (window.navigator.msSaveOrOpenBlob) {
+                        window.navigator.msSaveBlob(blob, fileData.fileName);
+                    }
+
+                    //for Chrome, Safari, Firefox
+                    else {                        
+                        var url = URL.createObjectURL(blob);
+                        var a = window.document.createElement('a');
+                        a.href = url;                       
+                        a.setAttribute("download", fileData.fileName);
+                        a.target = '_blank';
+                        a.click();
+                    }
+                },
+                (error: ng.IHttpPromiseCallbackArg<{}>) => {
+                    alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
+                });
+        } 
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);

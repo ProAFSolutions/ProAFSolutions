@@ -10,7 +10,7 @@ namespace ProAFSolutionsAPI.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.Title = "Home Page";
+            ViewBag.Title = "ProAFSolutions API";
 
             return View();
         }

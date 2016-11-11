@@ -20,11 +20,14 @@ using ProAFSolutionsAPI.Helpers;
 using System.IO;
 using ProAFSolutionsAPI.Util;
 using System.Web;
+using ProAFSolutionsAPI.Core.ActionResults;
+using System.Text;
+using System.Net.Http.Headers;
 
 namespace ProAFSolutionsAPI.Controllers
 {
     //[Authorize]   
-    [RoutePrefix("api/public")]    
+    [RoutePrefix("api/public")]
     public class PublicApiController : ApiController
     {
 
@@ -45,7 +48,7 @@ namespace ProAFSolutionsAPI.Controllers
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
                 ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));         
 
             //AppServicesProvider.EmailService.SendTextEmail(
             //    "Somebody wants to get in touch with you!",
@@ -77,36 +80,98 @@ namespace ProAFSolutionsAPI.Controllers
         /// Register access stats
         /// </summary>     
         [Route("register-access-stats")]
+        [HttpGet]
         public IHttpActionResult Ping()
         {
-            var path = ResourceHelper.GetStatsPath("site-stats.json");
+            var httpRequest = HttpContext.Current.Request;
 
-            var statsList = new List<StatsModel>();
+            if (!httpRequest.Url.Host.ToLower().Equals("localhost") && !httpRequest.UserHostAddress.Equals("::1")) {
 
-            if (File.Exists(path))
-            {
-                var statsJson = File.ReadAllText(path);
+                using (var client = new WebClient())
+                {
+                    string ip = ResourceHelper.GetClientIPAddress();
+                    var path = ResourceHelper.GetStatsPath("site-stats.json");
+                    var statsList = new List<StatsModel>();
+                    if (File.Exists(path))
+                    {
+                        var statsJson = File.ReadAllText(path);
+                        statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
+                    }
 
-                statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
+                    var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
+                    var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
+                    statsModel.IP = ip;
+                    statsModel.UtcDate = DateTime.UtcNow;
+                    statsList.Add(statsModel);
+                    File.WriteAllText(path, JsonHelper.Serialize(statsList));
+                }
             }
 
-            string ip = !HttpContext.Current.Request.UserHostAddress.Equals("::1") ?
-                ResourceHelper.GetIP4Address() :
-                "75.115.76.92";
+            return Ok();
+        }
 
-            var client = new WebClient();
+        /// <summary>
+        /// Email Chat Conversation
+        /// </summary> 
+        [Route("email-conversation")]
+        [HttpPost]
+        public IHttpActionResult EmailConversation(ChatConversationModel conversation) {
 
-            var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
+            var parameters = new Dictionary<string, object>();
+            parameters.Add("messages", conversation.Messages);
 
-            var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
-            statsModel.IP = ip;
-            statsModel.UtcDate = DateTime.UtcNow;
-
-            statsList.Add(statsModel);
-
-            File.WriteAllText(path, JsonHelper.Serialize(statsList));
+            AppServicesProvider.EmailService.SendHtmlEmail(
+                ConfigurationManager.AppSettings["chatConversationEmailSubject"],
+                new string[] { conversation.Room },
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), 
+                parameters
+            ));
 
             return Ok();
+        }
+
+        /// <summary>
+        /// Returns a .txt file witn the conversation inside of it
+        /// </summary> 
+        [Route("save-conversation")]
+        [HttpPost]
+        public HttpResponseMessage SaveConversation(ChatConversationModel conversation)
+        {
+            if(conversation != null && conversation.Messages.Count > 0)
+            {
+                using (var stream = new MemoryStream()) {
+
+                    stream.Position = 0;
+
+                    StreamWriter conversationWriter = new StreamWriter(stream, Encoding.UTF8);
+                    conversationWriter.WriteLine("Chat conversation as of " + DateTime.Now.ToShortDateString());
+                    conversationWriter.WriteLine("******************************************************************************************************");
+
+                    conversation.Messages.ForEach(M =>
+                    {
+                        conversationWriter.WriteLine(string.Format("{0}: {1}", M.Name.Equals(ConfigurationManager.AppSettings["adminCode"]) ? "ProAF" : M.Name, M.Text));
+                        conversationWriter.WriteLine("------------------------------------------------------------------------------------------------------");
+                    });
+
+                    conversationWriter.Flush();                               
+
+                    var result = new HttpResponseMessage(HttpStatusCode.OK)
+                    {
+                        Content = new ByteArrayContent(stream.GetBuffer())
+                    };
+
+                    result.Content.Headers.ContentDisposition = new ContentDispositionHeaderValue("attachment")
+                    {
+                        FileName = "conversation.txt"
+                    };
+                    result.Content.Headers.ContentType = new MediaTypeHeaderValue("text/plain");
+
+                    return result;
+                }
+                
+            }
+
+            return new HttpResponseMessage(HttpStatusCode.NoContent);
         }
     }
 }

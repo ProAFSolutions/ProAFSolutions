@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "Product",
+    "description": "This is a desc",
+    "picUrl": "/images/prod.jpg"
+  },
+
+  {
+    "name": "Product2",
+    "description": "This is a desc",
+    "picUrl": "/images/prod2.jpg"
+  },
+
+  {
+    "name": "Product3",
+    "description": "This is a desc",
+    "picUrl": "/images/prod3.jpg"
+  },
+
+  {
+    "name": "Product4",
+    "description": "This is a desc",
+    "picUrl": "/images/prod4.jpg"
+  }
+
+]
+

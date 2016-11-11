@@ -17,42 +17,29 @@ namespace ProAFSolutionsAPI.Helpers
 
         public static string GetEmailTemplatePath(string fileName)
         {
-            return string.Format("{0}/{1}/{2}", GetApplicationPath(), "Resources", fileName);
+            return string.Format("{0}/{1}/{2}", GetApplicationPath(), "Templates/Email", fileName);
         }
 
         public static string GetStatsPath(string fileName)
         {
-            return string.Format("{0}/{1}/{2}", GetApplicationPath(), "Resources/Stats", fileName);
-        }
+            return string.Format("{0}/{1}/{2}", GetApplicationPath(), "App_Data/Stats", fileName);
+        }       
 
-        public static string GetIP4Address()
+        public static string GetClientIPAddress()
         {
-            string IP4Address = String.Empty;
+            var httpRequest = HttpContext.Current.Request;
+            string ip = String.Empty;
 
-            foreach (IPAddress IPA in Dns.GetHostAddresses(HttpContext.Current.Request.UserHostAddress))
-            {
-                if (IPA.AddressFamily.ToString() == "InterNetwork")
-                {
-                    IP4Address = IPA.ToString();
-                    break;
-                }
-            }
+            if (httpRequest.ServerVariables["HTTP_X_FORWARDED_FOR"] != null)
+                ip = httpRequest.ServerVariables["HTTP_X_FORWARDED_FOR"].ToString();
 
-            if (IP4Address != String.Empty)
-            {
-                return IP4Address;
-            }
+            else if (!String.IsNullOrWhiteSpace(httpRequest.UserHostAddress))
+                ip = httpRequest.UserHostAddress;
 
-            foreach (IPAddress IPA in Dns.GetHostAddresses(Dns.GetHostName()))
-            {
-                if (IPA.AddressFamily.ToString() == "InterNetwork")
-                {
-                    IP4Address = IPA.ToString();
-                    break;
-                }
-            }
+            if (ip == "::1")
+                ip = "127.0.0.1";
 
-            return IP4Address;
+            return ip;
         }
     }
 }

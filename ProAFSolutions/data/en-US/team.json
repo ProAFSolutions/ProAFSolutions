@@ -1,0 +1,27 @@
+﻿[
+  {
+    "name": "Alejandro Clavijo",
+    "title":  "Funder & Software Engineer",
+    "description": "This is a desc",
+    "picUrl": "/images/team/alex.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/alexclavijo85"]
+  },
+
+  {
+    "name": "Filiberto Lopez",
+    "title":  "Funder & Software Analyst",
+    "description": "This is a desc",
+    "picUrl": "/images/team/fily.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/filibertolopez30"]
+  },
+
+  {
+    "name": "Alain Espaigne",
+    "title": "Software Developer & Data Analyst",
+    "description": "This is a desc",
+    "picUrl": "/images/team/alain.jpg",
+    "socialMediaUrls": ["https://www.linkedin.com/in/alain-espaigne-00903484"]
+  }
+
+]
+

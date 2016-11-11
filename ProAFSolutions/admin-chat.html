@@ -29,6 +29,12 @@
                 chatRoomHub.server.sendMessage($("#admin-code").val(), $("#message-text").val(), $("#room-code").val());
                 $("#message-text").val("");
             });
+
+            $("#message-text").keypress(function (e) {
+                if (e.keyCode == '13') {
+                    $("#send-button").click();
+                }
+            })
         });     
     </script>
 </head>

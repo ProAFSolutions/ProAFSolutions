@@ -105,6 +105,19 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Cors.5.2.3\lib\net45\System.Web.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -114,6 +127,14 @@
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Cors.5.2.3\lib\net45\System.Web.Http.Cors.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -128,18 +149,19 @@
     <Content Include="assets\icon-fonts\icons.css" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
-    <Content Include="css\custom.css">
-      <DependentUpon>custom.scss</DependentUpon>
-    </Content>
-    <Content Include="css\custom.min.css">
-      <DependentUpon>custom.css</DependentUpon>
-    </Content>
     <Content Include="css\jquery.vegas.css" />
     <Content Include="css\owl.carousel.css" />
     <Content Include="css\owl.theme.css" />
     <Content Include="css\pixeden-icons.css" />
     <Content Include="css\responsive.css" />
     <Content Include="css\site.css" />
+    <Content Include="css\styles.css">
+      <DependentUpon>styles.scss</DependentUpon>
+    </Content>
+    <Content Include="css\styles.min.css">
+      <DependentUpon>styles.css</DependentUpon>
+    </Content>
+    <Content Include="images\team\alain.jpg" />
     <Content Include="www\fonts\712-icon-fonts.svg" />
     <Content Include="images\i18n\en.gif" />
     <Content Include="images\i18n\es.gif" />
@@ -160,16 +182,34 @@
     <Content Include="assets\icon-fonts\fonts\712-icon-fonts.woff" />
     <Content Include="assets\i18n\en-US.json" />
     <Content Include="assets\i18n\es-ES.json" />
+    <Content Include="app\components\home\_home.scss" />
+    <Content Include="app\components\about\_about.scss" />
+    <Content Include="app\components\chat\_chat.scss" />
+    <Content Include="app\components\contact\_contact.scss" />
+    <Content Include="app\components\features\_features.scss" />
+    <Content Include="app\components\focus\_focus.scss" />
+    <Content Include="app\components\footer\_footer.scss" />
+    <Content Include="app\components\newsetter\_newsetter.scss" />
+    <Content Include="app\components\packages\_packages.scss" />
+    <Content Include="app\components\products\_products.scss" />
+    <Content Include="app\components\purchase\_purchase.scss" />
+    <Content Include="app\components\stats\_stats.scss" />
+    <Content Include="app\components\team\_team.scss" />
+    <Content Include="app\components\testimonial\_testimonial.scss" />
+    <Content Include="app\components\works\_works.scss" />
+    <Content Include="app\components\separator\_separator.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
-    <Content Include="css\custom.scss" />
-    <Content Include="data\products.json" />
+    <Content Include="data\en-US\products.json" />
     <Content Include="www\fonts\712-icon-fonts.eot" />
     <Content Include="www\fonts\712-icon-fonts.ttf" />
     <Content Include="www\fonts\712-icon-fonts.woff" />
-    <Content Include="data\team.json" />
+    <Content Include="data\en-US\team.json" />
+    <Content Include="data\es-ES\products.json" />
+    <Content Include="data\es-ES\team.json" />
+    <Content Include="css\styles.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -345,8 +385,10 @@
     <TypeScriptCompile Include="app\definitely-typed\angular-cookie.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\audio.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />
+    <TypeScriptCompile Include="app\models\conversation.ts" />
     <TypeScriptCompile Include="app\models\contact-message.ts" />
     <TypeScriptCompile Include="app\models\chat-message.ts" />
+    <TypeScriptCompile Include="app\models\file.ts" />
     <TypeScriptCompile Include="app\models\team-member.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />

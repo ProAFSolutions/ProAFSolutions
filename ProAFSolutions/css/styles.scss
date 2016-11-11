@@ -1,0 +1,46 @@
+﻿
+
+//Colors Definition
+$color-blue: #3ab0e2;
+$color-blue2: #337ab7;
+$color-green: #20AA73;
+$color-red: #e96656;
+$color-yellow: #E7AC44;
+$color-gray: #818181;
+$color-light-gray: #ccc;
+
+body {
+
+    @import "../app/components/about/about";
+
+    @import "../app/components/chat/chat";
+
+    @import "../app/components/contact/contact";
+
+    @import "../app/components/features/features";
+
+    @import "../app/components/focus/focus";
+
+    @import "../app/components/footer/footer";
+
+    @import "../app/components/home/home";
+
+    @import "../app/components/newsetter/newsetter";
+
+    @import "../app/components/packages/packages";
+
+    @import "../app/components/products/products";
+
+    @import "../app/components/purchase/purchase";
+
+    @import "../app/components/separator/separator";
+
+    @import "../app/components/stats/stats";
+
+    @import "../app/components/team/team";
+
+    @import "../app/components/testimonial/testimonial";
+
+    @import "../app/components/works/works";
+
+}
