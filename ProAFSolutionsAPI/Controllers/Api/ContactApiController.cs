@@ -22,9 +22,14 @@ using ProAFSolutionsAPI.Util;
 using System.Web;
 using System.Text;
 using System.Net.Http.Headers;
+using ProAFSolutionsAPI.Templates;
+using static ProAFSolutionsAPI.Helpers.PDFHelper;
 
 namespace ProAFSolutionsAPI.Controllers
 {
+    /// <summary>
+    /// Endpoint resposibe of handling logic to exchange information with our users
+    /// </summary> 
     //[Authorize]   
     [RoutePrefix("api/contact")]
     public class ContactApiController : ApiController
@@ -47,7 +52,7 @@ namespace ProAFSolutionsAPI.Controllers
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
                 ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("basic-email-template.html"), parameters));         
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", "basic-email-template.html"), parameters));         
 
             //AppServicesProvider.EmailService.SendTextEmail(
             //    "Somebody wants to get in touch with you!",
@@ -64,7 +69,43 @@ namespace ProAFSolutionsAPI.Controllers
             return Ok();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="contact">(Required)</param>  
+        [Route("send-store-offer")]
+        [HttpPost]
+        public IHttpActionResult SendOnlineStoreOffer(ContactModel contact)
+        {
+            var parameters = new Dictionary<string, object>();
+            parameters.Add("contactModel", contact);
 
-       
+            var pdfOfferAttachment = CreateOnlineStoreOfferAttachment();            
+
+            AppServicesProvider.EmailService.SendHtmlEmail(
+                "Testing Offer",
+                ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", TemplatesConst.EMAIL_OFFER_STORE), parameters),
+                new MailAttachment[] { pdfOfferAttachment });
+
+            return Ok();
+        }
+
+        private MailAttachment CreateOnlineStoreOfferAttachment() {
+
+            var docName = "ProAFSolutions - Online Store Offer";
+
+            var pdfTemplateParams = new Dictionary<string, object>();
+            pdfTemplateParams.Add("title", "Test");
+            pdfTemplateParams.Add("priceDev", "$2,000.00");
+
+            var data = PDFHelper.ConvertToPdf(DataType.HTML, 
+                                              NVelocityTemplateUtil.BuildHtmlBody(TemplatesConst.PDF_OFFER_STORE, pdfTemplateParams), docName);
+
+            return  new MailAttachment(new MemoryStream(data), docName);
+        }
+
+
+
     }
 }

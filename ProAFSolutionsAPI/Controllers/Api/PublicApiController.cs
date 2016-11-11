@@ -25,6 +25,9 @@ using System.Net.Http.Headers;
 
 namespace ProAFSolutionsAPI.Controllers
 {
+    /// <summary>
+    /// Endpoint resposibe of exposing public operations 
+    /// </summary>  
     //[Authorize]   
     [RoutePrefix("api/public")]
     public class PublicApiController : ApiController

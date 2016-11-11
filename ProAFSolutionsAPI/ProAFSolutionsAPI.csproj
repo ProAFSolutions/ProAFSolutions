@@ -34,7 +34,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <DocumentationFile>bin\ProAFSolutionsAPI.XML</DocumentationFile>
+    <DocumentationFile>
+    </DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -308,6 +309,7 @@
     <Compile Include="Helpers\ResourceHelper.cs" />
     <Compile Include="Services\SMSService.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="Templates\Templates.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
@@ -360,7 +362,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Templates\Pdf\en-US\offer-package-web-app.html" />
-    <Content Include="Templates\Pdf\en-US\offer-package-web-site.html" />
+    <Content Include="Templates\Pdf\en-US\offer-package-personal-site.html" />
     <Content Include="Templates\Pdf\en-US\offer-package-mobile.html" />
     <Content Include="Templates\Pdf\en-US\offer-package-store.html" />
     <Content Include="Web.config" />

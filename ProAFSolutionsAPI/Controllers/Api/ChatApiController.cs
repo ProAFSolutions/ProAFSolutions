@@ -25,6 +25,9 @@ using System.Net.Http.Headers;
 
 namespace ProAFSolutionsAPI.Controllers
 {
+    /// <summary>
+    /// Endpoint resposibe of handling chat data-related
+    /// </summary>  
     //[Authorize]   
     [RoutePrefix("api/chat")]
     public class ChatApiController : ApiController
@@ -54,7 +57,7 @@ namespace ProAFSolutionsAPI.Controllers
             AppServicesProvider.EmailService.SendHtmlEmail(
                 ConfigurationManager.AppSettings["chatConversationEmailSubject"],
                 new string[] { conversation.Room },
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("email-conversation-template.html"), 
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", "email-conversation-template.html"), 
                 parameters
             ));
 
