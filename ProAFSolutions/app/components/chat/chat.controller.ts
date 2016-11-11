@@ -162,6 +162,8 @@
                 this.send();
             }
         }
+
+
         public saveConversationClick(): void {
 
             this.$publicService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
