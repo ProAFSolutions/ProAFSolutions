@@ -25,6 +25,7 @@
         initHub(): void;
         emailConversationClick(): void;
         saveConversationClick(): void;
+        messageTextKeyPress(e): void;
     }
 
     class ChatController implements IChatController {
@@ -156,6 +157,11 @@
                 });
         }   
 
+        public messageTextKeyPress(e): void {
+            if (e.keyCode == '13') {
+                this.send();
+            }
+        }
         public saveConversationClick(): void {
 
             this.$publicService.saveConversation({ room: this.room, messages: this.conversation }, "conversation")
@@ -184,8 +190,6 @@
                     alert("Sorry an error has occurred. Please try again if the problem persists contact the administrator.");
                 });
         } 
-
-       
     }
 
     angular.module("proafsolutions").controller("ChatController", ChatController);

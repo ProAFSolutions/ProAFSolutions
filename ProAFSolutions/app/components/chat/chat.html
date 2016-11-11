@@ -76,7 +76,7 @@
                 </ul>
             </div>
             <div class="chat-input">
-                <input type="text" ng-model="vm.message" />
+                <input type="text" ng-model="vm.message" ng-keypress="vm.messageTextKeyPress($event)"/>
                 <a class="btn btn-primary" ng-disabled="!vm.message" ng-click="vm.send()">
                     <i class="icon-paperplane"></i>&nbsp;&nbsp;Send
                 </a>
