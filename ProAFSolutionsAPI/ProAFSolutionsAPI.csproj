@@ -312,6 +312,7 @@
     <Compile Include="Services\EmailService.cs" />
     <Compile Include="Helpers\ResourceHelper.cs" />
     <Compile Include="Services\SMSService.cs" />
+    <Compile Include="Services\StatsService.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Templates\TemplatesConst.cs" />
   </ItemGroup>
@@ -359,6 +360,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="App_Data\Stats\ProAF-Stats-Report.xlsx" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -396,12 +398,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="settings.config" />
+    <Content Include="settings.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Stats\" />
     <Folder Include="Templates\Email\es-ES\" />
     <Folder Include="Templates\Pdf\es-ES\" />
+    <Folder Include="Views\StatsReport\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
