@@ -76,7 +76,7 @@
 
   "packages.package2.title": "Aplicaciones Moviles",
   "packages.package2.section1": "Multiplataforma(iOS/Android/Win)",
-  "packages.package2.section2": "Web Api",
+  "packages.package2.section2": "Servicios Web (Web Api)",
   "packages.package2.section3": "Base de Datos(SQLite)",
   "packages.package2.section4": "Publicación de la aplicación en Google Play, Apple Store y Windows Store",
   "packages.package2.section5": "Fácil mantenimiento (misma lógica de negocio compartido entre las plataformas)",
