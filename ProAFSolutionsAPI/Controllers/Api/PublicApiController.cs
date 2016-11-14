@@ -46,21 +46,16 @@ namespace ProAFSolutionsAPI.Controllers
 
                 using (var client = new WebClient())
                 {
-                    string ip = ResourceHelper.GetClientIPAddress();
-                    var path = ResourceHelper.GetStatsPath("site-stats.json");
-                    var statsList = new List<StatsModel>();
-                    if (File.Exists(path))
-                    {
-                        var statsJson = File.ReadAllText(path);
-                        statsList = JsonHelper.Deserialize<List<StatsModel>>(statsJson);
-                    }
+                    string ip = ResourceHelper.GetClientIPAddress();                                        
+                    var statsList = AppServicesProvider.StatsService.GetAccessStats();
 
                     var statsData = client.DownloadString(string.Format(ConfigurationManager.AppSettings["ipApiUrl"], ip));
                     var statsModel = JsonHelper.Deserialize<StatsModel>(statsData);
                     statsModel.IP = ip;
                     statsModel.UtcDate = DateTime.UtcNow;
                     statsList.Add(statsModel);
-                    File.WriteAllText(path, JsonHelper.Serialize(statsList));
+
+                    AppServicesProvider.StatsService.WriteAccessStats(statsList);                    
 
                     AppServicesProvider.EmailService.SendTextEmail(
                        "ProAF Accesss Notification!",

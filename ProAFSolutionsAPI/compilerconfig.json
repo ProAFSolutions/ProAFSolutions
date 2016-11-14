@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Templates/Pdf/css/styles.css",
+    "inputFile": "Templates/Pdf/css/styles.scss"
+  },
+  {
+    "outputFile": "Content/pdf-templates.css",
+    "inputFile": "Content/pdf-templates.scss"
+  }
+]

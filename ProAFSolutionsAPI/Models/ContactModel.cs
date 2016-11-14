@@ -12,5 +12,6 @@ namespace ProAFSolutionsAPI.Models
         public string Subject { set; get; }
         public string Message { set; get; }
         public string Phone { set; get; }
+        public string Language { set; get; }
     }
 }

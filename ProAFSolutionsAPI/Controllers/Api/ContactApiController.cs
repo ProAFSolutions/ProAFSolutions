@@ -94,15 +94,15 @@ namespace ProAFSolutionsAPI.Controllers
 
         private MailAttachment CreateOnlineStoreOfferAttachment() {
 
-            var docName = "ProAFSolutions - Online Store Offer";
+            var docName = "ProAFSolutions - Online Store Offer.pdf";
 
             var pdfTemplateParams = new Dictionary<string, object>();
-            pdfTemplateParams.Add("logo", "???");
+            pdfTemplateParams.Add("siteRoot", ResourceHelper.GetSiteRoot());
             pdfTemplateParams.Add("title", "Test");
             pdfTemplateParams.Add("priceDev", "$2,000.00");
 
             var data = PDFHelper.ConvertToPdf(DataType.HTML, 
-                                              NVelocityTemplateUtil.BuildHtmlBody(TemplatesConst.PDF_OFFER_STORE, pdfTemplateParams), docName);
+                                              NVelocityTemplateUtil.BuildHtmlBody(ResourceHelper.GetPdfTemplatePath("en-US", TemplatesConst.PDF_OFFER_STORE), pdfTemplateParams), docName);
 
             return  new MailAttachment(new MemoryStream(data), docName);
         }

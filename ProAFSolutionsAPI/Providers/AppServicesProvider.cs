@@ -22,7 +22,16 @@ namespace ProAFSolutionsAPI.Providers
             {
                 return new SMSService();
             }
-        }     
+        }   
+        
+        
+        public static IStatsService StatsService
+        {
+            get
+            {
+                return new StatsService();
+            }
+        }  
       
     }
 }
