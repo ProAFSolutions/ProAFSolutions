@@ -20,4 +20,4 @@
 /Console/bin
 /Console/obj
 /ProAFSolutions/build
-/ProAFSolutionsAPI/logs
+/ProAFSolutionsAPI/App_Data/Logs/.log
