@@ -97,6 +97,8 @@
   "packages.package4.section5": "Todo es personalizable a su gusto (colores, contenido, imágenes, animaciones, logo)",
   "packages.package4.section6": "Creación de perfiles en redes sociales(Linkedin, Facebook,Twitter)",
 
+  "packages.select": "Usted ha seleccionado: ",
+
   "contact.title": "Estar en contacto",
   "contact.title.subtitle": "Tiene alguna pregunta? Envíenos un mensaje. Nosotros le responderemos antes de 24 horas.",
   "contact.form.name": "Su Nombre",
