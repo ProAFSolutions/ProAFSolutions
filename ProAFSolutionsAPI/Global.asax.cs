@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ProAFSolutionsAPI.Providers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -17,7 +18,9 @@ namespace ProAFSolutionsAPI
             GlobalConfiguration.Configure(WebApiConfig.Register);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-            BundleConfig.RegisterBundles(BundleTable.Bundles);          
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
+
+            LoggerProvider.Info("App Running");         
         }
 
         protected void Application_BeginRequest()
