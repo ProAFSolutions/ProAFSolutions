@@ -11,9 +11,7 @@ $color-light-gray: #ccc;
 
 body {
 
-    @import "../app/components/about/about";
-
-    @import "../app/components/chat/chat";
+    @import "../app/components/about/about";  
 
     @import "../app/components/contact/contact";
 

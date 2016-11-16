@@ -42,9 +42,9 @@
   "aboutus.skills.development": "Implementacion",
   "aboutus.skills.development.description": "Nuestras soluciones web están basadas sobre las plataformas .NET o Java. En soluciones móviles utilizamos Xamarin, Apache Cordova, Ionic o Android.",
   "aboutus.skills.maintenance": "Mantenimiento",
-  "aboutus.skills.maintenance.description": "Soporte 24/7. Asesoramos que hosting utilizar, base de datos y plataforma para la implementación de la solución.",
+  "aboutus.skills.maintenance.description": "Soporte 24/7. Asesoramos que hosting, base de datos y plataforma utilizar para la implementación de la solución.",
   "aboutus.panagraph1": "En ProAFSolutions proveemos software y servicios adaptados a tus necesidades, nos enfocamos en el desarrollo de software a la medida.",
-  "aboutus.panagraph2": "Somos un equipo de profesionales con más de 10 años de experiencia en soluciones informáticas con el objetivo principal de reducir los costos e impulsar la rentabilidad y eficiencia de nuestros clientes.",
+  "aboutus.panagraph2": "Somos un equipo de profesionales con 10 años de experiencia en soluciones informáticas con el objetivo principal de reducir los costos e impulsar la rentabilidad y eficiencia de nuestros clientes.",
   "aboutus.panagraph3": "Nuestro compromiso principal es brindar un servicio de alta calidad y percibir resultados desde el comienzo del desarrollo de la solucion tecnológica.",
 
   "separator.title1": "Necesitas promocionar y vender tus productos.",
@@ -63,7 +63,7 @@
 
   "packages.price": "Empieza en ",
 
-  "packages.button.select": "Seleccionar",
+  "packages.button.select": "Estoy Interesado",
 
   "packages.package1.title": "Tienda Online",
   "packages.package1.section1": "Hosting + Dominio (1 año)",

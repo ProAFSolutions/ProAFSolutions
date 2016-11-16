@@ -101,62 +101,74 @@
     <!-- =========================
            SCRIPTS
     ============================== -->
-    <!-- inject:js -->
-    <script src="/node_modules/jquery/jquery.js"></script>
-    <script src="/node_modules/angular/angular.js"></script>
-    <script src="/node_modules/angular-translate/dist/angular-translate.js"></script>
-    <script src="/node_modules/angular-cookies/angular-cookies.js"></script>
-    <script src="/node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="/node_modules/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-    <script src="/node_modules/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-    <script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>
-    <script src="/js/modernizr-custom.js"></script>
-    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="/node_modules/underscore/underscore.js"></script>
-    <script src="/js/jquery.signalr.js"></script>
-    <script src="http://localhost:5565/signalr/hubs"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/wow.min.js"></script>
-    <script src="/js/jquery.nav.js"></script>
-    <script src="/js/jquery.knob.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/smoothscroll.js"></script>
-    <script src="/js/jquery.vegas.min.js"></script>
-    <script src="/build/proafsolutions.js"></script>
-    <script src="/build/models/chat-message.js"></script>
-    <script src="/build/models/contact-message.js"></script>
-    <script src="/build/models/conversation.js"></script>
-    <script src="/build/models/file.js"></script>
-    <script src="/build/models/product.js"></script>
-    <script src="/build/models/team-member.js"></script>
-    <script src="/build/config/language.js"></script>
-    <script src="/build/config/routes.js"></script>
-    <script src="/build/config/settings.js"></script>
-    <script src="/build/services/chat.service.js"></script>
-    <script src="/build/services/contact.service.js"></script>
-    <script src="/build/services/dataprovider.service.js"></script>
-    <script src="/build/services/public.service.js"></script>
-    <script src="/build/components/about/about.controller.js"></script>
-    <script src="/build/components/chat/chat.controller.js"></script>
-    <script src="/build/components/contact/contact.controller.js"></script>
-    <script src="/build/components/features/features.controller.js"></script>
-    <script src="/build/components/focus/focus.controller.js"></script>
-    <script src="/build/components/footer/footer.controller.js"></script>
-    <script src="/build/components/home/home.controller.js"></script>
-    <script src="/build/components/newsetter/newsetter.controller.js"></script>
-    <script src="/build/components/packages/packages.controller.js"></script>
-    <script src="/build/components/products/products.controller.js"></script>
-    <script src="/build/components/purchase/purchase.controller.js"></script>
-    <script src="/build/components/separator/separator.controller.js"></script>
-    <script src="/build/components/shared/app.controller.js"></script>
-    <script src="/build/components/shared/datacontext.js"></script>
-    <script src="/build/components/stats/stats.controller.js"></script>
-    <script src="/build/components/team/team.controller.js"></script>
-    <script src="/build/components/testimonial/testimonial.controller.js"></script>
-    <script src="/build/components/works/works.controller.js"></script>
-    <script src="/js/zerif.js"></script>
+    <!-- inject:js -->    
+    <script src="/node_modules/jquery/jquery.js"></script>    
+    <script src="/node_modules/angular/angular.js"></script>    
+    <script src="/node_modules/angular-translate/dist/angular-translate.js"></script>    
+    <script src="/node_modules/angular-cookies/angular-cookies.js"></script>    
+    <script src="/node_modules/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>    
+    <script src="/node_modules/angular-translate-storage-local/angular-translate-storage-local.js"></script>    
+    <script src="/node_modules/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>    
+    <script src="/node_modules/angular-sanitize/angular-sanitize.js"></script>    
+    <script src="/js/modernizr-custom.js"></script>    
+    <script src="/node_modules/angular-ui-router/release/angular-ui-router.js"></script>    
+    <script src="/node_modules/underscore/underscore.js"></script>    
+    <script src="/js/bootstrap.min.js"></script>    
+    <script src="/js/wow.min.js"></script>    
+    <script src="/js/jquery.nav.js"></script>    
+    <script src="/js/jquery.knob.js"></script>    
+    <script src="/js/owl.carousel.min.js"></script>    
+    <script src="/js/smoothscroll.js"></script>    
+    <script src="/js/jquery.vegas.min.js"></script>    
+    <script src="/build/proafsolutions.js"></script>    
+    <script src="/build/config/language.js"></script>    
+    <script src="/build/config/routes.js"></script>    
+    <script src="/build/config/settings.js"></script>    
+    <script src="/build/models/chat-message.js"></script>    
+    <script src="/build/models/contact-message.js"></script>    
+    <script src="/build/models/conversation.js"></script>    
+    <script src="/build/models/file.js"></script>    
+    <script src="/build/models/product.js"></script>    
+    <script src="/build/models/team-member.js"></script>    
+    <script src="/build/services/chat.service.js"></script>    
+    <script src="/build/services/contact.service.js"></script>    
+    <script src="/build/services/dataprovider.service.js"></script>    
+    <script src="/build/services/public.service.js"></script>    
+    <script src="/build/components/about/about.controller.js"></script>    
+    <script src="/build/components/chat/chat.controller.js"></script>    
+    <script src="/build/components/contact/contact.controller.js"></script>    
+    <script src="/build/components/features/features.controller.js"></script>    
+    <script src="/build/components/focus/focus.controller.js"></script>    
+    <script src="/build/components/footer/footer.controller.js"></script>    
+    <script src="/build/components/home/home.controller.js"></script>    
+    <script src="/build/components/newsetter/newsetter.controller.js"></script>    
+    <script src="/build/components/packages/packages.controller.js"></script>    
+    <script src="/build/components/products/products.controller.js"></script>    
+    <script src="/build/components/purchase/purchase.controller.js"></script>    
+    <script src="/build/components/separator/separator.controller.js"></script>    
+    <script src="/build/components/shared/app.controller.js"></script>    
+    <script src="/build/components/shared/datacontext.js"></script>    
+    <script src="/build/components/stats/stats.controller.js"></script>    
+    <script src="/build/components/team/team.controller.js"></script>    
+    <script src="/build/components/testimonial/testimonial.controller.js"></script>    
+    <script src="/build/components/works/works.controller.js"></script>    
+    <script src="/js/zerif.js"></script>    
     <!-- endinject -->
 
+
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/582c921e73e3d85bf1093d3c/default';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
 </body>
 </html>

@@ -15,9 +15,9 @@ namespace ProAFSolutionsAPI.Templates
         public const string EMAIL_OFFER_PERSONAL_SITE = "email-offer-package-personal-site.html";
         public const string EMAIL_OFFER_MOBILE = "email-offer-package-mobile.html";
 
-        public const string PDF_OFFER_STORE = "pdf-offer-package-store.html";
-        public const string PDF_OFFER_WEB_APP = "pdf-offer-package-web-app.html";
-        public const string PDF_OFFER_PERSONAL_SITE = "pdf-offer-package-personal-site.html";
-        public const string PDF_OFFER_MOBILE = "pdf-offer-package-mobile.html";
+        public const string PDF_OFFER_STORE = "pdf-offer-package-store.pdf";
+        public const string PDF_OFFER_WEB_APP = "pdf-offer-package-web-app.pdf";
+        public const string PDF_OFFER_PERSONAL_SITE = "pdf-offer-package-personal-site.pdf";
+        public const string PDF_OFFER_MOBILE = "pdf-offer-package-mobile.pdf";
     }
 }
