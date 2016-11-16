@@ -29,7 +29,7 @@ namespace ProAFSolutionsAPI.Controllers
     /// Endpoint resposibe of handling chat data-related
     /// </summary>  
     //[Authorize]   
-    [RoutePrefix("api/chat")]
+    //[RoutePrefix("api/chat")]
     public class ChatApiController : ApiController
     {
        
