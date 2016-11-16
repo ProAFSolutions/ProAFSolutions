@@ -55,13 +55,23 @@ namespace ProAFSolutionsAPI.Controllers
                     statsModel.UtcDate = DateTime.UtcNow;
                     statsList.Add(statsModel);
 
-                    AppServicesProvider.StatsService.WriteAccessStats(statsList);                    
+                    LoggerProvider.Info(string.Format("Ping data downloaded IP:{0}", ip));
+
+                    AppServicesProvider.StatsService.WriteAccessStats(statsList);
+
+                    var to = ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' });
 
                     AppServicesProvider.EmailService.SendTextEmail(
                        "ProAF Accesss Notification!",
-                       ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
+                       to,
                        string.Format("Someone from the city of {0} using this IP address {1} has accessed ProAFsolutions website.", statsModel.City, statsModel.IP)
                    );
+
+                    bool sendEmail = !ConfigurationManager.AppSettings["mailMode"].Equals("off");
+                    if (sendEmail)
+                    {
+                        LoggerProvider.Info(string.Format("Ping Email sent to {0}", to));
+                    }
                 }
             }
 
