@@ -36,11 +36,20 @@
             });
         }
 
-        public magicShortcut(event: KeyboardEvent): void {
-            if (event.ctrlKey && event.altKey && event.shiftKey && event.keyCode == 13) {
-                window.open("/admin-chat.html", "AdminChat", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");                          
-            }
+        //public magicShortcut(event: KeyboardEvent): void {
+        //    if (event.ctrlKey && event.altKey && event.shiftKey && event.keyCode == 13) {
+        //        window.open("/admin-chat.html", "AdminChat", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");                          
+        //    }
+        //}
+
+        public openChatWindowClick(): void {
+            $('#tawkchat-iframe-container').find('#tawkchat-minified-iframe-element-round')
+                                           .contents()
+                                           .find("#tawkchat-status-icon")
+                                           .click();
         }
+
+       
     }
 
     angular.module("proafsolutions").controller("AppController", AppController);

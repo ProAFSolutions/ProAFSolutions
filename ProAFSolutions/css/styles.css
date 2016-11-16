@@ -1,32 +1,32 @@
-﻿body #aboutus .skill .skill-count i {
-  font-size: 48px;
-  color: white; }
-
-body #focus .other-focuses .section-footer-title {
-  text-transform: uppercase; }
-
-body #home .navbar .lang-selector {
-  position: absolute;
-  right: 20px; }
-  body #home .navbar .lang-selector .lang-item {
-    cursor: pointer;
-    padding-left: 5px; }
-    body #home .navbar .lang-selector .lang-item span {
-      color: black;
-      font-size: 12px; }
-    body #home .navbar .lang-selector .lang-item img {
-      width: 24px; }
-
-body #home .navbar .navbar-brand {
-  margin-bottom: 20px; }
-
-body #home .navbar .navbar-toggle {
-  margin-top: 50px !important; }
-
-body #pricingtable .price h4 {
-  font-size: 35px; }
-
-body #separator {
-  background: rgba(52, 210, 147, 0.95);
-  padding: 100px 0 100px 0; }
+﻿body {
+  /*@import "../app/components/chat/chat";*/ }
+  body .chat-red-section {
+    background: #e96656;
+    padding-top: 70px;
+    padding-bottom: 70px; }
+  body #aboutus .skill .skill-count i {
+    font-size: 48px;
+    color: white; }
+  body #focus .other-focuses .section-footer-title {
+    text-transform: uppercase; }
+  body #home .navbar .lang-selector {
+    position: absolute;
+    right: 20px; }
+    body #home .navbar .lang-selector .lang-item {
+      cursor: pointer;
+      padding-left: 5px; }
+      body #home .navbar .lang-selector .lang-item span {
+        color: black;
+        font-size: 12px; }
+      body #home .navbar .lang-selector .lang-item img {
+        width: 24px; }
+  body #home .navbar .navbar-brand {
+    margin-bottom: 20px; }
+  body #home .navbar .navbar-toggle {
+    margin-top: 50px !important; }
+  body #pricingtable .price h4 {
+    font-size: 35px; }
+  body #separator {
+    background: rgba(52, 210, 147, 0.95);
+    padding: 100px 0 100px 0; }
 

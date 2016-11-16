@@ -17,9 +17,9 @@ namespace proafsolutions {
                        },
 
                        //"chat": {
-                       //    templateUrl: RoutesConfig.getTemplatePath('chat'),
+                       //    templateurl: RoutesConfig.getTemplatePath('chat'),  
                        //    controller: "ChatController",
-                       //    controllerAs: "vm"
+                       //    controllerAs: "vm"                     
                        //},
 
                        "about": {
