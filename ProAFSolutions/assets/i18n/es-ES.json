@@ -69,10 +69,11 @@
   "packages.package1.section1": "Hosting + Dominio (1 año)",
   "packages.package1.section2": "Migración de su información hacia nuestro sistema",
   "packages.package1.section3": "Reportes personalizados",
-  "packages.package1.section4": "Nuevas funcionalidades",
+  "packages.package1.section4": "Envíos(UPS, FedEx, USPS, etc)",
   "packages.package1.section5": "Panel de administración",
   "packages.package1.section6": "Acceso desde dispositivos móviles",
   "packages.package1.section7": "Soporte 24/7 (4 meses gratis)",
+  "packages.package1.section8": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",
 
   "packages.package2.title": "Aplicaciones Moviles",
   "packages.package2.section1": "Multiplataforma(iOS/Android/Win)",
