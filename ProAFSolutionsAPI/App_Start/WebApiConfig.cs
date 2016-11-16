@@ -8,6 +8,8 @@ using Newtonsoft.Json.Serialization;
 using System.Web.Http.Cors;
 using Newtonsoft.Json.Converters;
 using System.Configuration;
+using System.Web.Http.ExceptionHandling;
+using ProAFSolutionsAPI.Exceptions;
 
 namespace ProAFSolutionsAPI
 {
@@ -15,6 +17,9 @@ namespace ProAFSolutionsAPI
     {
         public static void Register(HttpConfiguration config)
         {
+            // global API exception handler
+            config.Services.Replace(typeof(IExceptionHandler), new GlobalWebApiExceptionHandler());
+
             //var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
             //config.EnableCors(cors);
 

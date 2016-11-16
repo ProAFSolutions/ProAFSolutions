@@ -49,22 +49,30 @@ namespace ProAFSolutionsAPI.Controllers
             var parameters = new Dictionary<string, object>();
             parameters.Add("message", message);
 
-            AppServicesProvider.EmailService.SendHtmlEmail(
-                ConfigurationManager.AppSettings["chatRoomJoinEmailSubject"],
-                ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", "basic-email-template.html"), parameters));         
+            var to = ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' });
+            AppServicesProvider.EmailService.SendTextEmail(
+                "Somebody wants to get in touch with you!",
+                to,
+                message
+            );
 
-            //AppServicesProvider.EmailService.SendTextEmail(
-            //    "Somebody wants to get in touch with you!",
-            //    ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-            //    message
-            //);
+            bool sendEmail = !ConfigurationManager.AppSettings["mailMode"].Equals("off");
+            if (sendEmail) {
+                LoggerProvider.Info(string.Format("Contact Email sent to {0}", to));
+            }
 
-            //var phones = ConfigurationManager.AppSettings["adminPhones"].Split(new char[] { ',' });
-            //phones.ToList().ForEach(phone =>
-            //{
-            //    AppServicesProvider.SMSService.Send(message, phone);
-            //});
+            bool sendSMS = bool.Parse(ConfigurationManager.AppSettings["sendSms"]);
+
+            if (sendSMS) {
+                var phones = ConfigurationManager.AppSettings["adminPhones"].Split(new char[] { ',' });
+                phones.ToList().ForEach(phone =>
+                {
+                    AppServicesProvider.SMSService.Send(message, phone);
+                });
+
+                LoggerProvider.Info(string.Format("Contact Text sent to {0}", phones));
+            }
+           
 
             return Ok();
         }

@@ -292,6 +292,7 @@
     <Compile Include="Controllers\Api\ContactApiController.cs" />
     <Compile Include="Controllers\Api\PublicApiController.cs" />
     <Compile Include="Controllers\Mvc\StatsReportController.cs" />
+    <Compile Include="Exceptions\InternalServerErrorTextPlainResult.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -309,6 +310,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Providers\ApplicationOAuthProvider.cs" />
     <Compile Include="Providers\AppServicesProvider.cs" />
+    <Compile Include="Exceptions\GlobalWebApiExceptionHandler.cs" />
     <Compile Include="Providers\LoggerProvider.cs" />
     <Compile Include="Results\ChallengeResult.cs" />
     <Compile Include="Services\Mail\HtmlMailTemplate.cs" />
