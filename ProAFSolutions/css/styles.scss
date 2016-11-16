@@ -11,7 +11,15 @@ $color-light-gray: #ccc;
 
 body {
 
+   .chat-red-section{
+      background: $color-red;
+      padding-top: 70px;
+      padding-bottom: 70px;
+   }
+
     @import "../app/components/about/about";  
+
+    /*@import "../app/components/chat/chat";*/
 
     @import "../app/components/contact/contact";
 
