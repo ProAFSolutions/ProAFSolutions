@@ -21,11 +21,10 @@
         {
             this.contactMessage = new models.ContactMessage('','','','','');
             var _self = this;
-            this.$scope.$on('SelectedPackage!', function (events, args) {
-                // console.log(args);
+            this.$scope.$on('SelectedPackage!', (events, args) => {                
                 _self.$location.url('##contact');
-                _self.contactMessage.subject = args;
-                _self.contactMessage.message = "test";
+                _self.contactMessage.subject = args.subject;
+                _self.contactMessage.message = args.message;
             });
         }
 

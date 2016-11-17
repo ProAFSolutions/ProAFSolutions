@@ -145,6 +145,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="admin-chat.html" />
+    <Content Include="app\components\assistance\assistance.html" />
     <Content Include="app\components\chat\chat.html" />
     <Content Include="assets\icon-fonts\icons.css" />
     <Content Include="css\animate.css" />
@@ -198,6 +199,7 @@
     <Content Include="app\components\testimonial\_testimonial.scss" />
     <Content Include="app\components\works\_works.scss" />
     <Content Include="app\components\separator\_separator.scss" />
+    <Content Include="app\components\assistance\_assistance.scss" />
     <None Include="compilerconfig.json" />
     <None Include="compilerconfig.json.defaults">
       <DependentUpon>compilerconfig.json</DependentUpon>
@@ -373,6 +375,7 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="app\components\about\about.controller.ts" />
+    <TypeScriptCompile Include="app\components\assistance\assistance.controller.ts" />
     <TypeScriptCompile Include="app\components\chat\chat.controller.ts" />
     <TypeScriptCompile Include="app\components\contact\contact.controller.ts" />
     <TypeScriptCompile Include="app\components\features\features.controller.ts" />
@@ -382,6 +385,7 @@
     <TypeScriptCompile Include="app\components\newsetter\newsetter.controller.ts" />
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
+    <TypeScriptCompile Include="app\config\http-errors.ts" />
     <TypeScriptCompile Include="app\definitely-typed\angular-cookie.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\audio.d.ts" />
     <TypeScriptCompile Include="app\definitely-typed\signalr.d.ts" />

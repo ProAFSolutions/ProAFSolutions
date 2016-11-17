@@ -4,27 +4,41 @@
         keywords: string;
         authors: string;
         description: string;      
+
+        //Actions
+        catchHttpErrors(): void;
+        setupMetadata(): void;
+        customizeChatWindow(): void;   
     }
 
     class AppController implements IAppController {
 
-        static $inject = ['$dataContext']; 
+        static $inject = ['$scope', '$dataContext']; 
 
         public keywords: string;
         public authors: string;
         public description: string;
        
 
-        constructor(private $dataContext: shared.IDataContextService) {          
+        constructor(private $scope: ng.IScope,
+                    private $dataContext: shared.IDataContextService) {          
            this.init();
         }
 
         init(): void {
+            this.catchHttpErrors();
             this.setupMetadata();
             this.customizeChatWindow();         
         }       
 
-        private setupMetadata(): void {
+        public catchHttpErrors(): void {
+            let _self = this;
+            this.$scope.$on('HttpError!', (events: any, args: any) => {
+                console.error(args.message);
+            });
+        }
+
+        public setupMetadata(): void {
 
             this.authors = "Alejandro Clavijo & Filiberto Lopez";
 
@@ -53,12 +67,7 @@
             }, 3000);           
         }
 
-        public openChatWindowClick(): void {
-            var $chatIframe = $('#tawkchat-iframe-container').find('#tawkchat-minified-iframe-element-round');       
-            $chatIframe.contents().find("#tawkchat-status-icon").click();
-        }
-
-         //public magicShortcut(event: KeyboardEvent): void {
+        //public magicShortcut(event: KeyboardEvent): void {
         //    if (event.ctrlKey && event.altKey && event.shiftKey && event.keyCode == 13) {
         //        window.open("/admin-chat.html", "AdminChat", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");                          
         //    }

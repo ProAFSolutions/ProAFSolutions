@@ -1,7 +1,7 @@
 ﻿namespace proafsolutions {
 
     interface IPackagesController {
-        selectedPackage(packageName: string): void;
+        selectedPackage(packageName: string, defaultMessage: string): void;
 
     }
 
@@ -16,8 +16,8 @@
 
         init(): void { }
 
-        public selectedPackage(packageName: string): void {
-            this.$rootScope.$broadcast('SelectedPackage!', this.$translate.instant(packageName) );
+        public selectedPackage(packageName: string, defaultMessage: string): void {
+            this.$rootScope.$broadcast('SelectedPackage!', { subject: this.$translate.instant(packageName), message: this.$translate.instant(defaultMessage)});
         }
 
     }

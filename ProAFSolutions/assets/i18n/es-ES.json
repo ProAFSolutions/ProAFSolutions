@@ -55,11 +55,11 @@
   "separator.tools4": "Migramos toda tu información hacia el sistema nuevo. Soportamos base de datos, excel y ficheros de textos",
 
 
-  "chat.section.title1": "Siempre estamos online para usted.",
-  "chat.section.button": "Abrir Chat",
+  "assistance.section.title1": "Necesita ayuda? Siempre estamos online para usted.",
+  "assistance.section.button": "Abrir Chat",
 
   "packages.title": "Paquetes",
-  "packages.title.subtitle": "Tenemos 4 paquetes para usted. Revise todos los paquetes y seleccione el que se ajuste a su desarrollo.",
+  "packages.title.subtitle": "Tenemos 4 paquetes para usted. Reviselos y contactenos si esta interesado.",
 
   "packages.price": "Empieza en ",
 
@@ -74,6 +74,7 @@
   "packages.package1.section6": "Acceso desde el navegador del móvil",
   "packages.package1.section7": "Soporte 24/7 (4 meses gratis)",
   "packages.package1.section8": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",
+  "packages.package1.message":  "Hola, me interesa vender mis productos por Internet. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
 
   "packages.package2.title": "Aplicaciones Moviles",
   "packages.package2.section1": "Multiplataforma (iOS/Android/Win)",
@@ -82,6 +83,7 @@
   "packages.package2.section4": "Publicación de la aplicación en Google Play, Apple Store y Windows Store",
   "packages.package2.section5": "Fácil mantenimiento (misma lógica de negocio compartido entre las plataformas)",
   "packages.package2.section6": "Soporte 24/7 (4 meses gratis)",
+  "packages.package2.message":  "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
 
   "packages.package3.title": "Aplicaciones Web",
   "packages.package3.section1": "Hosting + Dominio (1 año)",
@@ -91,10 +93,12 @@
   "packages.package3.section5": "Soporte 24/7 (4 meses gratis)",
   "packages.package3.section6": "Social Media (Facebook, LinkedIn, Twitter)",
   "packages.package3.section7": "Chat en tiempo real",
+  "packages.package3.message":  "Hola, me interesa crear un sitio web. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
 
   "packages.package4.title": "Suite (Web + Movil)",
   "packages.package4.section1": "PAQUETE DE APPLICACIONES WEB",
   "packages.package4.section2": "PAQUETE DE APPLICACIONES MOVILES", 
+  "packages.package4.message":  "Hola, me interesa crear un sitio y una app movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
 
   "packages.select": "Usted ha seleccionado: ",
 
@@ -103,7 +107,7 @@
   "contact.form.name": "Su Nombre",
   "contact.form.email": "Su Correo",
   "contact.form.subject": "Asunto",
-  "contact.form.message": "Mensaje",
+  "contact.form.message": "Mensaje",  
   "contact.button": "Enviar Mensaje",
   "contact.message.sucessfully": "Su mensaje fue enviado.",
   "contact.message.error": "El correo debe ser válido y el contenido del mensaje no puede ser vacío."

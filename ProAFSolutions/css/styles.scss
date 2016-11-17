@@ -9,15 +9,11 @@ $color-yellow: #E7AC44;
 $color-gray: #818181;
 $color-light-gray: #ccc;
 
-body {
-
-   .chat-red-section{
-      background: $color-red;
-      padding-top: 70px;
-      padding-bottom: 70px;
-   }
+body {   
 
     @import "../app/components/about/about";  
+
+    @import "../app/components/assistance/assistance";
 
     /*@import "../app/components/chat/chat";*/
 

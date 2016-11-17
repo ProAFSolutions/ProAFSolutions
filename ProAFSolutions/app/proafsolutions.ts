@@ -14,11 +14,14 @@ namespace proafsolutions {
                     $urlRouterProvider: angular.ui.IUrlRouterProvider,
                     $locationProvider: ng.ILocationProvider,
                     $compileProvider: ng.ICompileProvider,
-                    $translateProvider: angular.translate.ITranslateProvider): void {          
+                    $translateProvider: angular.translate.ITranslateProvider,
+                    $httpProvider: ng.IHttpProvider): void {          
 
            RoutesConfig.setupRoutes($stateProvider, $urlRouterProvider);
 
            AppLanguageConfig.setupLanguage($translateProvider);
+
+           ProAFSolutionsApp.initInterceptors($httpProvider);
 
            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
         }      
@@ -26,6 +29,10 @@ namespace proafsolutions {
        static run($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService): void {
            ProAFSolutionsApp.pingServer($publicService, $cookies);
        } 
+
+       static initInterceptors($httpProvider: ng.IHttpProvider): void {
+           $httpProvider.interceptors.push("$globalErrorHandler");
+       }
 
        static pingServer($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService) {
            var lastAccess = $cookies.get('PROAF_LAST_ACCESS');

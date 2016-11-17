@@ -1,12 +1,16 @@
 ﻿body {
   /*@import "../app/components/chat/chat";*/ }
-  body .chat-red-section {
-    background: #e96656;
-    padding-top: 70px;
-    padding-bottom: 70px; }
   body #aboutus .skill .skill-count i {
     font-size: 48px;
     color: white; }
+  body #assistance.chat-red-section {
+    background: #e96656;
+    padding-top: 70px;
+    padding-bottom: 70px; }
+    body #assistance.chat-red-section i.help-icon {
+      font-size: 48px; }
+    body #assistance.chat-red-section i.chat-icon {
+      font-size: 24px; }
   body #focus .other-focuses .section-footer-title {
     text-transform: uppercase; }
   body #home .navbar .lang-selector {

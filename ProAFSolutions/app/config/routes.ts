@@ -16,6 +16,12 @@ namespace proafsolutions {
                            controllerAs: "vm"
                        },
 
+                       "assistance": {
+                           templateUrl: RoutesConfig.getTemplatePath('assistance'),
+                           controller: "AssistanceController",
+                           controllerAs: "vm"             
+                       },
+
                        //"chat": {
                        //    templateurl: RoutesConfig.getTemplatePath('chat'),  
                        //    controller: "ChatController",

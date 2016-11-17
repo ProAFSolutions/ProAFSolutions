@@ -1,0 +1,18 @@
+﻿ 
+#assistance {
+      &.chat-red-section {
+        background: $color-red;
+        padding-top: 70px;
+        padding-bottom: 70px;
+
+        i {
+            &.help-icon{
+                font-size: 48px;
+            }
+            
+            &.chat-icon{
+                font-size: 24px;
+            }           
+        }
+    }
+ }
