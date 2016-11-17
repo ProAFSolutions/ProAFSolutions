@@ -8,7 +8,7 @@
         //Actions
         catchHttpErrors(): void;
         setupMetadata(): void;
-        customizeChatWindow(language: string): void;   
+        setupChatWindow(): void;   
     }
 
     class AppController implements IAppController {
@@ -28,7 +28,7 @@
         init(): void {
             this.catchHttpErrors();
             this.setupMetadata();
-            this.voidSetupChatWindow();           
+            this.setupChatWindow();           
         }       
 
         public catchHttpErrors(): void {
@@ -51,7 +51,7 @@
             });
         }
 
-        public voidSetupChatWindow(): void {
+        public setupChatWindow(): void {
             this.$scope.$watch(() => this.$dataContext.currentLanguage, (newValue: string, oldValue: string) => {
                 if (newValue != oldValue) {
                     let _self = this;
@@ -62,7 +62,7 @@
             });  
         }
 
-        public customizeChatWindow(language: string): void {      
+        private customizeChatWindow(language: string): void {      
 
             var $chatIframe = $('#tawkchat-iframe-container').find('#tawkchat-maximized-iframe-element');
                 
