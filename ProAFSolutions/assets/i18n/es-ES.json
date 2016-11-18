@@ -110,7 +110,22 @@
   "contact.form.message": "Mensaje",  
   "contact.button": "Enviar Mensaje",
   "contact.message.sucessfully": "Su mensaje fue enviado.",
-  "contact.message.error": "El correo debe ser válido y el contenido del mensaje no puede ser vacío."
+  "contact.message.error": "El correo debe ser válido y el contenido del mensaje no puede ser vacío.",
 
-
+  "chat.greeting.text": "Estamos listos para chatear con usted. Teclee debajo para iniciar una conversación.",
+  "chat.text.placeholder": "Teclee aqui y presione enter..",
+  "chat.menu.open": "Opciones",
+  "chat.menu.close": "Cerrar menú <span></span>",
+  "chat.menu.option.end": "Terminar Conversación",
+  "chat.menu.option.upload": "Subir Fichero",
+  "chat.menu.option.sound": "Activar Sonido",
+  "chat.menu.option.email": "Enviar por Correo",
+  "chat.menu.option.print": "Imprimir Conversación",
+  "chat.menu.option.name": "Cambiar Nombre",
+  "chat.actions.minimize": "Minimizar",
+  "chat.actions.popout": "Separar",
+  "chat.actions.endchat": "Cerrar Chat",
+  "chat.end.message": "Está seguro que desea terminar esta conversación?",
+  "chat.end.cancel": "Cancelar",
+  "chat.end.submit":  "Finalizar Chat"
 }
