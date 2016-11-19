@@ -73,5 +73,22 @@
   "contact.form.message": "Message",
   "contact.button": "Send Message",
   "contact.message.sucessfully": "Your message has been sent successfully.",
-  "contact.message.error": "Email must be valid and the message must be longer than 1 character."
+  "contact.message.error": "Email must be valid and the message must be longer than 1 character.",
+
+  "chat.greeting.text": "We are live and ready to chat with you now. Say something to start a live chat.",
+  "chat.text.placeholder": "Type here and press enter..",
+  "chat.menu.open": "Chat Settings",
+  "chat.menu.close": "Close menu <span></span>",
+  "chat.menu.option.end": "End chat",
+  "chat.menu.option.upload": "Upload File",
+  "chat.menu.option.sound": "Sound On",
+  "chat.menu.option.email": "Email Transcript",
+  "chat.menu.option.print": "Print Transcript",
+  "chat.menu.option.name": "Change Name",
+  "chat.actions.minimize": "Minimize",
+  "chat.actions.popout": "Pop out",
+  "chat.actions.endchat": "End Chat",
+  "chat.end.message": "Are you sure you want to end this chat?",
+  "chat.end.cancel": "Cancel",
+  "chat.end.submit":  "End Chat"
 }
