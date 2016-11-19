@@ -147,6 +147,8 @@
     <Content Include="admin-chat.html" />
     <Content Include="app\components\assistance\assistance.html" />
     <Content Include="app\components\chat\chat.html" />
+    <Content Include="app\components\packages\package-toggle.directive.html" />
+    <Content Include="app\components\packages\package.directive.html" />
     <Content Include="assets\icon-fonts\icons.css" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
@@ -212,6 +214,8 @@
     <Content Include="data\es-ES\products.json" />
     <Content Include="data\es-ES\team.json" />
     <Content Include="css\styles.scss" />
+    <Content Include="data\en-US\packages.json" />
+    <Content Include="data\es-ES\packages.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -383,6 +387,9 @@
     <TypeScriptCompile Include="app\components\footer\footer.controller.ts" />
     <TypeScriptCompile Include="app\components\home\home.controller.ts" />
     <TypeScriptCompile Include="app\components\newsetter\newsetter.controller.ts" />
+    <TypeScriptCompile Include="app\components\packages\package-toggle.directive.ts" />
+    <TypeScriptCompile Include="app\components\packages\package.directive.ts" />
+    <TypeScriptCompile Include="app\components\packages\package.vm.ts" />
     <TypeScriptCompile Include="app\components\packages\packages.controller.ts" />
     <TypeScriptCompile Include="app\components\shared\app.controller.ts" />
     <TypeScriptCompile Include="app\config\http-errors.ts" />
@@ -393,6 +400,7 @@
     <TypeScriptCompile Include="app\models\contact-message.ts" />
     <TypeScriptCompile Include="app\models\chat-message.ts" />
     <TypeScriptCompile Include="app\models\file.ts" />
+    <TypeScriptCompile Include="app\models\package.ts" />
     <TypeScriptCompile Include="app\models\team-member.ts" />
     <TypeScriptCompile Include="app\proafsolutions.ts" />
     <TypeScriptCompile Include="app\components\products\products.controller.ts" />

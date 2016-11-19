@@ -1,0 +1,30 @@
+﻿<div class="col-lg-3 col-sm-6">
+    <div class="package wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+        <div class="package-header {{color + '-bg'}}">
+            <h5>
+                <i class="{{icon}}"></i>&nbsp;
+                {{package.title}}
+            </h5>
+        </div>
+        <div class="price dark-bg">
+            <div class="price-container">
+                <h4><span class="dollar-sign"></span>{{"packages.price" | translate}} </h4>
+                <span class="price-meta">
+                    {{package.basePrice | currency}}                    
+                </span>
+                <div class="price-total lightSpeedIn animated" ng-show="package.totalPrice > package.basePrice">
+                    <span>{{"packages.estimation" | translate}}</span>
+                    <span class="estimation">{{package.totalPrice | currency}}</span>    
+                </div>
+            </div>
+        </div>
+        <ul>
+            <li ng-repeat="option in package.options">
+                <package-toggle toggle-id="toggle-{{package.id}}-{{$index}}" toggle-color="{{color}}" toggle-option="option" toggle-package="package"></package-toggle>   
+            </li>
+        </ul>
+        <a href="##contact" class="btn btn-primary custom-button {{color + '-btn'}}" ng-click="vm.selectedPackage(package)">
+            {{"packages.button.select" | translate}}
+        </a>
+    </div>
+</div>

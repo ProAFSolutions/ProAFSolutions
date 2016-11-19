@@ -30,6 +30,70 @@
     margin-top: 50px !important; }
   body #pricingtable .price h4 {
     font-size: 35px; }
+  body #pricingtable .package .package-header i {
+    font-size: 24px; }
+  body #pricingtable .package .price-container {
+    position: relative; }
+    body #pricingtable .package .price-container h4 {
+      font-size: 30px; }
+    body #pricingtable .package .price-container .price-meta {
+      font-size: 18px; }
+    body #pricingtable .package .price-container .price-total {
+      position: absolute;
+      top: -38px;
+      right: 10px;
+      font-size: 18px; }
+      body #pricingtable .package .price-container .price-total .estimation {
+        font-size: 20px; }
+  body #pricingtable .package ul li {
+    width: 70%;
+    margin-left: 20px; }
+    body #pricingtable .package ul li .toggle-option .toggle > input[type="checkbox"] {
+      display: none; }
+    body #pricingtable .package ul li .toggle-option .toggle > label {
+      cursor: pointer;
+      height: 0px;
+      width: 0px;
+      position: relative; }
+      body #pricingtable .package ul li .toggle-option .toggle > label.toggle-green-bg {
+        background-color: #20AA73; }
+      body #pricingtable .package ul li .toggle-option .toggle > label.toggle-blue-bg {
+        background-color: #3ab0e2; }
+      body #pricingtable .package ul li .toggle-option .toggle > label.toggle-red-bg {
+        background-color: #e96656; }
+      body #pricingtable .package ul li .toggle-option .toggle > label.toggle-yellow-bg {
+        background-color: #E7AC44; }
+      body #pricingtable .package ul li .toggle-option .toggle > label.toggle-disabled {
+        background-color: #818181 !important; }
+    body #pricingtable .package ul li .toggle-option .toggle > label::before {
+      background: black;
+      box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+      border-radius: 8px;
+      content: '';
+      height: 16px;
+      margin-top: -8px;
+      position: absolute;
+      opacity: 0.3;
+      transition: all 0.4s ease-in-out;
+      width: 40px; }
+    body #pricingtable .package ul li .toggle-option .toggle > label::after {
+      background: white;
+      border-radius: 16px;
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+      content: '';
+      height: 24px;
+      left: -4px;
+      margin-top: -8px;
+      position: absolute;
+      top: -4px;
+      transition: all 0.3s ease-in-out;
+      width: 24px; }
+    body #pricingtable .package ul li .toggle-option .toggle > input[type="checkbox"]:checked + label::before {
+      background: inherit;
+      opacity: 0.5; }
+    body #pricingtable .package ul li .toggle-option .toggle > input[type="checkbox"]:checked + label::after {
+      background: inherit;
+      left: 20px; }
   body #separator {
     background: rgba(52, 210, 147, 0.95);
     padding: 100px 0 100px 0; }

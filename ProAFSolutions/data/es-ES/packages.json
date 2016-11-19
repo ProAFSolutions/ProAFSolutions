@@ -1,0 +1,157 @@
+﻿[
+  {
+    "basePrice": 2199.00,
+    "title": "Tienda Online",
+    "message": "Hola, me interesa vender mis productos por Internet. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
+    "options": [
+      {
+        "name": "Dominio (1 año)",        
+        "price": 15.95,
+        "included": false
+      },
+      {
+        "name": "Hosting (1 año)",        
+        "price": 200.00,
+        "included": false
+      },
+      {
+        "name": "Migración de su información hacia nuestro sistema",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Reportes personalizados",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Envío(UPS, USPS, etc)",
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Panel de administración",        
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Acceso desde el móvil",        
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Soporte(4 meses gratis)",        
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",        
+        "price": 0,
+        "included": true
+      }
+    ]
+  },
+
+  {
+    
+    "basePrice": 3199.00,
+    "title": "Aplicaciones Moviles",
+    "message": "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
+    "options": [
+      {
+        "name": "Android",        
+        "price": 0,
+        "included":  true
+      },
+      {
+        "name": "iOS",        
+        "price": 0,
+        "included":  true
+      },
+      {
+        "name": "Windows Phone",        
+        "price": 0,
+        "included":  false
+      },
+      {
+        "name": "Publicación en tiendas(Google Play, Apple Store, Windows Store)",        
+        "price": 0,
+        "included":  false
+      },
+      {
+        "name": "Soporte (4 meses gratis)",        
+        "price": 0,
+        "included":  true
+      }
+    ]
+  },
+
+  {
+    
+    "basePrice": 199.00,
+    "title": "Aplicaciones Web",
+    "message": "Hola, me interesa crear un sitio web. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
+    "options": [
+      {
+        "name": "Dominio (1 año)",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Hosting (1 año)",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Base de Datos",
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Panel de administración",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Acceso desde el móvil",       
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Soporte(4 meses gratis)",
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "Social Media (Facebook, LinkedIn, Twitter)",        
+        "price": 0,
+        "included": false
+      },
+      {
+        "name": "Chat en tiempo real",        
+        "price": 0,
+        "included": false
+      }
+    ]
+  },
+
+  {
+    
+    "basePrice": 4999.00,
+    "title": "Suite (Web + Movil)",
+    "message": "Hola, me interesa crear un sitio y una app movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
+    "options": [
+      {
+        "name": "PAQUETE DE APPLICACIONES WEB",        
+        "price": 0,
+        "included": true
+      },
+      {
+        "name": "PAQUETE DE APPLICACIONES MOVILES",       
+        "price": 0,
+        "included": true
+      }
+    ]
+  }
+]
+

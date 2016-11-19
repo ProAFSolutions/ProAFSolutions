@@ -60,46 +60,10 @@
 
   "packages.title": "Paquetes",
   "packages.title.subtitle": "Tenemos 4 paquetes para usted. Reviselos y contactenos si esta interesado.",
-
   "packages.price": "Empieza en ",
-
+  "packages.estimation":"Precio Estimado ≈",
   "packages.button.select": "Estoy Interesado",
-
-  "packages.package1.title": "Tienda Online",
-  "packages.package1.section1": "Hosting + Dominio (1 año)",
-  "packages.package1.section2": "Migración de su información hacia nuestro sistema",
-  "packages.package1.section3": "Reportes personalizados",
-  "packages.package1.section4": "Envíos(UPS, FedEx, USPS, etc)",
-  "packages.package1.section5": "Panel de administración",
-  "packages.package1.section6": "Acceso desde el navegador del móvil",
-  "packages.package1.section7": "Soporte 24/7 (4 meses gratis)",
-  "packages.package1.section8": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",
-  "packages.package1.message":  "Hola, me interesa vender mis productos por Internet. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-
-  "packages.package2.title": "Aplicaciones Moviles",
-  "packages.package2.section1": "Multiplataforma (iOS/Android/Win)",
-  "packages.package2.section2": "Servicios Web (Web Api)",
-  "packages.package2.section3": "Base de Datos(SQLite)",
-  "packages.package2.section4": "Publicación de la aplicación en Google Play, Apple Store y Windows Store",
-  "packages.package2.section5": "Fácil mantenimiento (misma lógica de negocio compartido entre las plataformas)",
-  "packages.package2.section6": "Soporte 24/7 (4 meses gratis)",
-  "packages.package2.message":  "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-
-  "packages.package3.title": "Aplicaciones Web",
-  "packages.package3.section1": "Hosting + Dominio (1 año)",
-  "packages.package3.section2": "Plantilla personalizada (seleccione el diseño que desea)",
-  "packages.package3.section3": "Base de datos",
-  "packages.package3.section4": "Acceso desde el navegador del móvil",
-  "packages.package3.section5": "Soporte 24/7 (4 meses gratis)",
-  "packages.package3.section6": "Social Media (Facebook, LinkedIn, Twitter)",
-  "packages.package3.section7": "Chat en tiempo real",
-  "packages.package3.message":  "Hola, me interesa crear un sitio web. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-
-  "packages.package4.title": "Suite (Web + Movil)",
-  "packages.package4.section1": "PAQUETE DE APPLICACIONES WEB",
-  "packages.package4.section2": "PAQUETE DE APPLICACIONES MOVILES", 
-  "packages.package4.message":  "Hola, me interesa crear un sitio y una app movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-
+  "packages.option.included": "Ya esta incluido",
   "packages.select": "Usted ha seleccionado: ",
 
   "contact.title": "Estar en contacto",

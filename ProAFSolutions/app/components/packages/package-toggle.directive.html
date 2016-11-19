@@ -1,0 +1,16 @@
+﻿<div class="toggle-option">
+    {{toggleOption.model.name}}
+    <div class="toggle pull-right">
+        <input id="{{toggleId}}"
+               name="{{toggleId}}-option"
+               type="checkbox"
+               ng-disabled="toggleOption.model.included"               
+               ng-model="toggleOption.isChecked"
+               ng-change="togglePackage.calculateTotalPrice()" />
+
+        <label for="{{toggleId}}" 
+               class="toggle-{{toggleColor}}-bg"
+               title="{{ toggleOption.model.included ? 'Included' : '' }}" 
+               ng-class="{ 'toggle-disabled': toggleOption.model.included}"></label>
+    </div>
+</div>
