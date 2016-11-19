@@ -101,12 +101,7 @@
         "name": "Hosting (1 año)",        
         "price": 0,
         "included": false
-      },
-      {
-        "name": "Base de Datos",
-        "price": 0,
-        "included": true
-      },
+      },      
       {
         "name": "Panel de administración",        
         "price": 0,

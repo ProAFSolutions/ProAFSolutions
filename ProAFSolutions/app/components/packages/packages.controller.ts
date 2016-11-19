@@ -26,6 +26,11 @@
             this.packagesLoaded = false;
             this.packages = new Array<PackageVM>();
             this.loadPackages();
+
+            let _self = this;
+            this.$scope.$on('LanguageChanged!', (events, args) => {
+                _self.loadPackages();
+            });
         }
 
         public loadPackages(): void {           
