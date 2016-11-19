@@ -58,6 +58,19 @@
       font-size: 18px; }
       body #pricingtable .package .price-container .price-total .estimation {
         font-size: 20px; }
+  body #pricingtable .package .package-selection-header-text {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    font-weight: bold; }
+    body #pricingtable .package .package-selection-header-text.text-green {
+      color: #20AA73; }
+    body #pricingtable .package .package-selection-header-text.text-blue {
+      color: #3ab0e2; }
+    body #pricingtable .package .package-selection-header-text.text-red {
+      color: #e96656; }
+    body #pricingtable .package .package-selection-header-text.text-yellow {
+      color: #E7AC44; }
   body #pricingtable .package ul li {
     width: 70%;
     margin-left: 20px; }

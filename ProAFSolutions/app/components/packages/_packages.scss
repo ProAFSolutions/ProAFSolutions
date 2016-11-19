@@ -38,7 +38,28 @@
             }
         }
 
-        
+        .package-selection-header-text{
+            margin-top: 10px;
+            margin-bottom: 10px;            
+            font-size: 14px;
+            font-weight: bold;
+
+            &.text-green{
+                color: $color-green; 
+            }
+                        
+            &.text-blue{
+                color: $color-blue; 
+            } 
+                        
+            &.text-red{
+                color: $color-red; 
+            }   
+                        
+            &.text-yellow{
+                color: $color-yellow; 
+            }
+        }
 
         ul {
 

@@ -29,12 +29,11 @@
             this.message = pack.message;            
             this.totalPrice = 0;            
 
-            //let sortedByIncluded = _.sortBy(pack.options, (option: models.IPackageOption) => {
-            //    return option.included;
-            //});
-
+            let sortedOptions = _.sortBy(pack.options, (option: models.IPackageOption) => {
+                return option.order;
+            });
             this.options = new Array<PackageOptionVM>();
-            _.each(pack.options, (option: models.IPackageOption) => {
+            _.each(sortedOptions, (option: models.IPackageOption) => {
                 this.options.push(new PackageOptionVM(option));
             });
         }   

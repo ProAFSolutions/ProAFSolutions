@@ -14,7 +14,7 @@
         </div>
         <!-- / END SECTION HEADER -->
         <!-- PACKAGES -->
-        <div class="row" ng-if="vm.packagesLoaded">
+        <div class="row" ng-show="vm.packagesLoaded">
 
             <package-widget ctrl="vm" package="vm.packages[1]" color="blue" icon="icon-phone-1"></package-widget>    
 
@@ -22,7 +22,7 @@
 
             <package-widget ctrl="vm" package="vm.packages[2]" color="red" icon="icon-browser-streamline-window"></package-widget>    
 
-            <package-widget ctrl="vm" package="vm.packages[3]" color="yellow" icon="icon-world"></package-widget>    
+            <package-widget ctrl="vm" package="vm.packages[3]" color="yellow" icon="icon-world" hide-text-header="true"></package-widget>    
 
         </div> <!-- / END PACKAGES -->
 

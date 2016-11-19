@@ -60,9 +60,9 @@
             }, 2000);
 
             this.$scope.$watch(() => this.$dataContext.currentLanguage, (newValue: string, oldValue: string) => {
-                if (newValue != oldValue) {    
-                    this.$rootScope.$broadcast('LanguageChanged!');                                      
+                if (newValue != oldValue) {                                                      
                     setTimeout(() => {
+                        _self.$rootScope.$broadcast('LanguageChanged!', { lan: newValue });
                         _self.customizeChatWindow();
                     }, 500);
                 }

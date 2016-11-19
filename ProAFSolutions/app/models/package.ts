@@ -4,6 +4,7 @@
         name: string;      
         price: number;
         included: boolean;
+        order: number;
     }
 
     export interface IPackage {       

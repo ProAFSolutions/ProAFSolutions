@@ -7,47 +7,56 @@
       {
         "name": "Dominio (1 año)",        
         "price": 15.95,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Hosting (1 año)",        
         "price": 200.00,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Migración de su información hacia nuestro sistema",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Reportes personalizados",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Envío(UPS, USPS, etc)",
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Panel de administración",        
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Acceso desde el móvil",        
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Soporte(4 meses gratis)",        
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",        
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       }
     ]
   },
@@ -61,27 +70,32 @@
       {
         "name": "Android",        
         "price": 0,
-        "included":  true
+        "included": true,
+        "order": 1
       },
       {
         "name": "iOS",        
         "price": 0,
-        "included":  true
+        "included": true,
+        "order": 2
       },
       {
         "name": "Windows Phone",        
         "price": 0,
-        "included":  false
+        "included": false,
+        "order": 4
       },
       {
         "name": "Publicación en tiendas(Google Play, Apple Store, Windows Store)",        
         "price": 0,
-        "included":  false
+        "included": false,
+        "order": 5
       },
       {
         "name": "Soporte (4 meses gratis)",        
         "price": 0,
-        "included":  true
+        "included": true,
+        "order": 3
       }
     ]
   },
@@ -95,37 +109,44 @@
       {
         "name": "Dominio (1 año)",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Hosting (1 año)",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },      
       {
         "name": "Panel de administración",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Acceso desde el móvil",       
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Soporte(4 meses gratis)",
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       },
       {
         "name": "Chat en tiempo real",        
         "price": 0,
-        "included": false
+        "included": false,
+        "order": 0
       }
     ]
   },
@@ -139,12 +160,14 @@
       {
         "name": "PAQUETE DE APPLICACIONES WEB",        
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       },
       {
         "name": "PAQUETE DE APPLICACIONES MOVILES",       
         "price": 0,
-        "included": true
+        "included": true,
+        "order": 0
       }
     ]
   }

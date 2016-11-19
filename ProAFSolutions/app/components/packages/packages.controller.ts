@@ -24,21 +24,21 @@
 
         init(): void {
             this.packagesLoaded = false;
-            this.packages = new Array<PackageVM>();
-            this.loadPackages();
-
             let _self = this;
             this.$scope.$on('LanguageChanged!', (events, args) => {
-                _self.loadPackages();
+                setTimeout(() => {
+                    _self.loadPackages(); 
+                }, 0);             
             });
         }
 
-        public loadPackages(): void {           
+        public loadPackages(): void {  
+            this.packages = new Array<PackageVM>();                   
             this.$dataProvider.getPackagesPromise().then((response: ng.IHttpPromiseCallbackArg<models.IPackage[]>) => {
                 _.each(response.data, (pack: models.IPackage, index: number) => {
                     this.packages.push(new PackageVM((index + 1), pack));
                 });
-                this.packagesLoaded = true;
+                this.packagesLoaded = true;                
            });
         }
 

@@ -20,25 +20,14 @@
         }
 
         init(): void {
-
-            this.loadTeamMembers();
-
             let _self = this;
             this.$scope.$on('LanguageChanged!', (events, args) => {
                 _self.loadTeamMembers();
             });
-
-            //this.$scope.$watch(() => this.$dataContext.currentLanguage, (newValue: string, oldValue: string) => {
-            //    if (newValue != oldValue) {
-            //        let _self = this;
-            //        setTimeout(() => {
-            //            _self.loadTeamMembers();
-            //        }, 500);                    
-            //    }
-            //});  
         }
 
         private loadTeamMembers(): void {
+            this.teamMembers = new Array<models.ITeamMember>();
             this.$dataProvider.getTeamMembersPromise().then((response: ng.IHttpPromiseCallbackArg<models.ITeamMember[]>) => {
                 this.teamMembers = response.data;
             });

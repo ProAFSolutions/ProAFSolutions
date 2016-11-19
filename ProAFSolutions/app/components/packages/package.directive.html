@@ -18,6 +18,9 @@
                 </div>
             </div>
         </div>
+        <div ng-hide="hideTextHeader" class="package-selection-header-text text-{{color}}">
+            {{"packages.personalized.text" | translate}}
+        </div>
         <ul>
             <li ng-repeat="option in package.options">
                 <package-toggle toggle-id="toggle-{{package.id}}-{{$index}}" toggle-color="{{color}}" toggle-option="option" toggle-package="package"></package-toggle>   
