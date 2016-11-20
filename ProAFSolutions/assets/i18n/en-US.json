@@ -126,5 +126,9 @@
   "chat.actions.endchat": "End Chat",
   "chat.end.message": "Are you sure you want to end this chat?",
   "chat.end.cancel": "Cancel",
-  "chat.end.submit":  "End Chat"
+  "chat.end.submit": "End Chat",
+  "chat.change.name.message": "Please change your name so we can recognize you the next time.",
+  "chat.change.name.placeholder": "your name..",
+  "chat.email.conversation.placeholder": "your email..",
+  "chat.email.conversation.message": "Email transcript to:"
 }

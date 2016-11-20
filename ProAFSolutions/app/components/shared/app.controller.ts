@@ -58,7 +58,7 @@
                     let _self = this;
                     setTimeout(() => {
                         _self.customizeChatWindow();
-                    }, 500);
+                    }, 1000);
                 }
             });  
         }
@@ -79,6 +79,7 @@
         }
 
         private translateChat($content: any) {
+
             $content.find("#greetingsContainer").text(this.$translate.instant("chat.greeting.text"));
             $content.find("#chatTextarea").attr("placeholder", this.$translate.instant("chat.text.placeholder"));
             $content.find("#openMenu").text(this.$translate.instant("chat.menu.open"));
@@ -90,16 +91,27 @@
             optionsContainer.find("#soundOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.sound"));
             optionsContainer.find("#emailTranscriptOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.email"));
             optionsContainer.find("#printOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.print"));
-            optionsContainer.find("#changeNameOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.name"));
+            optionsContainer.find("#changeNameOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.name"));          
             //window actions
             $content.find("#minimizeChat").attr("title", this.$translate.instant("chat.actions.minimize"));
             $content.find("#popoutChat").attr("title", this.$translate.instant("chat.actions.popout"));
             $content.find("#endChat").attr("title", this.$translate.instant("chat.actions.endchat"));
-            //call off chat
+            //end chat panel
             $content.find("#endChatFormMessageContainer").text(this.$translate.instant("chat.end.message"));
+            //change name panel
+            $content.find("#changeNameFormMessageContainer").text(this.$translate.instant("chat.change.name.message"));
+            $content.find("#nameField").attr("placeholder", this.$translate.instant("chat.change.name.placeholder"));
+            //email transcript panel
+            $content.find("#emailTranscriptFormMessageContainer").text(this.$translate.instant("chat.email.conversation.message"));
+            $content.find("#transcriptEmailField").attr("placeholder", this.$translate.instant("chat.email.conversation.placeholder"));           
+            //common panel actions
             $content.find("#formCancel").text(this.$translate.instant("chat.end.cancel"));
             $content.find("#formSubmit").text(this.$translate.instant("chat.end.submit"));
-        }
+
+            // events
+            var _self = this;
+            optionsContainer.find("#endChatOption,#emailTranscriptOption,#changeNameOption").on('click', function () { _self.translateChat($content) });
+        }        
 
         //public magicShortcut(event: KeyboardEvent): void {
         //    if (event.ctrlKey && event.altKey && event.shiftKey && event.keyCode == 13) {

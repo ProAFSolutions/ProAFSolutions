@@ -127,5 +127,9 @@
   "chat.actions.endchat": "Cerrar Chat",
   "chat.end.message": "Está seguro que desea terminar esta conversación?",
   "chat.end.cancel": "Cancelar",
-  "chat.end.submit":  "Finalizar Chat"
+  "chat.end.submit": "Finalizar Chat",
+  "chat.change.name.message": "Por favor, cambie su nombre.",
+  "chat.change.name.placeholder": "teclee su nombre ..",
+  "chat.email.conversation.placeholder": "teclee su correo..",
+  "chat.email.conversation.message": "Enviar conversación a:"
 }
