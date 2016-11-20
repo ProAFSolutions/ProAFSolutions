@@ -1,6 +1,144 @@
 ﻿#pricingtable{
+    
     .price h4{
         font-size:35px
     }
 
+    .package{
+        
+        .package-header{
+
+            i{
+                font-size: 24px;
+            }
+        }
+
+
+        .price-container{
+            position: relative;
+
+            h4{
+                font-size: 30px;
+            }
+
+            .price-meta{
+                font-size: 18px;
+            }
+
+            .price-total{
+                position: absolute;
+                top: -38px;
+                right: 10px;
+                font-size: 18px;
+
+                .estimation{
+                    font-size: 20px;
+                }
+
+            }
+        }
+
+        .package-selection-header-text{
+            margin-top: 10px;
+            margin-bottom: 10px;            
+            font-size: 14px;
+            font-weight: bold;
+
+            &.text-green{
+                color: $color-green; 
+            }
+                        
+            &.text-blue{
+                color: $color-blue; 
+            } 
+                        
+            &.text-red{
+                color: $color-red; 
+            }   
+                        
+            &.text-yellow{
+                color: $color-yellow; 
+            }
+        }
+
+        ul {
+
+            li{
+
+                width: 70%;
+                margin-left: 20px;
+
+                .toggle-option {
+
+                    .toggle > input[type="checkbox"] {
+                       display: none;   
+                    }
+
+                    .toggle > label {
+                        cursor: pointer;
+                        height: 0px;
+                        width: 0px;  
+                        position: relative; 
+                        
+                        &.toggle-green-bg{
+                            background-color: $color-green; 
+                        }
+                        
+                        &.toggle-blue-bg{
+                            background-color: $color-blue; 
+                        } 
+                        
+                        &.toggle-red-bg{
+                            background-color: $color-red; 
+                        }   
+                        
+                        &.toggle-yellow-bg{
+                            background-color: $color-yellow; 
+                        }  
+                        
+                        &.toggle-disabled {
+                            background-color: $color-light-gray !important;  
+                        }      
+                    }
+
+                    .toggle > label::before {
+                        background: rgb(0, 0, 0);
+                        box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5);
+                        border-radius: 8px;
+                        content: '';
+                        height: 16px;
+                        margin-top: -8px;
+                        position:absolute;
+                        opacity: 0.3;
+                        transition: all 0.4s ease-in-out;
+                        width: 40px;
+                    }
+                    .toggle > label::after {
+                        background: rgb(255, 255, 255);
+                        border-radius: 16px;
+                        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+                        content: '';
+                        height: 24px;
+                        left: -4px;
+                        margin-top: -8px;
+                        position: absolute;
+                        top: -4px;
+                        transition: all 0.3s ease-in-out;
+                        width: 24px;
+                    }
+                    .toggle > input[type="checkbox"]:checked + label::before {
+                        background: inherit;
+                        opacity: 0.5;
+                    }
+                    .toggle > input[type="checkbox"]:checked + label::after {
+                        background: inherit;
+                        left: 20px;
+                    }                    
+                }
+
+                
+            }
+
+        }
+    }
 }

@@ -4,6 +4,7 @@
     export interface IDataProviderService {
         getProductsPromise(): ng.IHttpPromise<models.IProduct[]>; 
         getTeamMembersPromise(): ng.IHttpPromise<models.ITeamMember[]>;
+        getPackagesPromise(): ng.IHttpPromise<models.IPackage[]>;
     }
 
 
@@ -20,6 +21,10 @@
 
         public getTeamMembersPromise(): ng.IHttpPromise<models.ITeamMember[]> {
             return this.$http.get<models.ITeamMember[]>(this.getFilePath("team.json"));
+        }
+
+        public getPackagesPromise(): ng.IHttpPromise<models.IPackage[]> {
+            return this.$http.get<models.IPackage[]>(this.getFilePath("packages.json"));
         }
 
         private getFilePath(file: string): string{

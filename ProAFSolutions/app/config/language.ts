@@ -10,9 +10,11 @@ namespace proafsolutions {
                suffix: '.json'
            });
 
+           $translateProvider.useLocalStorage(); 
+
            $translateProvider.preferredLanguage('es-ES');
 
-           $translateProvider.useLocalStorage();         
+                   
        }     
    }
 }

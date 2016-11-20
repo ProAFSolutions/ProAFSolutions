@@ -1,7 +1,42 @@
 ﻿#focus{
+
+        .focus-box{
+
+            .service-icon{
+                
+                i {
+                    font-size: 52px;
+                     top: 10px;
+
+                    &.blue{
+                        color: $color-blue;
+                    }
+
+                    &.green{
+                        color: $color-green;
+                    }
+
+                    &.red{                       
+                        color: $color-red;
+                    }
+
+                    &.yellow{
+                        color: $color-yellow;
+                    }
+                }
+            }
+
+        }
+
         .other-focuses{
             .section-footer-title{
                 text-transform: uppercase;
+            }
+        }
+
+        .other-focus-list{
+            i{
+                font-size: 24px;
             }
         }
     }

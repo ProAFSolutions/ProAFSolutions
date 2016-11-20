@@ -13,7 +13,7 @@
 
     class AppController implements IAppController {
 
-        static $inject = ['$scope', '$dataContext', '$translate']; 
+        static $inject = ['$scope', '$rootScope', '$dataContext', '$translate']; 
 
         public keywords: string;
         public authors: string;
@@ -21,6 +21,7 @@
  
 
         constructor(private $scope: ng.IScope,
+                    private $rootScope: ng.IRootScopeService,
                     private $dataContext: shared.IDataContextService,
                     private $translate: ng.translate.ITranslateService) {          
            this.init();
@@ -53,10 +54,15 @@
         }
 
         public setupChatWindow(): void {
+            let _self = this;
+            setTimeout(() => {
+                _self.customizeChatWindow();
+            }, 2000);
+
             this.$scope.$watch(() => this.$dataContext.currentLanguage, (newValue: string, oldValue: string) => {
-                if (newValue != oldValue) {                    
-                    let _self = this;
+                if (newValue != oldValue) {                                                      
                     setTimeout(() => {
+                        _self.$rootScope.$broadcast('LanguageChanged!', { lan: newValue });
                         _self.customizeChatWindow();
                     }, 1000);
                 }

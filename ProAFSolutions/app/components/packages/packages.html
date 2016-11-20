@@ -14,124 +14,16 @@
         </div>
         <!-- / END SECTION HEADER -->
         <!-- PACKAGES -->
-        <div class="row">
+        <div class="row" ng-show="vm.packagesLoaded">
 
-            <!-- FIRST PACKAGE -->
-            <div class="col-lg-3 col-sm-3">
-                <div class="package wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="package-header green-bg">
-                        <h5>{{"packages.package1.title" | translate}}</h5>
-                    </div>
-                    <div class="price dark-bg">
-                        <div class="price-container">
-                            <h4><span class="dollar-sign"></span>{{"packages.price" | translate}} </h4><span class="price-meta">
-                                <!--/ mo-->$2199
-                            </span>
-                        </div>
-                    </div>
-                    <ul>
-                        <li><i class="icon-check"></i>{{"packages.package1.section1" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section2" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section3" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section4" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section8" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section5" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section6" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package1.section7" | translate}}</li>
-                        <!--<li><i class="icon-cancel"></i>Access to Tutorials</li>
-                        <li><i class="icon-cancel"></i>Auto Backup</li>
-                        <li><i class="icon-cancel"></i>Extended Security</li>-->
-                    </ul>
-                    <a href="##contact" class="btn btn-primary custom-button green-btn" ng-click="vm.selectedPackage('packages.package1.title', 'packages.package1.message')">
-                        {{"packages.button.select" | translate}}
-                    </a>
-                </div>
-            </div> <!-- / END FIRST PACKAGE -->
+            <package-widget ctrl="vm" package="vm.packages[1]" color="blue" icon="icon-phone-1"></package-widget>    
 
-            <div class="col-lg-3 col-sm-3">
-                <div class="package wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="package-header blue-bg">
-                        <h5>{{"packages.package2.title" | translate}}</h5>
-                    </div>
-                    <!--<div class="price dark-bg">
-                        <div class="price-container">
-                            <h4><span class="dollar-sign">$</span>21 </h4>
-                            <span class="price-meta">/ Mo</span>
-                        </div>
-                    </div>-->
-                    <div class="price dark-bg">
-                        <div class="price-container">
-                            <h4><span class="dollar-sign"></span>{{"packages.price" | translate}}</h4><span class="price-meta">
-                                <!--/ mo-->$2999
-                            </span>
-                        </div>
-                    </div>
-                    <ul>
-                        <li><i class="icon-check"></i>{{"packages.package2.section1" | translate}}</li>
-                        <!--<li><i class="icon-check"></i>{{"packages.package2.section2" | translate}}</li>-->
-                        <!--<li><i class="icon-check"></i>{{"packages.package2.section3" | translate}}</li>-->
-                        <li><i class="icon-check"></i>{{"packages.package2.section4" | translate}}</li>
-                        <!--<li><i class="icon-check"></i>{{"packages.package2.section5" | translate}}</li>-->
-                        <li><i class="icon-check"></i>{{"packages.package2.section6" | translate}}</li>
-                        <!--<li><i class="icon-cancel"></i>Access to Tutorials</li>
-                        <li><i class="icon-cancel"></i>Auto Backup</li>
-                        <li><i class="icon-cancel"></i>Extended Security</li>-->
-                    </ul>
-                    <a href="##contact" class="btn btn-primary custom-button blue-btn" ng-click="vm.selectedPackage('packages.package2.title', 'packages.package2.message')">
-                        {{"packages.button.select" | translate}}
-                    </a>
-                </div>
-            </div>
+            <package-widget ctrl="vm" package="vm.packages[0]" color="green" icon="icon-caddie-shopping-streamline"></package-widget>             
 
-             <div class="col-lg-3 col-sm-3">
-                <div class="package wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="package-header red-bg">
-                        <h5>{{"packages.package3.title" | translate}}</h5>
-                    </div>
-                    <div class="price dark-bg">
-                        <h4><span class="dollar-sign"></span>{{"packages.price" | translate}} </h4><span class="price-meta">
-                            <!--/ mo-->$299
-                        </span>
-                    </div>
-                    <ul>
-                        <li><i class="icon-check"></i>{{"packages.package3.section1" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section2" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section3" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section4" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section6" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section7" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package3.section5" | translate}}</li>
-                        
-                        <!--<li><i class="icon-cancel"></i>Access to Tutorials</li>
-                        <li><i class="icon-cancel"></i>Auto Backup</li>
-                        <li><i class="icon-cancel"></i>Extended Security</li>-->
-                    </ul>
-                    <a href="##contact" class="btn btn-primary custom-button red-btn" ng-click="vm.selectedPackage('packages.package3.title', 'packages.package3.message')">
-                        {{"packages.button.select" | translate}}
-                   </a>
-                </div>
-            </div>
+            <package-widget ctrl="vm" package="vm.packages[2]" color="red" icon="icon-browser-streamline-window"></package-widget>    
 
+            <package-widget ctrl="vm" package="vm.packages[3]" color="yellow" icon="icon-world" hide-text-header="true"></package-widget>    
 
-            <div class="col-lg-3 col-sm-3">
-                <div class="package wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="package-header yellow-bg">
-                        <h5>{{"packages.package4.title" | translate}}</h5>
-                    </div>
-                    <div class="price dark-bg">
-                        <h4><span class="dollar-sign"></span>{{"packages.price" | translate}}</h4><span class="price-meta">
-                            <!--/ mo-->$199
-                        </span>
-                    </div>
-                    <ul>
-                        <li><i class="icon-check"></i>{{"packages.package4.section1" | translate}}</li>
-                        <li><i class="icon-check"></i>{{"packages.package4.section2" | translate}}</li>                      
-                    </ul>
-                    <a href="##contact" class="btn btn-primary custom-button yellow-btn" ng-click="vm.selectedPackage('packages.package4.title', 'packages.package4.message')">
-                        {{"packages.button.select" | translate}}
-                    </a> 
-                </div>
-            </div>
         </div> <!-- / END PACKAGES -->
 
     </div> <!--END CONTAINER  -->
