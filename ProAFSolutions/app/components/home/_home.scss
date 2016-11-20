@@ -1,6 +1,10 @@
 ﻿
 #home {
-        .navbar{
+
+      #main-nav {
+        position: fixed !important;        
+
+        &.navbar{
             .lang-selector{
                position: absolute;
                right: 20px;
@@ -20,6 +24,10 @@
                 }
             }
 
+            i.close{
+                display: none;
+            }
+
             .navbar-brand{
                 margin-bottom: 20px;
             }
@@ -29,4 +37,73 @@
             }
 
         }
+      }
+       
   }
+
+@media (max-width: 767px){
+
+    #home {
+        #main-nav {
+            &.navbar-inverse {
+
+                .navbar-header{
+                    .navbar-toggle{
+                        
+                        &:hover, &:focus{
+                            background-color: $color-blue;
+                        }
+
+                       
+                    }
+                }
+
+                .navbar-collapse {  
+                    position: relative;                  
+                    background-color: #272727;
+                    color: white;
+                    opacity: 0.9;
+
+                    i.close{
+                        display: block;
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        color: white;
+                        font-size: 32px;
+                        opacity: 1;
+                    }
+
+                    .navbar-nav > li {
+                        display: inline !important;    
+                        
+                        a {
+                            color: white;
+                            margin-left: 40px;
+                            margin-right: 40px;
+                            border-radius: 15px;
+                            
+                            &:hover{
+                                background-color: $color-blue;
+                            }
+
+                        }  
+
+                         &:first-child{
+                            a {
+                                margin-top: 40px;
+                            }                            
+                        } 
+                        
+                        &:last-child{
+                            a {
+                                margin-bottom: 20px;
+                            }                            
+                        }              
+                    }
+                }
+            }
+        }
+    }
+}
+
