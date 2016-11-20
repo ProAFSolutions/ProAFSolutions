@@ -23,6 +23,10 @@
             this.$dataContext.currentLanguage = this.$translateProvider.use();          
         } 
 
+        public closeMenuClick(): void {
+            $(".navbar-toggle").click();
+        }
+
         public changeAppLanguageClick(lang: string) {
             this.$translateProvider.use(lang);
             this.$dataContext.currentLanguage = lang;

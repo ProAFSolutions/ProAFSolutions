@@ -61,9 +61,12 @@
         color: white;
         font-size: 32px;
         opacity: 1; }
+        body #home #main-nav.navbar-inverse .navbar-collapse i.close:hover {
+          opacity: 0.8; }
       body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li {
         display: inline !important; }
         body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li a {
+          font-weight: bold;
           color: white;
           margin-left: 40px;
           margin-right: 40px;
