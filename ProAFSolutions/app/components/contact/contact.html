@@ -24,8 +24,14 @@
                         <input type="email" name="email" ng-model="vm.contactMessage.email" placeholder='{{"contact.form.email" | translate}}' class="form-control input-box" id="email">
                     </div>
                     <div class="col-lg-4 col-sm-4">
-                        <input type="text" name="subject" ng-model="vm.contactMessage.subject" placeholder='{{"contact.form.subject" | translate}}' class="form-control input-box" id="subject">
+                        <input type="tel" name="email" ng-model="vm.contactMessage.phone" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
                     </div>
+                </div>
+
+                <div class="clearfix">
+                    <div class="col-md-6 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                        <input type="text" name="subject" ng-model="vm.contactMessage.subject" placeholder='{{"contact.form.subject" | translate}}' class="form-control input-box" id="subject">
+                    </div>                    
                 </div>
 
                 <div class="clearfix">

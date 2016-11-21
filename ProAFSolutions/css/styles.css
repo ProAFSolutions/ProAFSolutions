@@ -26,21 +26,57 @@
     text-transform: uppercase; }
   body #focus .other-focus-list i {
     font-size: 24px; }
-  body #home .navbar .lang-selector {
-    position: absolute;
-    right: 20px; }
-    body #home .navbar .lang-selector .lang-item {
-      cursor: pointer;
-      padding-left: 5px; }
-      body #home .navbar .lang-selector .lang-item span {
-        color: black;
-        font-size: 12px; }
-      body #home .navbar .lang-selector .lang-item img {
-        width: 24px; }
-  body #home .navbar .navbar-brand {
-    margin-bottom: 20px; }
-  body #home .navbar .navbar-toggle {
-    margin-top: 50px !important; }
+  body #home #main-nav {
+    position: fixed !important; }
+    body #home #main-nav.navbar .lang-selector {
+      position: absolute;
+      right: 20px; }
+      body #home #main-nav.navbar .lang-selector .lang-item {
+        cursor: pointer;
+        padding-left: 5px; }
+        body #home #main-nav.navbar .lang-selector .lang-item span {
+          color: black;
+          font-size: 12px; }
+        body #home #main-nav.navbar .lang-selector .lang-item img {
+          width: 24px; }
+    body #home #main-nav.navbar i.close {
+      display: none; }
+    body #home #main-nav.navbar .navbar-brand {
+      margin-bottom: 20px; }
+    body #home #main-nav.navbar .navbar-toggle {
+      margin-top: 50px !important; }
+  @media (max-width: 767px) {
+    body #home #main-nav.navbar-inverse .navbar-header .navbar-toggle:hover, body #home #main-nav.navbar-inverse .navbar-header .navbar-toggle:focus {
+      background-color: #3ab0e2; }
+    body #home #main-nav.navbar-inverse .navbar-collapse {
+      position: relative;
+      background-color: #272727;
+      color: white;
+      opacity: 0.9; }
+      body #home #main-nav.navbar-inverse .navbar-collapse i.close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        color: white;
+        font-size: 32px;
+        opacity: 1; }
+        body #home #main-nav.navbar-inverse .navbar-collapse i.close:hover {
+          opacity: 0.8; }
+      body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li {
+        display: inline !important; }
+        body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li a {
+          font-weight: bold;
+          color: white;
+          margin-left: 40px;
+          margin-right: 40px;
+          border-radius: 15px; }
+          body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li a:hover {
+            background-color: #3ab0e2; }
+        body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li:first-child a {
+          margin-top: 40px; }
+        body #home #main-nav.navbar-inverse .navbar-collapse .navbar-nav > li:last-child a {
+          margin-bottom: 20px; } }
   body #pricingtable .price h4 {
     font-size: 35px; }
   body #pricingtable .package .package-header i {
