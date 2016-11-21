@@ -1,6 +1,6 @@
 ﻿[
   {
-    "basePrice": 2199.00,
+    "basePrice": 1999.00,
     "title": "Online Store",
     "message": "Hi, I'm interested in selling my products through Internet. I would like to get more information. Please contact me.  Thanks",
     "options": [
@@ -8,143 +8,149 @@
         "name": "Domain (1 year)",        
         "price": 15.95,
         "included": false,
-        "order": 0
+        "order": 5
       },
       {
         "name": "Hosting (1 año)",        
         "price": 200.00,
         "included": false,
-        "order": 0
+        "order": 6
       },
       {
         "name": "Migration of products to our system",        
-        "price": 0,
+        "price": 250,
         "included": false,
-        "order": 0
+        "order": 7
       },
       {
         "name": "Custom reports",        
-        "price": 0,
+        "price": 300,
         "included": false,
-        "order": 0
+        "order": 8
       },
       {
         "name": "Shipping(UPS, USPS, etc)",       
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 1
       },
       {
         "name": "Admin panel",       
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 2
       },
       {
         "name": "Access from mobile",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 3
       },
       {
         "name": "Free Support(4 months)",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 4
       },
       {
         "name": "Payment methods (Paypal,MasterCard, Visa, etc)",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 5
       }
     ]
   },
 
   {
-    "basePrice": 2199.00,
+    "basePrice": 2999.00,
     "title": "Mobile apps",
     "message": "Hi, I'm interested in making a mobile app. I would like to get more information about it. Please contact me.  Thanks",
     "options": [
       {
-        "name": "Android",        
+        "name": "Android",
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 1
       },
       {
-        "name": "iOS",        
+        "name": "iOS",
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 2
       },
       {
-        "name": "Windows Phone",        
-        "price": 0,
+        "name": "Windows Phone",
+        "price": 399,
         "included": false,
-        "order": 0
+        "order": 4
       },
       {
-        "name": "Publish on stores(Google, Apple, Windows)",        
-        "price": 0,
+        "name": "Publish on stores(Google, Apple, Windows)",
+        "price": 299,
         "included": false,
-        "order": 0
+        "order": 5
       },
       {
-        "name": "Free Support(4 months)",        
+        "name": "Free Support(4 months)",
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 3
+      },
+      {
+        "name": "Social Media (Facebook, LinkedIn, Twitter)",
+        "price": 49,
+        "included": false,
+        "order": 6
       }
     ]
   },
 
   {
-    "basePrice": 2199.00,
+    "basePrice": 199.00,
     "title": "Web Application",
     "message": "Hi, I'm interested in making a web site. I would like to get more information about it. Please contact me.  Thanks",
     "options": [
       {
         "name": "Domain (1 year)",        
-        "price": 0,
+        "price": 15.95,
         "included": false,
-        "order": 0
+        "order": 3
       },
       {
         "name": "Hosting (1 year)",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 4
       },     
       {
         "name": "Admin Panel",        
-        "price": 0,
+        "price": 99,
         "included": false,
-        "order": 0
+        "order": 5
       },
       {
         "name": "Access from mobile",       
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 1
       },
       {
         "name": "Free Support(4 months)",       
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 2
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 6
       },
       {
         "name": "Real Time Chat",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 7
       }
     ]
   },
