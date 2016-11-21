@@ -53,10 +53,10 @@
         "order": 4
       },
       {
-        "name": "Payment methods (Paypal,MasterCard, Visa, etc)",        
+        "name": "Payment(Paypal,MasterCard, Visa, etc)",        
         "price": 0,
         "included": true,
-        "order": 5
+        "order": 0
       }
     ]
   },
