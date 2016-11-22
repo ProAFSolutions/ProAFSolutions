@@ -1,7 +1,7 @@
 ﻿namespace proafsolutions {
 
     interface IContactController {
-        sendContactMessage(): void;
+        sendContactMessage(contactForm: any): void;
     }
 
     class ContactController implements IContactController {
@@ -10,11 +10,16 @@
 
         public contactMessage: models.IContactMessage;
 
+        public showSuccessMsg: boolean;
+        public showFormErrors: boolean;
+
         constructor(private $scope: ng.IScope,
                     protected $dataContext: shared.IDataContextService,
                     protected $contactService: services.IContactService,
                     protected $location: ng.ILocationService) {           
             this.init();
+            this.showSuccessMsg = false;
+            this.showFormErrors = false;
         }
 
         init(): void
@@ -28,9 +33,25 @@
             });
         }
 
-        public sendContactMessage(): void {
-            //todo: callback 
-            this.$contactService.sendMessage(this.contactMessage);
+        public sendContactMessage(contactForm: any): void {    
+            let _self = this;
+            this.showFormErrors = false;
+
+            if (contactForm.$valid) {
+                this.$contactService.sendMessage(this.contactMessage)
+                    .then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+                        if (response) {
+                            this.showSuccessMsg = true;
+                            this.contactMessage = new models.ContactMessage('', '', '', '', '')
+                            setTimeout(() => {
+                                _self.showSuccessMsg = false;
+                                _self.$scope.$apply();
+                            }, 5000);
+                        }
+                    });
+            } else {
+                this.showFormErrors = true;
+            }           
         }
       
 

@@ -42,7 +42,7 @@ namespace ProAFSolutionsAPI.Controllers
         [Route("contact-us")]
         [HttpPost]
         public IHttpActionResult SendContactMessage(ContactModel contact)
-        {
+        {     
             var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
                                          contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
 
@@ -71,8 +71,7 @@ namespace ProAFSolutionsAPI.Controllers
                 });
 
                 LoggerProvider.Info(string.Format("Contact Text sent to {0}", phones));
-            }
-           
+            }          
 
             return Ok();
         }

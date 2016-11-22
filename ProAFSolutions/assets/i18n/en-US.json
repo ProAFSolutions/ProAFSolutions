@@ -74,7 +74,12 @@
   "contact.form.message": "Message",
   "contact.button": "Send Message",
   "contact.message.sucessfully": "Your message has been sent successfully.",
-  "contact.message.error": "Email must be valid and the message must be longer than 1 character.",
+  "contact.message.error": "Sorry the message could not be sent. Please try again, if the problem persists contact the administrator",
+  "contact.form.validation.name.required": "Name is required",
+  "contact.form.validation.email.required": "Email is required",
+  "contact.form.validation.phone.required": "Phone number is required",
+  "contact.form.validation.subject.required": "Subject is required",
+  "contact.form.validation.message.required":  "Message is required",
 
   "chat.greeting.text": "We are live and ready to chat with you now. Say something to start a live chat.",
   "chat.text.placeholder": "Type here and press enter..",

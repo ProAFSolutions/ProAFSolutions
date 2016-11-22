@@ -15,40 +15,48 @@
         <!-- / END SECTION HEADER -->
         <!-- CONTACT FORM-->
         <div class="row">
-            <form role="form" class="contact-form" id="contact-form">
+            <form role="form" class="contact-form" id="contact-form" name="contactForm" novalidate>
                 <div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="col-lg-4 col-sm-4">
-                        <input type="text" name="name" ng-model="vm.contactMessage.name" placeholder='{{"contact.form.name" | translate}}' class="form-control input-box" id="name">
+                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.name.$invalid && vm.showFormErrors}">
+                        <input type="text" required name="name" ng-model="vm.contactMessage.name" placeholder='{{"contact.form.name" | translate}}' class="form-control input-box" id="name">
+                        <p ng-show="vm.showFormErrors && contactForm.name.$error.required">* {{"contact.form.validation.name.required" | translate}}</p>                        
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <input type="email" name="email" ng-model="vm.contactMessage.email" placeholder='{{"contact.form.email" | translate}}' class="form-control input-box" id="email">
+                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.email.$invalid && vm.showFormErrors}">
+                        <input type="email" required name="email" ng-model="vm.contactMessage.email" placeholder='{{"contact.form.email" | translate}}' class="form-control input-box" id="email">                       
+                        <p ng-show="vm.showFormErrors && contactForm.email.$error.required">* {{"contact.form.validation.email.required" | translate}}</p>                        
                     </div>
-                    <div class="col-lg-4 col-sm-4">
-                        <input type="tel" name="email" ng-model="vm.contactMessage.phone" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
+                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.phone.$invalid && vm.showFormErrors}">
+                        <input type="tel" required name="phone" ng-model="vm.contactMessage.phone" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
+                        <p ng-show="vm.showFormErrors && contactForm.phone.$error.required">* {{"contact.form.validation.phone.required" | translate}}</p>                        
                     </div>
                 </div>
 
                 <div class="clearfix">
-                    <div class="col-md-6 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                        <input type="text" name="subject" ng-model="vm.contactMessage.subject" placeholder='{{"contact.form.subject" | translate}}' class="form-control input-box" id="subject">
+                    <div class="col-md-6 wow fadeInRight animated" ng-class="{ 'has-error': contactForm.subject.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">>
+                        <input type="text" required name="subject" ng-model="vm.contactMessage.subject" placeholder='{{"contact.form.subject" | translate}}' class="form-control input-box" id="subject">
+                        <p ng-show="vm.showFormErrors && contactForm.subject.$error.required">* {{"contact.form.validation.subject.required" | translate}}</p>                        
                     </div>                    
                 </div>
 
                 <div class="clearfix">
-                    <div class="col-md-12 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                        <textarea name="message" ng-model="vm.contactMessage.message"  class="form-control textarea-box" placeholder='{{"contact.form.message" | translate}}' id="message"></textarea>
+                    <div class="col-md-12 wow fadeInRight animated" ng-class="{ 'has-error': contactForm.message.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                        <textarea name="message" required ng-model="vm.contactMessage.message"  class="form-control textarea-box" placeholder='{{"contact.form.message" | translate}}' id="message"></textarea>
+                        <p ng-show="vm.showFormErrors && contactForm.message.$error.required">* {{"contact.form.validation.message.required" | translate}}</p>                        
                     </div>
-                </div>
+                </div>                            
+                
                 <!-- IF MAIL SENT SUCCESSFULLY -->
-                <h4 class="success pull-left white-text">
+                <h4 class="pull-left white-text success-message" ng-show="vm.showSuccessMsg">
                     {{"contact.message.sucessfully" | translate}}
                 </h4>
 
                 <!-- IF MAIL SENDING UNSUCCESSFULL -->
-                <h4 class="error pull-left white-text">
+                <!--<h4 class="error pull-left white-text">
                     {{"contact.message.error" | translate}}
-                </h4>
-                <button class="btn btn-primary custom-button red-btn wow fadeInLeft animated" ng-click="vm.sendContactMessage()" id="submit" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">{{"contact.button" | translate}}</button>
+                </h4>-->
+
+                <button class="btn btn-primary custom-button red-btn wow fadeInLeft animated" ng-click="vm.sendContactMessage(contactForm)"  id="submit" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s" type="submit">{{"contact.button" | translate}}</button>
+                <!--ng-disabled="contactForm.$invalid"-->
             </form>
         </div>
         <!-- / END CONTACT FORM-->
