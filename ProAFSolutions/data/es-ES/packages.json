@@ -1,6 +1,6 @@
 ﻿[
   {
-    "basePrice": 2199.00,
+    "basePrice": 1999.00,
     "title": "Tienda Online",
     "message": "Hola, me interesa vender mis productos por Internet. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
     "options": [
@@ -8,52 +8,52 @@
         "name": "Dominio (1 año)",        
         "price": 15.95,
         "included": false,
-        "order": 0
+        "order": 5
       },
       {
         "name": "Hosting (1 año)",        
         "price": 200.00,
         "included": false,
-        "order": 0
+        "order": 6
       },
       {
         "name": "Migración de su información hacia nuestro sistema",        
-        "price": 0,
+        "price": 250,
         "included": false,
-        "order": 0
+        "order": 7
       },
       {
         "name": "Reportes personalizados",        
-        "price": 0,
+        "price": 300,
         "included": false,
-        "order": 0
+        "order": 8
       },
       {
         "name": "Envío(UPS, USPS, etc)",
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 1
       },
       {
         "name": "Panel de administración",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 2
       },
       {
         "name": "Acceso desde el móvil",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 3
       },
       {
         "name": "Soporte(4 meses gratis)",        
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 4
       },
       {
-        "name": "Métodos de pagos(Paypal,MasterCard, Visa, etc)",        
+        "name": "Pagos(Paypal,MasterCard, Visa, etc)",        
         "price": 0,
         "included": true,
         "order": 0
@@ -63,7 +63,7 @@
 
   {
     
-    "basePrice": 3199.00,
+    "basePrice": 2999.00,
     "title": "Aplicaciones Moviles",
     "message": "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
     "options": [
@@ -81,21 +81,27 @@
       },
       {
         "name": "Windows Phone",        
-        "price": 0,
+        "price": 399,
         "included": false,
         "order": 4
       },
       {
         "name": "Publicación en tiendas(Google Play, Apple Store, Windows Store)",        
-        "price": 0,
+        "price": 299,
         "included": false,
         "order": 5
       },
       {
-        "name": "Soporte (4 meses gratis)",        
+        "name": "Soporte (4 meses gratis)",
         "price": 0,
         "included": true,
         "order": 3
+      },
+        {
+        "name": "Social Media (Facebook, LinkedIn, Twitter)",        
+        "price": 49,
+        "included": false,
+        "order": 6
       }
     ]
   },
@@ -108,45 +114,45 @@
     "options": [
       {
         "name": "Dominio (1 año)",        
-        "price": 0,
+        "price": 15.95,
         "included": false,
-        "order": 0
+        "order": 3
       },
       {
         "name": "Hosting (1 año)",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 4
       },      
       {
         "name": "Panel de administración",        
-        "price": 0,
+        "price": 99,
         "included": false,
-        "order": 0
+        "order": 5
       },
       {
         "name": "Acceso desde el móvil",       
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 1
       },
       {
         "name": "Soporte(4 meses gratis)",
         "price": 0,
         "included": true,
-        "order": 0
+        "order": 2
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 6
       },
       {
         "name": "Chat en tiempo real",        
-        "price": 0,
+        "price": 49,
         "included": false,
-        "order": 0
+        "order": 7
       }
     ]
   },
