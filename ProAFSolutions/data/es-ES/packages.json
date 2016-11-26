@@ -35,22 +35,10 @@
         "order": 1
       },
       {
-        "name": "Panel de administración",        
-        "price": 0,
-        "included": true,
-        "order": 2
-      },
-      {
         "name": "Acceso desde el móvil",        
         "price": 0,
         "included": true,
         "order": 3
-      },
-      {
-        "name": "Soporte(4 meses gratis)",        
-        "price": 0,
-        "included": true,
-        "order": 4
       },
       {
         "name": "Pagos(Paypal,MasterCard, Visa, etc)",        
@@ -68,40 +56,28 @@
     "message": "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
     "options": [
       {
-        "name": "Android",        
+        "name": "Android/iOS",        
         "price": 0,
         "included": true,
         "order": 1
       },
       {
-        "name": "iOS",        
-        "price": 0,
-        "included": true,
-        "order": 2
-      },
-      {
         "name": "Windows Phone",        
         "price": 399,
         "included": false,
-        "order": 4
+        "order": 2
       },
       {
         "name": "Publicación en tiendas(Google Play, Apple Store, Windows Store)",        
         "price": 299,
         "included": false,
-        "order": 5
-      },
-      {
-        "name": "Soporte (4 meses gratis)",
-        "price": 0,
-        "included": true,
         "order": 3
       },
         {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        
         "price": 49,
         "included": false,
-        "order": 6
+        "order": 4
       }
     ]
   },
@@ -135,12 +111,6 @@
         "price": 0,
         "included": true,
         "order": 1
-      },
-      {
-        "name": "Soporte(4 meses gratis)",
-        "price": 0,
-        "included": true,
-        "order": 2
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        

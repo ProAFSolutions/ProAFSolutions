@@ -35,22 +35,10 @@
         "order": 1
       },
       {
-        "name": "Admin panel",       
-        "price": 0,
-        "included": true,
-        "order": 2
-      },
-      {
         "name": "Access from mobile",        
         "price": 0,
         "included": true,
         "order": 3
-      },
-      {
-        "name": "Free Support(4 months)",        
-        "price": 0,
-        "included": true,
-        "order": 4
       },
       {
         "name": "Payment(Paypal,MasterCard, Visa, etc)",        
@@ -67,40 +55,28 @@
     "message": "Hi, I'm interested in making a mobile app. I would like to get more information about it. Please contact me.  Thanks",
     "options": [
       {
-        "name": "Android",
+        "name": "Android/iOS",
         "price": 0,
         "included": true,
         "order": 1
       },
       {
-        "name": "iOS",
-        "price": 0,
-        "included": true,
-        "order": 2
-      },
-      {
         "name": "Windows Phone",
         "price": 399,
         "included": false,
-        "order": 4
+        "order": 2
       },
       {
         "name": "Publish on stores(Google, Apple, Windows)",
         "price": 299,
         "included": false,
-        "order": 5
-      },
-      {
-        "name": "Free Support(4 months)",
-        "price": 0,
-        "included": true,
         "order": 3
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",
         "price": 49,
         "included": false,
-        "order": 6
+        "order": 4
       }
     ]
   },
@@ -133,12 +109,6 @@
         "price": 0,
         "included": true,
         "order": 1
-      },
-      {
-        "name": "Free Support(4 months)",       
-        "price": 0,
-        "included": true,
-        "order": 2
       },
       {
         "name": "Social Media (Facebook, LinkedIn, Twitter)",        
