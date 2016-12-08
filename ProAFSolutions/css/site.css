@@ -1405,9 +1405,13 @@ width: -webkit-calc(100% / 2);
 }
 .contact-us .input-box,textarea {
 	width: 100%;
-	margin: auto;
-	margin-bottom: 20px;
+	margin: auto;	
 }
+
+.contact-us .field {
+    margin-bottom: 20px;
+}
+
 .contact-us .custom-button {
 	float: right;
 }

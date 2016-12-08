@@ -17,29 +17,30 @@
         <div class="row">
             <form role="form" class="contact-form" id="contact-form" name="contactForm" novalidate>
                 <div class="wow fadeInLeft animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.name.$invalid && vm.showFormErrors}">
+                    <div class="col-lg-4 col-sm-4 field" ng-class="{ 'has-error': contactForm.name.$invalid && vm.showFormErrors}">
                         <input type="text" required name="name" ng-model="vm.contactMessage.name" placeholder='{{"contact.form.name" | translate}}' class="form-control input-box" id="name">
                         <p ng-show="vm.showFormErrors && contactForm.name.$error.required">* {{"contact.form.validation.name.required" | translate}}</p>                        
                     </div>
-                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.email.$invalid && vm.showFormErrors}">
+                    <div class="col-lg-4 col-sm-4 field" ng-class="{ 'has-error': contactForm.email.$invalid && vm.showFormErrors}">
                         <input type="email" required name="email" ng-model="vm.contactMessage.email" placeholder='{{"contact.form.email" | translate}}' class="form-control input-box" id="email">                       
                         <p ng-show="vm.showFormErrors && contactForm.email.$error.required">* {{"contact.form.validation.email.required" | translate}}</p>                        
+                        <p ng-show="vm.showFormErrors && contactForm.email.$error.email">* {{"contact.form.validation.email.invalid" | translate}}</p>                        
                     </div>
-                    <div class="col-lg-4 col-sm-4" ng-class="{ 'has-error': contactForm.phone.$invalid && vm.showFormErrors}">
+                    <div class="col-lg-4 col-sm-4 field" ng-class="{ 'has-error': contactForm.phone.$invalid && vm.showFormErrors}">
                         <input type="tel" required name="phone" ng-model="vm.contactMessage.phone" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
-                        <p ng-show="vm.showFormErrors && contactForm.phone.$error.required">* {{"contact.form.validation.phone.required" | translate}}</p>                        
+                        <p ng-show="vm.showFormErrors && contactForm.phone.$error.required">* {{"contact.form.validation.phone.required" | translate}}</p>                                                                                           
                     </div>
                 </div>
 
                 <div class="clearfix">
-                    <div class="col-md-6 wow fadeInRight animated" ng-class="{ 'has-error': contactForm.subject.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">>
+                    <div class="col-md-6 field wow fadeInRight animated" ng-class="{ 'has-error': contactForm.subject.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                         <input type="text" required name="subject" ng-model="vm.contactMessage.subject" placeholder='{{"contact.form.subject" | translate}}' class="form-control input-box" id="subject">
-                        <p ng-show="vm.showFormErrors && contactForm.subject.$error.required">* {{"contact.form.validation.subject.required" | translate}}</p>                        
+                        <p ng-show="vm.showFormErrors && contactForm.subject.$error.required">* {{"contact.form.validation.subject.required" | translate}}</p>                                                
                     </div>                    
                 </div>
 
                 <div class="clearfix">
-                    <div class="col-md-12 wow fadeInRight animated" ng-class="{ 'has-error': contactForm.message.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
+                    <div class="col-md-12 field wow fadeInRight animated" ng-class="{ 'has-error': contactForm.message.$invalid && vm.showFormErrors}" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
                         <textarea name="message" required ng-model="vm.contactMessage.message"  class="form-control textarea-box" placeholder='{{"contact.form.message" | translate}}' id="message"></textarea>
                         <p ng-show="vm.showFormErrors && contactForm.message.$error.required">* {{"contact.form.validation.message.required" | translate}}</p>                        
                     </div>

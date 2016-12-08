@@ -11,13 +11,13 @@
       font-size: 48px; }
     body #assistance.chat-red-section i.chat-icon {
       font-size: 24px; }
-  body #contact .has-error .form-control + p {
+  body #contact .has-error p {
     color: red;
     font-weight: bold;
     font-size: 16px;
     text-align: left; }
   body #contact .success-message {
-    margin-left: 2px; }
+    margin-left: 18px; }
   body #focus .focus-box .service-icon i {
     font-size: 52px;
     top: 10px; }
