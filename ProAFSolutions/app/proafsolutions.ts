@@ -48,7 +48,7 @@ namespace proafsolutions {
        }
    }
 
-    angular.module("proafsolutions", ["ngSanitize", "ui.router", "pascalprecht.translate", "ngCookies"])
+    angular.module("proafsolutions", ["ngSanitize", "ui.router", "ui.mask", "pascalprecht.translate", "ngCookies"])
         .config(ProAFSolutionsApp.config).run(ProAFSolutionsApp.run);
             
 }

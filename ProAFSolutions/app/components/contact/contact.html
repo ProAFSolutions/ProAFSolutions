@@ -27,7 +27,7 @@
                         <p ng-show="vm.showFormErrors && contactForm.email.$error.email">* {{"contact.form.validation.email.invalid" | translate}}</p>                        
                     </div>
                     <div class="col-lg-4 col-sm-4 field" ng-class="{ 'has-error': contactForm.phone.$invalid && vm.showFormErrors}">
-                        <input type="tel" required name="phone" ng-model="vm.contactMessage.phone" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
+                        <input type="tel" required name="phone" ng-model="vm.contactMessage.phone" ui-mask="(999) 999-9999" ui-mask-placeholder ui-mask-placeholder-char="_" placeholder='{{"contact.form.phone" | translate}}' class="form-control input-box" id="phone">
                         <p ng-show="vm.showFormErrors && contactForm.phone.$error.required">* {{"contact.form.validation.phone.required" | translate}}</p>                                                                                           
                     </div>
                 </div>
