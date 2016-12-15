@@ -163,6 +163,16 @@
     body #pricingtable .package ul li .toggle-option .toggle > input[type="checkbox"]:checked + label::after {
       background: inherit;
       left: 20px; }
+  body #pricingtable .package .download {
+    cursor: pointer; }
+    body #pricingtable .package .download.green-link {
+      color: #20AA73; }
+    body #pricingtable .package .download.blue-link {
+      color: #3ab0e2; }
+    body #pricingtable .package .download.red-link {
+      color: #e96656; }
+    body #pricingtable .package .download.yellow-link {
+      color: #E7AC44; }
   body #separator {
     background: rgba(52, 210, 147, 0.95);
     padding: 100px 0 100px 0; }

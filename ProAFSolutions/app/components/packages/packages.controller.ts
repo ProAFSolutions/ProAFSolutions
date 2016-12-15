@@ -6,11 +6,13 @@
 
         selectedPackage(pack: PackageVM): void;
 
+        downloadOffer(pack: PackageVM): void;
+
     }
 
     class PackagesController implements IPackagesController{
 
-        static $inject = ['$scope', '$rootScope', '$translate', '$dataProvider'];
+        static $inject = ['$scope', '$rootScope', '$translate', '$dataProvider', '$window'];
 
         public packages: Array<PackageVM>;
         public packagesLoaded: boolean;
@@ -18,7 +20,8 @@
         constructor(private $scope: ng.IScope,
                     private $rootScope: ng.IRootScopeService,
                     private $translate: ng.translate.ITranslateService,
-                    private $dataProvider: services.IDataProviderService) {
+                    private $dataProvider: services.IDataProviderService,
+                    private $window: ng.IWindowService) {
             this.init();
         }
 
@@ -46,6 +49,9 @@
             this.$rootScope.$broadcast('SelectedPackage!', { subject: pack.title, message: pack.message });
         }
 
+        public downloadOffer(pack: PackageVM): void {
+            this.$window.open(pack.orderUrl, '_blank');
+        }
     }
 
     angular.module("proafsolutions").controller("PackagesController", PackagesController);

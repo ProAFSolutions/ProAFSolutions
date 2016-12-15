@@ -8,8 +8,15 @@ namespace proafsolutions {
 
         static COMPONENTS_FOLDER = "app/components";
         static DIST_FOLDER = "dist";
-        static DATA_FOLDER = "data";        
-        
+        static DATA_FOLDER = "data";
+
+        static OFFERS_FOLDER = "offers";
+        static ORDER_ECOMMERCE = "ProAFSolutionsECommerce.pdf";
+        static ORDER_MOBILE = "ProAFSolutionsMobile.pdf";
+        static ORDER_SUITE = "ProAFSolutionsSuite.pdf";
+        static ORDER_WEB = "ProAFSolutionsWeb.pdf";
+
+
         static API_URL = "http://localhost:5565/api";
         static API_HUBS_URL = "http://localhost:5565/signalr";
 

@@ -140,5 +140,27 @@
             }
 
         }
+
+        .download{
+
+            cursor: pointer;
+
+            &.green-link{
+                color: $color-green; 
+            }
+                        
+            &.blue-link{
+               color: $color-blue; 
+            } 
+                        
+            &.red-link{
+               color: $color-red; 
+            }   
+                        
+            &.yellow-link{
+                color: $color-yellow; 
+            } 
+
+        }
     }
 }

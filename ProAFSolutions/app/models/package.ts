@@ -11,6 +11,7 @@
         basePrice: number;
         title: string;
         message: string;
+        orderUrl: string;
         options: Array<IPackageOption>;
     }
 

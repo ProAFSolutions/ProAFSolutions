@@ -19,6 +19,7 @@
         public basePrice: number;
         public title: string;
         public message: string;
+        public orderUrl: string;
         public options: Array<PackageOptionVM>;
         public totalPrice: number;
 
@@ -26,7 +27,8 @@
             this.id = id;
             this.basePrice = pack.basePrice;
             this.title = pack.title;
-            this.message = pack.message;            
+            this.message = pack.message;
+            this.orderUrl = pack.orderUrl;        
             this.totalPrice = 0;            
 
             let sortedOptions = _.sortBy(pack.options, (option: models.IPackageOption) => {
