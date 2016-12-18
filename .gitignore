@@ -21,3 +21,4 @@
 /Console/obj
 /ProAFSolutions/build
 /ProAFSolutionsAPI/App_Data/Logs/.log
+/ProAFSolutionsAPI/App_Data/Logs/*.log

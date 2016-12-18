@@ -55,10 +55,7 @@
 
         public setupChatWindow(): void {
             let _self = this;
-            setTimeout(() => {
-                _self.customizeChatWindow();
-            }, 2000);
-
+                       
             this.$scope.$watch(() => this.$dataContext.currentLanguage, (newValue: string, oldValue: string) => {
                 if (newValue != oldValue) {                                                      
                     setTimeout(() => {
@@ -70,18 +67,29 @@
         }
 
         private customizeChatWindow(): void {
+            let _self = this;           
 
-            var $chatIframe = $('#tawkchat-iframe-container').find('#tawkchat-maximized-iframe-element');
+            var $chatIframe = $('iframe');
 
-            var $content = $chatIframe.contents();
+            $.each($chatIframe, function (index, value) {
+                try {                    
+                    var $content = $(this).contents();
 
-            //Removes 'Powered By' 
-            $content.find('#tawktoLink').remove();
+                    var $contentWrapper = $content.find('#tawkchat-maximized-wrapper');
 
-            //Changing options menu a little
-            $content.find('#openMenu').text("Chat Settings").css("text-transform", "Capitalize");   
+                    if ($contentWrapper.length) {
 
-            this.translateChat($content);         
+                        //Removes 'Powered By' 
+                        $content.find('#tawktoLink').remove();
+
+                        //Changing options menu a little
+                        $content.find('#openMenu').text("Chat Settings").css("text-transform", "Capitalize");
+
+                        _self.translateChat($content);
+                    }
+                  
+                } catch (exception) {}                        
+            });           
         }
 
         private translateChat($content: any) {
@@ -90,7 +98,8 @@
             $content.find("#chatTextarea").attr("placeholder", this.$translate.instant("chat.text.placeholder"));
             $content.find("#openMenu").text(this.$translate.instant("chat.menu.open"));
             $content.find("#closeMenu").html(this.$translate.instant("chat.menu.close"));
-            //menu options
+
+            //menu options                     
             var optionsContainer = $content.find("#optionsContainer");
             optionsContainer.find("#endChatOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.end"));
             optionsContainer.find("#uploadFileOption").find(".optionTitle").text(this.$translate.instant("chat.menu.option.upload"));
