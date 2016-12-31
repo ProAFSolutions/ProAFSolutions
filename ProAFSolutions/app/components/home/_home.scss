@@ -5,6 +5,18 @@
         position: fixed !important;        
 
         &.navbar{
+            .navbar-inverse {               
+                .navbar-collapse { 
+                    .navbar-nav{
+                        li:active{
+                          a{
+                              color: $color-red;
+                          }
+                        }
+                    }
+                }
+            }
+
             .lang-selector{
                position: absolute;
                right: 20px;

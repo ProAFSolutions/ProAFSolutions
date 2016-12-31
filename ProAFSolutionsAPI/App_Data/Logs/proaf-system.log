@@ -1,5 +1,5 @@
 [START]---------------------------------------
-Timestamp: 11/19/2016 5:00:56 AM
+Timestamp: 12/19/2016 2:28:11 PM
 
 Message:    at System.Web.Http.HostAuthenticationFilter.GetAuthenticationManagerOrThrow(HttpRequestMessage request)
    at System.Web.Http.HostAuthenticationFilter.<AuthenticateAsync>d__0.MoveNext()
@@ -34,20 +34,20 @@ Title:
 
 Machine: ALEX-PC
 
-App Domain: /LM/W3SVC/3/ROOT-1-131240052435453460
+App Domain: /LM/W3SVC/3/ROOT-1-131263037953258537
 
-ProcessId: 19160
+ProcessId: 1020
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:14656
+Win32 ThreadId:30296
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 11/19/2016 5:00:58 AM
+Timestamp: 12/19/2016 2:28:13 PM
 
 Message: Tracing to LogSource 'General' failed. Processing for other sources will continue. See summary information below for more information. Should this problem persist, stop the service and check the configuration file(s) for possible error(s) in the configuration of the categories and sinks.
 
@@ -56,7 +56,7 @@ Summary for Enterprise Library Distributor Service:
 ======================================
 --> 
 Message: 
-Timestamp: 11/19/2016 5:00:56 AM
+Timestamp: 12/19/2016 2:28:11 PM
 Message:    at System.Web.Http.HostAuthenticationFilter.GetAuthenticationManagerOrThrow(HttpRequestMessage request)
    at System.Web.Http.HostAuthenticationFilter.<AuthenticateAsync>d__0.MoveNext()
 --- End of stack trace from previous location where exception was thrown ---
@@ -83,16 +83,16 @@ EventId: 0
 Severity: Error
 Title:
 Machine: ALEX-PC
-App Domain: /LM/W3SVC/3/ROOT-1-131240052435453460
-ProcessId: 19160
+App Domain: /LM/W3SVC/3/ROOT-1-131263037953258537
+ProcessId: 1020
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 Thread Name: 
-Win32 ThreadId:14656
+Win32 ThreadId:30296
 Extended Properties: 
 --> MachineName: ALEX-PC
---> TimeStamp: 11/19/2016 5:00:58 AM
+--> TimeStamp: 12/19/2016 2:28:13 PM
 --> FullName: Microsoft.Practices.EnterpriseLibrary.Logging, Version=6.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35
---> AppDomainName: /LM/W3SVC/3/ROOT-1-131240052435453460
+--> AppDomainName: /LM/W3SVC/3/ROOT-1-131263037953258537
 --> WindowsIdentity: FMP\Alejandro.Clavijo
 
 Exception Information Details:
@@ -167,15 +167,15 @@ Title:
 
 Machine: ALEX-PC
 
-App Domain: /LM/W3SVC/3/ROOT-1-131240052435453460
+App Domain: /LM/W3SVC/3/ROOT-1-131263037953258537
 
-ProcessId: 19160
+ProcessId: 1020
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:14656
+Win32 ThreadId:30296
 
 Extended Properties: 
 [END]-----------------------------------------
