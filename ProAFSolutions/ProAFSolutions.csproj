@@ -220,6 +220,10 @@
     <Content Include="offers\en-EN\ProAFSolutionsWeb.pdf" />
     <Content Include="offers\en-EN\ProAFSolutionsMobile.pdf" />
     <Content Include="offers\en-EN\ProAFSolutionsECommerce.pdf" />
+    <Content Include="offers\es-ES\ProAFSolutionsECommerce.pdf" />
+    <Content Include="offers\es-ES\ProAFSolutionsMobile.pdf" />
+    <Content Include="offers\es-ES\ProAFSolutionsSuite.pdf" />
+    <Content Include="offers\es-ES\ProAFSolutionsWeb.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -430,7 +434,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="build\" />
-    <Folder Include="offers\es-ES\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
