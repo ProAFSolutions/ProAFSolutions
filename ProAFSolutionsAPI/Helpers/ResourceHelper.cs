@@ -53,7 +53,7 @@ namespace ProAFSolutionsAPI.Helpers
 
         public static string GetLogoPath()
         {
-            return string.Format("{0}/{1}", GetApplicationPath(), "Content/logo.png");
+            return string.Format("{0}/{1}", GetApplicationPath(), "Content/logo.jpg");
         }
 
         public static string GetEmailTemplatePath(string lan, string fileName)
@@ -61,9 +61,9 @@ namespace ProAFSolutionsAPI.Helpers
             return string.Format("{0}/{1}/{2}/{3}", GetApplicationPath(), "Templates/Email", lan, fileName);
         }
 
-        public static string GetPdfTemplatePath(string lan, string fileName)
+        public static string GetOfferPath(string lan, string fileName)
         {
-            return string.Format("{0}/{1}/{2}/{3}", GetApplicationPath(), "Templates/Pdf", lan, fileName);
+            return string.Format("{0}/{1}/{2}/{3}", GetApplicationPath(), "Templates/Offers", lan, fileName);
         }
 
         public static string GetStatsPath(string fileName)

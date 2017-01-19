@@ -325,13 +325,13 @@
     <Compile Include="Services\SMSService.cs" />
     <Compile Include="Services\StatsService.cs" />
     <Compile Include="Startup.cs" />
-    <Compile Include="Templates\TemplatesConst.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\favicon.ico" />
+    <Content Include="Content\logo.jpg" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\pdf-templates.css">
       <DependentUpon>pdf-templates.scss</DependentUpon>
@@ -342,9 +342,7 @@
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
-    <Content Include="Templates\Email\en-US\basic-email-template.html" />
-    <Content Include="Templates\Email\en-US\email-offer-package-store.html" />
-    <Content Include="Templates\Email\en-US\email-conversation-template.html" />
+    <Content Include="Templates\Email\en-US\offer-email.html" />
     <Content Include="Scripts\ai.0.22.19-build00125.js" />
     <Content Include="Scripts\ai.0.22.19-build00125.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -377,6 +375,14 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\pdf-templates.scss" />
+    <Content Include="Templates\Offers\en-US\ProAFSolutionsECommerce.pdf" />
+    <Content Include="Templates\Offers\en-US\ProAFSolutionsMobile.pdf" />
+    <Content Include="Templates\Offers\en-US\ProAFSolutionsSuite.pdf" />
+    <Content Include="Templates\Offers\en-US\ProAFSolutionsWeb.pdf" />
+    <Content Include="Templates\Offers\es-ES\ProAFSolutionsECommerce.pdf" />
+    <Content Include="Templates\Offers\es-ES\ProAFSolutionsMobile.pdf" />
+    <Content Include="Templates\Offers\es-ES\ProAFSolutionsSuite.pdf" />
+    <Content Include="Templates\Offers\es-ES\ProAFSolutionsWeb.pdf" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -390,10 +396,6 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
-    <Content Include="Templates\Pdf\en-US\pdf-offer-package-web-app.html" />
-    <Content Include="Templates\Pdf\en-US\pdf-offer-package-personal-site.html" />
-    <Content Include="Templates\Pdf\en-US\pdf-offer-package-mobile.html" />
-    <Content Include="Templates\Pdf\en-US\pdf-offer-package-store.html" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -415,7 +417,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Templates\Email\es-ES\" />
-    <Folder Include="Templates\Pdf\es-ES\" />
     <Folder Include="Views\StatsReport\" />
   </ItemGroup>
   <ItemGroup>

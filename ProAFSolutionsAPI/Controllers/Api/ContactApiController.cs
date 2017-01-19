@@ -22,8 +22,8 @@ using ProAFSolutionsAPI.Util;
 using System.Web;
 using System.Text;
 using System.Net.Http.Headers;
-using ProAFSolutionsAPI.Templates;
 using static ProAFSolutionsAPI.Helpers.PDFHelper;
+using System.Net.Mime;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -42,7 +42,17 @@ namespace ProAFSolutionsAPI.Controllers
         [Route("contact-us")]
         [HttpPost]
         public IHttpActionResult SendContactMessage(ContactModel contact)
-        {     
+        {
+            NotifyProAF(contact);
+
+            if (!string.IsNullOrEmpty(contact.OfferFileName))
+                SendOfferEmail(contact);
+
+            return Ok();
+        }
+
+
+        private void NotifyProAF(ContactModel contact) {
             var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
                                          contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
 
@@ -57,13 +67,15 @@ namespace ProAFSolutionsAPI.Controllers
             );
 
             bool sendEmail = !ConfigurationManager.AppSettings["mailMode"].Equals("off");
-            if (sendEmail) {
+            if (sendEmail)
+            {
                 LoggerProvider.Info(string.Format("Contact Email sent to {0}", to));
             }
 
             bool sendSMS = bool.Parse(ConfigurationManager.AppSettings["sendSms"]);
 
-            if (sendSMS) {
+            if (sendSMS)
+            {
                 var phones = ConfigurationManager.AppSettings["adminPhones"].Split(new char[] { ',' });
                 phones.ToList().ForEach(phone =>
                 {
@@ -71,47 +83,58 @@ namespace ProAFSolutionsAPI.Controllers
                 });
 
                 LoggerProvider.Info(string.Format("Contact Text sent to {0}", phones));
-            }          
+            }
 
-            return Ok();
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="contact">(Required)</param>  
-        [Route("send-store-offer")]
-        [HttpPost]
-        public IHttpActionResult SendOnlineStoreOffer(ContactModel contact)
+        private void SendOfferEmail(ContactModel contact)
         {
-            var parameters = new Dictionary<string, object>();
-            parameters.Add("logo", "???");
-            parameters.Add("contactModel", contact);
+            //Template parameters to pass data
+            var parameters = new Dictionary<string, object>();            
+            parameters.Add("contact", contact);
 
-            var pdfOfferAttachment = CreateOnlineStoreOfferAttachment();            
+            //Atttachment set up
+            var pdfOfferAttachment = CreateOfferAttachment(contact.Language, contact.OfferFileName);
+
+            //Link resources to pass images 
+            var resources = new List<LinkedResource>();
+            string path = ResourceHelper.GetLogoPath();
+            // var logoResx =  new LinkedResource(ResourceHelper.GetLogoPath(), "image/jpg")
+          //  var logoResx = new LinkedResource("c:\\logo.jpg", "image/jpg");
+           // string mediaType = MediaTypeNames.Image.Jpeg;
+
+           //  logoResx.ContentType.MediaType = mediaType;
+            // logoResx.ContentId = "logoId";
+            // logoResx.ContentLink = new Uri("cid:" + logoResx.ContentId);
+            // logoResx.ContentType.Name = logoResx.ContentId;
+            // logoResx.TransferEncoding = System.Net.Mime.TransferEncoding.Base64;
+           // resources.Add(logoResx);            
 
             AppServicesProvider.EmailService.SendHtmlEmail(
-                "Testing Offer",
-                ConfigurationManager.AppSettings["mailToAdmin"].Split(new char[] { ',' }),
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath("en-US", TemplatesConst.EMAIL_OFFER_STORE), parameters),
-                new MailAttachment[] { pdfOfferAttachment });
+                contact.Subject,
+                new string[] { contact.Email },
+                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath(contact.Language, "offer-email.html"), resources, parameters),
+                new MailAttachment[] { pdfOfferAttachment }
+            );
 
-            return Ok();
         }
 
-        private MailAttachment CreateOnlineStoreOfferAttachment() {
+        private MailAttachment CreateOfferAttachment(string lan, string fileName) {
 
-            var docName = "ProAFSolutions - Online Store Offer.pdf";
+            try
+            {
+                var offerFilePath = ResourceHelper.GetOfferPath(lan, fileName);
+                var stream = new FileStream(offerFilePath, FileMode.Open);
+                byte[] array = new byte[stream.Length];
+                stream.Read(array, 0, array.Length);
+                return new MailAttachment(new MemoryStream(array), fileName);
+            }
+            catch (Exception ex)
+            {
+               
+            }
 
-            var pdfTemplateParams = new Dictionary<string, object>();
-            pdfTemplateParams.Add("siteRoot", ResourceHelper.GetSiteRoot());
-            pdfTemplateParams.Add("title", "Test");
-            pdfTemplateParams.Add("priceDev", "$2,000.00");
-
-            var data = PDFHelper.ConvertToPdf(DataType.HTML, 
-                                              NVelocityTemplateUtil.BuildHtmlBody(ResourceHelper.GetPdfTemplatePath("en-US", TemplatesConst.PDF_OFFER_STORE), pdfTemplateParams), docName);
-
-            return  new MailAttachment(new MemoryStream(data), docName);
+            return null;
         }
 
 

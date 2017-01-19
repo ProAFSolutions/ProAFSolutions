@@ -6,7 +6,7 @@
 
     class ContactController implements IContactController {
 
-        static $inject = ['$scope', '$dataContext', '$contactService', '$location']; 
+        static $inject = ['$scope', '$dataContext', '$contactService', '$location', '$translate']; 
 
         public contactMessage: models.IContactMessage;
 
@@ -16,7 +16,8 @@
         constructor(private $scope: ng.IScope,
                     protected $dataContext: shared.IDataContextService,
                     protected $contactService: services.IContactService,
-                    protected $location: ng.ILocationService) {           
+                    protected $location: ng.ILocationService,
+                    private $translate: angular.translate.ITranslateProvider) {           
             this.init();
             this.showSuccessMsg = false;
             this.showFormErrors = false;
@@ -30,6 +31,8 @@
                 _self.$location.url('##contact');
                 _self.contactMessage.subject = args.subject;
                 _self.contactMessage.message = args.message;
+                _self.contactMessage.offerFileName = args.fileName;
+                _self.contactMessage.language = _self.$translate.use();
             });
         }
 

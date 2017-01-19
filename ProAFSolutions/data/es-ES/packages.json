@@ -3,7 +3,7 @@
     "basePrice": 1999.00,
     "title": "Tienda Online",
     "message": "Hola, me interesa vender mis productos por Internet. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-    "orderUrl":  "/offers/en-ES/ProAFSolutionsECommerce.pdf",
+    "orderFileName":  "ProAFSolutionsECommerce.pdf",
     "options": [
       {
         "name": "Dominio (1 año)",        
@@ -55,7 +55,7 @@
     "basePrice": 2999.00,
     "title": "Aplicaciones Moviles",
     "message": "Hola, me interesa crear una applicacion movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-    "orderUrl":  "/offers/en-ES/ProAFSolutionsMobile.pdf",
+    "orderFileName":  "ProAFSolutionsMobile.pdf",
     "options": [
       {
         "name": "Android/iOS",        
@@ -89,7 +89,7 @@
     "basePrice": 199.00,
     "title": "Aplicaciones Web",
     "message": "Hola, me interesa crear un sitio web. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-    "orderUrl":  "/offers/en-ES/ProAFSolutionsWeb.pdf",
+    "orderFileName":  "ProAFSolutionsWeb.pdf",
     "options": [
       {
         "name": "Dominio (1 año)",        
@@ -135,7 +135,7 @@
     "basePrice": 4999.00,
     "title": "Suite (Web + Movil)",
     "message": "Hola, me interesa crear un sitio y una app movil. Necesito obtener mas informacion al respecto. Por favor contacteme.  Gracias",
-    "orderUrl":  "/offers/en-ES/ProAFSolutionsSuite.pdf",
+    "orderFileName":  "ProAFSolutionsSuite.pdf",
     "options": [
       {
         "name": "PAQUETE DE APPLICACIONES WEB",        

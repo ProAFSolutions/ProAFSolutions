@@ -11,7 +11,7 @@
         basePrice: number;
         title: string;
         message: string;
-        orderUrl: string;
+        orderFileName: string;
         options: Array<IPackageOption>;
     }
 

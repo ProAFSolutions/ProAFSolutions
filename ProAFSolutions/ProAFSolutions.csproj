@@ -216,10 +216,6 @@
     <Content Include="css\styles.scss" />
     <Content Include="data\en-US\packages.json" />
     <Content Include="data\es-ES\packages.json" />
-    <Content Include="offers\en-EN\ProAFSolutionsSuite.pdf" />
-    <Content Include="offers\en-EN\ProAFSolutionsWeb.pdf" />
-    <Content Include="offers\en-EN\ProAFSolutionsMobile.pdf" />
-    <Content Include="offers\en-EN\ProAFSolutionsECommerce.pdf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -430,7 +426,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="build\" />
-    <Folder Include="offers\es-ES\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
