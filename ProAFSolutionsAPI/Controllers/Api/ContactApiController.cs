@@ -23,6 +23,7 @@ using System.Web;
 using System.Text;
 using System.Net.Http.Headers;
 using static ProAFSolutionsAPI.Helpers.PDFHelper;
+using System.Net.Mime;
 
 namespace ProAFSolutionsAPI.Controllers
 {
@@ -97,10 +98,17 @@ namespace ProAFSolutionsAPI.Controllers
 
             //Link resources to pass images 
             var resources = new List<LinkedResource>();
-            var logoResx =  new LinkedResource(ResourceHelper.GetLogoPath(), "image/png");
-            logoResx.ContentId = "logoId";
-            logoResx.TransferEncoding = System.Net.Mime.TransferEncoding.Base64;
-            resources.Add(logoResx);            
+            string path = ResourceHelper.GetLogoPath();
+            // var logoResx =  new LinkedResource(ResourceHelper.GetLogoPath(), "image/jpg")
+          //  var logoResx = new LinkedResource("c:\\logo.jpg", "image/jpg");
+           // string mediaType = MediaTypeNames.Image.Jpeg;
+
+           //  logoResx.ContentType.MediaType = mediaType;
+            // logoResx.ContentId = "logoId";
+            // logoResx.ContentLink = new Uri("cid:" + logoResx.ContentId);
+            // logoResx.ContentType.Name = logoResx.ContentId;
+            // logoResx.TransferEncoding = System.Net.Mime.TransferEncoding.Base64;
+           // resources.Add(logoResx);            
 
             AppServicesProvider.EmailService.SendHtmlEmail(
                 contact.Subject,

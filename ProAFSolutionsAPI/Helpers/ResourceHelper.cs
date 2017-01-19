@@ -53,7 +53,7 @@ namespace ProAFSolutionsAPI.Helpers
 
         public static string GetLogoPath()
         {
-            return string.Format("{0}/{1}", GetApplicationPath(), "Content/logo.png");
+            return string.Format("{0}/{1}", GetApplicationPath(), "Content/logo.jpg");
         }
 
         public static string GetEmailTemplatePath(string lan, string fileName)
