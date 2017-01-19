@@ -4,18 +4,18 @@
       #main-nav {
         position: fixed !important;        
 
+      
         &.navbar{
-            .navbar-inverse {               
-                .navbar-collapse { 
-                    .navbar-nav{
-                        li:active{
-                          a{
-                              color: $color-red;
-                          }
+                          
+            .navbar-collapse { 
+                .navbar-nav{
+                    li{
+                        a:active, a:focus{
+                            color: $color-red !important;
                         }
                     }
                 }
-            }
+            }            
 
             .lang-selector{
                position: absolute;

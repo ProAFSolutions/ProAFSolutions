@@ -35,8 +35,8 @@
     font-size: 24px; }
   body #home #main-nav {
     position: fixed !important; }
-    body #home #main-nav.navbar .navbar-inverse .navbar-collapse .navbar-nav li:active a {
-      color: #e96656; }
+    body #home #main-nav.navbar .navbar-collapse .navbar-nav li a:active, body #home #main-nav.navbar .navbar-collapse .navbar-nav li a:focus {
+      color: #e96656 !important; }
     body #home #main-nav.navbar .lang-selector {
       position: absolute;
       right: 20px; }
