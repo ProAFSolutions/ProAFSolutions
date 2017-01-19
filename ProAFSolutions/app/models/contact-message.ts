@@ -6,9 +6,14 @@
         subject: string;
         message: string;
         phone: string;
+        language: string;
+        offerFileName: string;
     }
 
     export class ContactMessage implements IContactMessage {
+
+        public language: string;
+        public offerFileName: string;
 
         constructor(public name: string,
             public email: string,

@@ -46,11 +46,11 @@
         }
 
         public selectedPackage(pack: PackageVM): void {
-            this.$rootScope.$broadcast('SelectedPackage!', { subject: pack.title, message: pack.message });
+            this.$rootScope.$broadcast('SelectedPackage!', { subject: pack.title, message: pack.message, fileName: pack.orderFileName });
         }
 
         public downloadOffer(pack: PackageVM): void {
-            this.$window.open(pack.orderUrl, '_blank');
+            this.$window.open(pack.orderFileName, '_blank');
         }
     }
 
