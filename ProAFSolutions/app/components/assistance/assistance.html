@@ -7,11 +7,19 @@
                 </h3>
             </div>
             <div class="col-md-3 wow fadeInRight animated" data-wow-offset="30" data-wow-duration="1.5s" data-wow-delay="0.15s">
-                <a href="" ng-click="vm.openChatWindowClick()" class="btn btn-primary custom-button red-btn">
+                <a href="" class="btn btn-primary custom-button red-btn" id="OpenChat">
                     <i class="icon-fontawesome-webfont-225 chat-icon"></i>&nbsp; {{"assistance.section.button" | translate}}
                 </a>
             </div>
         </div>
     </div>
 </section>
+
+<script>
+    $(document).ready(function () {
+        $("#OpenChat").click(function (e) {
+            Tawk_API.maximize();
+        });
+    });
+</script>
 
