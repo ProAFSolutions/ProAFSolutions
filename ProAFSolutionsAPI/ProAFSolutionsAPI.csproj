@@ -375,6 +375,7 @@
       <DependentUpon>compilerconfig.json</DependentUpon>
     </None>
     <Content Include="Content\pdf-templates.scss" />
+    <Content Include="Templates\Email\es-ES\offer-email.html" />
     <Content Include="Templates\Offers\en-US\ProAFSolutionsECommerce.pdf" />
     <Content Include="Templates\Offers\en-US\ProAFSolutionsMobile.pdf" />
     <Content Include="Templates\Offers\en-US\ProAFSolutionsSuite.pdf" />
@@ -416,7 +417,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\Email\es-ES\" />
     <Folder Include="Views\StatsReport\" />
   </ItemGroup>
   <ItemGroup>

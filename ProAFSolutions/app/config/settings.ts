@@ -19,6 +19,7 @@ namespace proafsolutions {
 
         static API_URL = "http://localhost:5565/api";
         static API_HUBS_URL = "http://localhost:5565/signalr";
+        static API_URL_TEMPLATES = "http://localhost:5565/Templates/Offers";
 
        static METADATA_KEYWORDS = [
             'ProAFSolutions',

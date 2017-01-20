@@ -50,7 +50,8 @@
         }
 
         public downloadOffer(pack: PackageVM): void {
-            this.$window.open(pack.orderFileName, '_blank');
+            console.log(AppSettings.API_URL_TEMPLATES + "/" + this.$translate.use()+"/"+pack.orderFileName);
+            this.$window.open(AppSettings.API_URL_TEMPLATES + "/" + this.$translate.use() + "/" + pack.orderFileName, '_blank');
         }
     }
 
