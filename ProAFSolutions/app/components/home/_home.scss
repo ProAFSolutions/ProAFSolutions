@@ -5,11 +5,11 @@
         position: fixed !important;        
 
         &.navbar{
-            .navbar-inverse {               
+            &.navbar-inverse {               
                 .navbar-collapse { 
                     .navbar-nav{
-                        li:active{
-                          a{
+                        li{
+                          a:focus{
                               color: $color-red;
                           }
                         }

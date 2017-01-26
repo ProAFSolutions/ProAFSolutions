@@ -21,6 +21,8 @@ namespace proafsolutions {
         static API_HUBS_URL = "http://localhost:5565/signalr";
         static API_URL_TEMPLATES = "http://localhost:5565/Templates/Offers";
 
+        static CONTACT_EMAIL = "contact@proafsolutions.com";
+
        static METADATA_KEYWORDS = [
             'ProAFSolutions',
             'Alejandro Clavijo',

@@ -14,7 +14,7 @@
             <div class="icon-top green-text">
                 <i class="icon-fontawesome-webfont-329"></i>
             </div>
-            contact@proafsolutions.com
+            <a class="email" href="mailto:{{vm.contactEmail}}">{{vm.contactEmail}}</a>            
         </div>
 
         <!-- COMPANY PHONE NUMBER -->
@@ -22,7 +22,10 @@
             <div class="icon-top blue-text">
                 <i class="icon-fontawesome-webfont-101"></i>
             </div>
-            +1 (786)-413-8551 <br />+1 (786)-370-6635 
+            <a class="tel" href="tel:1-786-413-8551">+1 (786)-413-8551</a>
+            <br />
+            <a class="tel" href="tel:1-786-370-6635">+1 (786)-370-6635</a>
+            
         </div>
 
         <!-- SOCIAL ICON AND COPYRIGHT -->
@@ -30,9 +33,14 @@
             <ul class="social">
                 <li><a href="https://www.facebook.com/Proafsolutions-236931140081701/" target="_blank"><i class="icon-facebook"></i></a></li>
                 <!--<li><a href=""><i class="icon-twitter-alt"></i></a></li>
-                <li><a href=""><i class="icon-linkedin"></i></a></li>-->               
+                <li><a href=""><i class="icon-linkedin"></i></a></li>-->
             </ul>
-            ProAFSolutions © 2017
+            <div>
+                <div class="logo-small"></div>
+                <div>ProAFSolutions © {{vm.copyrightYear}}</div>
+            </div>
+
+
         </div>
     </div> <!-- / END CONTAINER -->
 </footer> <!-- / END FOOOTER  -->
