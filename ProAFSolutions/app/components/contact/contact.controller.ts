@@ -32,8 +32,18 @@
                 _self.contactMessage.subject = args.subject;
                 _self.contactMessage.message = args.message;
                 _self.contactMessage.offerFileName = args.fileName;
+                _self.contactMessage.checkedOptions = this.getCheckedOptionsAsString(args.checkedOptions);
                 _self.contactMessage.language = _self.$translate.use();
             });
+        }
+
+        private getCheckedOptionsAsString(options: Array<string>): string {
+            var result = '';
+            _.each(options, (option: string) => {
+                result += option.concat(","); 
+            });
+
+            return result.length > 0 ? result.substring(0, result.length - 1) : '';
         }
 
         public sendContactMessage(contactForm: any): void {    

@@ -7,7 +7,7 @@ namespace proafsolutions {
         static APP_MODE = "Debug";
 
         static COMPONENTS_FOLDER = "app/components";
-        static DIST_FOLDER = "dist";
+        static DIST_FOLDER = "www";
         static DATA_FOLDER = "data";
 
         static OFFERS_FOLDER = "offers";

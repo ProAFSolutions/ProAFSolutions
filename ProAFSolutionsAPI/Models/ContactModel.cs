@@ -14,5 +14,6 @@ namespace ProAFSolutionsAPI.Models
         public string Phone { set; get; }
         public string Language { set; get; }
         public string OfferFileName { get; set; }
+        public string CheckedOptions { get; set; }
     }
 }

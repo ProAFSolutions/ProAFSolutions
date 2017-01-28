@@ -53,8 +53,8 @@ namespace ProAFSolutionsAPI.Controllers
 
 
         private void NotifyProAF(ContactModel contact) {
-            var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
-                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
+            var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4},PACKAGES:{5}",
+                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message, contact.CheckedOptions);
 
             var parameters = new Dictionary<string, object>();
             parameters.Add("message", message);

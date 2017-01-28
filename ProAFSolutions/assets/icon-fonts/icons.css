@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "712-icon-fonts";
-  src:url("fonts/712-icon-fonts.eot");
-  src:url("fonts/712-icon-fonts.eot?#iefix") format("embedded-opentype"),
-    url("fonts/712-icon-fonts.woff") format("woff"),
-    url("fonts/712-icon-fonts.ttf") format("truetype"),
-    url("fonts/712-icon-fonts.svg#712-icon-fonts") format("svg");
+  src:url("/assets/icon-fonts/fonts/712-icon-fonts.eot");
+  src:url("/assets/icon-fonts/fonts/712-icon-fonts.eot?#iefix") format("embedded-opentype"),
+    url("/assets/icon-fonts/fonts/712-icon-fonts.woff") format("woff"),
+    url("/assets/icon-fonts/fonts/712-icon-fonts.ttf") format("truetype"),
+    url("/assets/icon-fonts/fonts/712-icon-fonts.svg#712-icon-fonts") format("svg");
   font-weight: normal;
   font-style: normal;
 
@@ -14,7 +14,7 @@
 @media screen and (-webkit-min-device-pixel-ratio:0) {
 @font-face {
 font-family: '712-icon-fonts';
-src: url('fonts/712-icon-fonts.svg#712-icon-fonts') format('svg');
+src: url('/assets/icon-fonts/fonts/712-icon-fonts.svg#712-icon-fonts') format('svg');
 
 }
 }

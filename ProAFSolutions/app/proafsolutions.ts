@@ -25,30 +25,31 @@ namespace proafsolutions {
 
            $compileProvider.imgSrcSanitizationWhitelist(/^\s*(https?|file|ftp|blob):|data:image\//);
         }      
-
-       static run($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService): void {
-           ProAFSolutionsApp.pingServer($publicService, $cookies);
-       } 
+             
 
        static initInterceptors($httpProvider: ng.IHttpProvider): void {
            $httpProvider.interceptors.push("$globalErrorHandler");
        }
 
-       static pingServer($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService) {
-           var lastAccess = $cookies.get('PROAF_LAST_ACCESS');
-           var now = new Date();           
-           var currentDate = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
-           if (!lastAccess || lastAccess != currentDate) {
-               $publicService.pingServer().then((response: ng.IHttpPromiseCallbackArg<{}>) => {
-                   var tomorrow = new Date();
-                   tomorrow.setDate(tomorrow.getDate() + 1);
-                   $cookies.put('PROAF_LAST_ACCESS', currentDate, { expires: tomorrow });
-               });               
-           }
-       }
+       //static run($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService): void {
+       //    ProAFSolutionsApp.pingServer($publicService, $cookies);
+       //} 
+
+       //static pingServer($publicService: services.IPublicService, $cookies: ng.cookies.ICookiesService) {
+       //    var lastAccess = $cookies.get('PROAF_LAST_ACCESS');
+       //    var now = new Date();           
+       //    var currentDate = (now.getMonth() + 1) + '/' + now.getDate() + '/' + now.getFullYear();
+       //    if (!lastAccess || lastAccess != currentDate) {
+       //        $publicService.pingServer().then((response: ng.IHttpPromiseCallbackArg<{}>) => {
+       //            var tomorrow = new Date();
+       //            tomorrow.setDate(tomorrow.getDate() + 1);
+       //            $cookies.put('PROAF_LAST_ACCESS', currentDate, { expires: tomorrow });
+       //        });               
+       //    }
+       //}
    }
 
     angular.module("proafsolutions", ["ngSanitize", "ui.router", "ui.mask", "pascalprecht.translate", "ngCookies"])
-        .config(ProAFSolutionsApp.config).run(ProAFSolutionsApp.run);
+        .config(ProAFSolutionsApp.config);
             
 }
