@@ -11,13 +11,13 @@ namespace proafsolutions {
                    views: {
 
                        "home": {
-                           templateUrl: RoutesConfig.getTemplatePath('home'),
+                           templateUrl: AppSettings.getTemplatePath('home'),
                            controller: "HomeController",
                            controllerAs: "vm"
                        },
 
                        "assistance": {
-                           templateUrl: RoutesConfig.getTemplatePath('assistance'),
+                           templateUrl: AppSettings.getTemplatePath('assistance'),
                            controller: "AssistanceController",
                            controllerAs: "vm"             
                        },
@@ -29,13 +29,13 @@ namespace proafsolutions {
                        //},
 
                        "about": {
-                           templateUrl: RoutesConfig.getTemplatePath('about'),
+                           templateUrl: AppSettings.getTemplatePath('about'),
                            controller: "AboutController",
                            controllerAs: "vm"
                        },
 
                        "contact": {
-                           templateUrl: RoutesConfig.getTemplatePath('contact'),
+                           templateUrl: AppSettings.getTemplatePath('contact'),
                            controller: "ContactController",
                            controllerAs: "vm"
                        },
@@ -47,7 +47,7 @@ namespace proafsolutions {
                        //},
 
                        "focus": {
-                           templateUrl: RoutesConfig.getTemplatePath('focus'),
+                           templateUrl: AppSettings.getTemplatePath('focus'),
                            controller: "FocusController",
                            controllerAs: "vm"
                        },
@@ -59,13 +59,13 @@ namespace proafsolutions {
                        //},
 
                        "packages": {
-                           templateUrl: RoutesConfig.getTemplatePath('packages'),
+                           templateUrl: AppSettings.getTemplatePath('packages'),
                            controller: "PackagesController",
                            controllerAs: "vm"
                        },
 
                        "products": {
-                           templateUrl: RoutesConfig.getTemplatePath('products'),
+                           templateUrl: AppSettings.getTemplatePath('products'),
                            controller: "ProductsController",
                            controllerAs: "vm"
                        },
@@ -77,7 +77,7 @@ namespace proafsolutions {
                        //},
 
                        "separator": {
-                           templateUrl: RoutesConfig.getTemplatePath('separator'),
+                           templateUrl: AppSettings.getTemplatePath('separator'),
                            controller: "SeparatorController",
                            controllerAs: "vm"
                        },
@@ -89,7 +89,7 @@ namespace proafsolutions {
                        //},
 
                        "team": {
-                           templateUrl: RoutesConfig.getTemplatePath('team'),
+                           templateUrl: AppSettings.getTemplatePath('team'),
                            controller: "TeamController",
                            controllerAs: "vm"
                        },
@@ -107,7 +107,7 @@ namespace proafsolutions {
                        //},
 
                        "footer": {
-                           templateUrl: RoutesConfig.getTemplatePath('footer'),
+                           templateUrl: AppSettings.getTemplatePath('footer'),
                            controller: "FooterController",
                            controllerAs: "vm"
                        }
@@ -117,9 +117,6 @@ namespace proafsolutions {
            $urlRouterProvider.otherwise("");
        }       
 
-       private static getTemplatePath(componentName: string): string {
-           return AppSettings.APP_MODE == 'Debug' ? AppSettings.COMPONENTS_FOLDER + '/' + componentName + '/' + componentName + '.html'
-                                                  : AppSettings.DIST_FOLDER + '/' + componentName + '.min.html';          
-       }
+       
    }     
 }

@@ -212,6 +212,8 @@
     <Content Include="css\styles.scss" />
     <Content Include="data\en-US\packages.json" />
     <Content Include="data\es-ES\packages.json" />
+    <None Include="Properties\PublishProfiles\proafsolutions.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\proafsolutions.com - Web Deploy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

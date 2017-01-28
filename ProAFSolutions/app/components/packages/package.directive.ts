@@ -7,7 +7,7 @@
         }
 
         public restrict = 'E';
-        public templateUrl = '/app/components/packages/package.directive.html';
+        public templateUrl = AppSettings.getDirectiveTemplatePath('packages', 'package.directive');
         public scope = {
             vm: '=ctrl',
             package: '=',           
@@ -18,6 +18,9 @@
         public link(scope: ng.IScope, element: ng.IAugmentedJQuery, attrs: ng.IAttributes): void {
 
         }
+
+
+       
     }
 
     angular.module("proafsolutions").directive('packageWidget', PackageWidgetDirective.instance);

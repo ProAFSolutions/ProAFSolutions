@@ -384,6 +384,8 @@
     <Content Include="Templates\Offers\es-ES\ProAFSolutionsMobile.pdf" />
     <Content Include="Templates\Offers\es-ES\ProAFSolutionsSuite.pdf" />
     <Content Include="Templates\Offers\es-ES\ProAFSolutionsWeb.pdf" />
+    <None Include="Properties\PublishProfiles\proafsolutions.com - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\proafsolutions.com - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />

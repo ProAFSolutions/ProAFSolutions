@@ -4,6 +4,7 @@
     <UseIISExpress>true</UseIISExpress>
     <ProjectView>ProjectFiles</ProjectView>
     <ToolsVersionPromptShown>2.1</ToolsVersionPromptShown>
+    <NameOfLastUsedPublishProfile>proafsolutions.com - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>
