@@ -20,7 +20,11 @@ namespace ProAFSolutionsAPI
             // global API exception handler
             config.Services.Replace(typeof(IExceptionHandler), new GlobalWebApiExceptionHandler());
 
-            //var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
+          //  var cors = new EnableCorsAttribute(ConfigurationManager.AppSettings["proafOrigin"], "*", "*");
+            //var cors = new EnableCorsAttribute("*",
+            //                                   "Origin, Content-Type, Accept",
+            //                                   "GET, PUT, POST, DELETE, OPTIONS");
+
             //config.EnableCors(cors);
 
             // Web API configuration and services
@@ -39,7 +43,7 @@ namespace ProAFSolutionsAPI
 
             config.Routes.MapHttpRoute(
                 name: "DefaultApi",
-                routeTemplate: "api/{controller}/{id}",
+                routeTemplate: "{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
         }
