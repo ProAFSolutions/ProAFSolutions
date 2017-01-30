@@ -4,7 +4,7 @@
   "home.nav.works": "Works",
   "home.nav.about": "About Us",
   "home.nav.team": "Team",
-  "home.nav.pricing": "Pricing",
+  "home.nav.pricing": "Packages",
   "home.nav.features": "Features",
   "home.nav.products": "Products",
   "home.nav.testimonials": "Testimonials",
@@ -65,6 +65,7 @@
   "packages.option.included": "It's included",
   "packages.select": "You selected: ",
   "packages.personalized.text": "Personalize your package",
+  "packages.offer": "Offer Details",
 
   "contact.title": "Get in touch",
   "contact.title.subtitle": "Have any question? Drop us a message. We will get back to you in 24 hours.",

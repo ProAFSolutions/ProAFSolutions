@@ -1,53 +1,5 @@
 [START]---------------------------------------
-Timestamp: 1/18/2017 4:44:58 AM
-
-Message:    at System.Web.Http.HostAuthenticationFilter.GetAuthenticationManagerOrThrow(HttpRequestMessage request)
-   at System.Web.Http.HostAuthenticationFilter.<AuthenticateAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Web.Http.Controllers.AuthenticationFilterResult.<ExecuteAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Web.Http.Dispatcher.HttpControllerDispatcher.<SendAsync>d__1.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Web.Http.Owin.PassiveAuthenticationMessageHandler.<SendAsync>d__0.MoveNext()
---- End of stack trace from previous location where exception was thrown ---
-   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
-   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
-   at System.Web.Http.HttpServer.<SendAsync>d__0.MoveNext()
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Error
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131291882694041999
-
-ProcessId: 7772
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:13804
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/18/2017 4:49:30 AM
+Timestamp: 1/28/2017 3:58:27 PM
 
 Message: Contact Email sent to alexclavijo85@gmail.com
 
@@ -63,20 +15,20 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131291885204333286
+App Domain: /LM/W3SVC/2/ROOT-1-131300925936076935
 
-ProcessId: 19396
+ProcessId: 5484
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:10804
+Win32 ThreadId:12648
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/18/2017 4:59:13 AM
+Timestamp: 1/28/2017 4:04:54 PM
 
 Message: Contact Email sent to alexclavijo85@gmail.com
 
@@ -92,20 +44,20 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131291885204333286
+App Domain: /LM/W3SVC/2/ROOT-1-131300930025490398
 
-ProcessId: 19396
+ProcessId: 7576
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:10804
+Win32 ThreadId:3976
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/18/2017 5:04:37 AM
+Timestamp: 1/28/2017 4:05:38 PM
 
 Message: Contact Email sent to alexclavijo85@gmail.com
 
@@ -121,22 +73,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131291894572309274
+App Domain: /LM/W3SVC/2/ROOT-1-131300930025490398
 
-ProcessId: 7956
+ProcessId: 7576
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:5668
+Win32 ThreadId:15248
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/18/2017 5:06:41 AM
+Timestamp: 1/28/2017 4:14:44 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -150,22 +102,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131291895760556934
+App Domain: /LM/W3SVC/2/ROOT-1-131300936536161075
 
-ProcessId: 13192
+ProcessId: 16340
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:2452
+Win32 ThreadId:13620
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/18/2017 5:10:53 AM
+Timestamp: 1/28/2017 4:19:18 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -179,22 +131,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131291898300810370
+App Domain: /LM/W3SVC/2/ROOT-1-131300936536161075
 
-ProcessId: 20352
+ProcessId: 16340
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:11012
+Win32 ThreadId:1324
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:11:52 AM
+Timestamp: 1/28/2017 4:24:18 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -208,22 +160,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292690833942755
+App Domain: /LM/W3SVC/2/ROOT-1-131300942342691638
 
-ProcessId: 11420
+ProcessId: 14860
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:5840
+Win32 ThreadId:15764
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:12:32 AM
+Timestamp: 1/28/2017 4:26:13 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -237,22 +189,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292690833942755
+App Domain: /LM/W3SVC/2/ROOT-1-131300942342691638
 
-ProcessId: 11420
+ProcessId: 14860
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:5840
+Win32 ThreadId:15764
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:18:40 AM
+Timestamp: 1/28/2017 4:31:05 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -266,22 +218,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292694938047435
+App Domain: /LM/W3SVC/2/ROOT-1-131300945435344976
 
-ProcessId: 2376
+ProcessId: 9172
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:12416
+Win32 ThreadId:2852
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:19:41 AM
+Timestamp: 1/28/2017 4:33:02 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -295,22 +247,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292694938047435
+App Domain: /LM/W3SVC/2/ROOT-1-131300947544132851
 
-ProcessId: 2376
+ProcessId: 15696
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:16336
+Win32 ThreadId:15492
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:20:23 AM
+Timestamp: 1/28/2017 4:48:14 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -324,22 +276,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292694938047435
+App Domain: /LM/W3SVC/2/ROOT-1-131300956692027061
 
-ProcessId: 2376
+ProcessId: 6112
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:7748
+Win32 ThreadId:15736
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:30:13 AM
+Timestamp: 1/28/2017 4:49:43 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -353,22 +305,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292701979017544
+App Domain: /LM/W3SVC/2/ROOT-1-131300957531638928
 
-ProcessId: 2392
+ProcessId: 15920
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:5176
+Win32 ThreadId:9768
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:30:58 AM
+Timestamp: 1/28/2017 5:00:11 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -382,22 +334,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292701979017544
+App Domain: /LM/W3SVC/2/ROOT-1-131300963826558112
 
-ProcessId: 2392
+ProcessId: 10608
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:15652
+Win32 ThreadId:14732
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:33:47 AM
+Timestamp: 1/28/2017 5:01:31 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -411,22 +363,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292703933175360
+App Domain: /LM/W3SVC/2/ROOT-1-131300963826558112
 
-ProcessId: 10412
+ProcessId: 10608
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:11052
+Win32 ThreadId:14732
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:35:23 AM
+Timestamp: 1/28/2017 5:30:12 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -440,22 +392,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292705075207877
+App Domain: /LM/W3SVC/2/ROOT-1-131300981952965408
 
-ProcessId: 11504
+ProcessId: 16000
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:20320
+Win32 ThreadId:14132
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:38:36 AM
+Timestamp: 1/28/2017 5:33:20 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -469,22 +421,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292707007528695
+App Domain: /LM/W3SVC/2/ROOT-1-131300983744928170
 
-ProcessId: 12384
+ProcessId: 16324
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:17264
+Win32 ThreadId:3672
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:40:28 AM
+Timestamp: 1/28/2017 5:35:47 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to alejandro@proafsolutions.com
 
 Category: General
 
@@ -498,22 +450,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292708161515444
+App Domain: /LM/W3SVC/2/ROOT-1-131300983744928170
 
-ProcessId: 2168
+ProcessId: 16324
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:18736
+Win32 ThreadId:3672
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:41:26 AM
+Timestamp: 1/28/2017 9:25:29 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to postmaster@proafsolutions.com
 
 Category: General
 
@@ -527,22 +479,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292708701004116
+App Domain: /LM/W3SVC/2/ROOT-1-131301122296662472
 
-ProcessId: 11876
+ProcessId: 7212
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:17744
+Win32 ThreadId:8680
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:42:53 AM
+Timestamp: 1/28/2017 9:29:37 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to postmaster@proafsolutions.com
 
 Category: General
 
@@ -556,22 +508,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292709588672343
+App Domain: /LM/W3SVC/2/ROOT-1-131301125575985241
 
-ProcessId: 19212
+ProcessId: 13728
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:16016
+Win32 ThreadId:15452
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:43:32 AM
+Timestamp: 1/28/2017 9:34:22 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to postmaster@proafsolutions.com
 
 Category: General
 
@@ -585,22 +537,22 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292709588672343
+App Domain: /LM/W3SVC/2/ROOT-1-131301128443161840
 
-ProcessId: 19212
+ProcessId: 4244
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:14664
+Win32 ThreadId:6528
 
 Extended Properties: 
 [END]-----------------------------------------
 [START]---------------------------------------
-Timestamp: 1/19/2017 3:49:32 AM
+Timestamp: 1/28/2017 9:42:15 PM
 
-Message: Contact Email sent to alexclavijo85@gmail.com
+Message: Contact Email sent to postmaster@proafsolutions.com
 
 Category: General
 
@@ -614,218 +566,15 @@ Title:
 
 Machine: DESKTOP-BB460RJ
 
-App Domain: /LM/W3SVC/2/ROOT-1-131292713578814455
+App Domain: /LM/W3SVC/2/ROOT-1-131301133064549151
 
-ProcessId: 11620
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:5172
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 3:50:59 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292714528253392
-
-ProcessId: 5592
+ProcessId: 14292
 
 Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
 
 Thread Name: 
 
-Win32 ThreadId:9920
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 3:52:52 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292715553928221
-
-ProcessId: 18364
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:17928
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 3:55:42 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292717291294261
-
-ProcessId: 16676
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:19392
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 3:56:26 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292717721015672
-
-ProcessId: 16644
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:19836
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 3:57:08 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292718174956195
-
-ProcessId: 19652
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:17888
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 4:03:33 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292722078880300
-
-ProcessId: 5200
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:14628
-
-Extended Properties: 
-[END]-----------------------------------------
-[START]---------------------------------------
-Timestamp: 1/19/2017 4:09:40 AM
-
-Message: Contact Email sent to alexclavijo85@gmail.com
-
-Category: General
-
-Priority: -1
-
-EventId: 0
-
-Severity: Information
-
-Title:
-
-Machine: DESKTOP-BB460RJ
-
-App Domain: /LM/W3SVC/2/ROOT-1-131292725711169896
-
-ProcessId: 10136
-
-Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
-
-Thread Name: 
-
-Win32 ThreadId:18032
+Win32 ThreadId:13704
 
 Extended Properties: 
 [END]-----------------------------------------

@@ -12,8 +12,8 @@
             return new PackageToggleDirective;
         }
 
-        public restrict = 'E';       
-        public templateUrl = '/app/components/packages/package-toggle.directive.html';
+        public restrict = 'E';
+        public templateUrl = AppSettings.getDirectiveTemplatePath('packages', 'package-toggle.directive');
         public scope = {                
             toggleId: '@',
             toggleColor: '@',  

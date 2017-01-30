@@ -50,6 +50,15 @@
             this.totalPrice = this.basePrice + selection;
         }
 
+        public getCheckedOptions(): Array<string> {
+            var result = new Array<string>();
+            _.each(this.options, (option: PackageOptionVM) => {
+                if (option.isChecked && !option.model.included)
+                    result.push(option.model.name);
+            });
+            return result;
+        }
+
     }
 
 }

@@ -29,7 +29,7 @@ namespace ProAFSolutionsAPI.Controllers
     /// Endpoint resposibe of exposing public operations 
     /// </summary>  
     //[Authorize]   
-    [RoutePrefix("api/public")]
+    [RoutePrefix("public")]
     public class PublicApiController : ApiController
     {
 

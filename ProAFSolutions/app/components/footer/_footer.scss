@@ -1,1 +1,18 @@
 ﻿
+footer{
+
+    .logo-small{
+        background-image: url(/images/logo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 60px;
+        height: 26px;
+        display: inline-block;
+    }
+
+    .tel, .email{
+        color: $color-font-gray;
+    }
+
+
+}

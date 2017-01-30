@@ -31,7 +31,7 @@ namespace ProAFSolutionsAPI.Controllers
     /// Endpoint resposibe of handling logic to exchange information with our users
     /// </summary> 
     //[Authorize]   
-    [RoutePrefix("api/contact")]
+    [RoutePrefix("contact")]   
     public class ContactApiController : ApiController
     {
 
@@ -43,18 +43,24 @@ namespace ProAFSolutionsAPI.Controllers
         [HttpPost]
         public IHttpActionResult SendContactMessage(ContactModel contact)
         {
-            NotifyProAF(contact);
+            try
+            {
+                NotifyProAF(contact);
 
-            if (!string.IsNullOrEmpty(contact.OfferFileName))
-                SendOfferEmail(contact);
+                if (!string.IsNullOrEmpty(contact.OfferFileName))
+                    SendOfferEmail(contact);
+            }
+            catch (Exception ex) {
+                LoggerProvider.Error(ex.Message);
+            }
 
             return Ok();
         }
 
 
         private void NotifyProAF(ContactModel contact) {
-            var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4}",
-                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message);
+            var message = string.Format("NAME:{0}, EMAIL:{1}, PHONE:{2}, SUBJECT:{3}, MSG:{4},PACKAGES:{5}",
+                                         contact.Name, contact.Email, contact.Phone, contact.Subject, contact.Message, contact.CheckedOptions);
 
             var parameters = new Dictionary<string, object>();
             parameters.Add("message", message);

@@ -12,7 +12,7 @@
     body #assistance.chat-red-section i.chat-icon {
       font-size: 24px; }
   body #contact .has-error p {
-    color: red;
+    color: #e96656;
     font-weight: bold;
     font-size: 16px;
     text-align: left; }
@@ -33,10 +33,19 @@
     text-transform: uppercase; }
   body #focus .other-focus-list i {
     font-size: 24px; }
+  body footer .logo-small {
+    background-image: url(/images/logo.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 60px;
+    height: 26px;
+    display: inline-block; }
+  body footer .tel, body footer .email {
+    color: #939393; }
   body #home #main-nav {
     position: fixed !important; }
-    body #home #main-nav.navbar .navbar-collapse .navbar-nav li a:active, body #home #main-nav.navbar .navbar-collapse .navbar-nav li a:focus {
-      color: #e96656 !important; }
+    body #home #main-nav.navbar.navbar-inverse .navbar-collapse .navbar-nav li a:focus {
+      color: #e96656; }
     body #home #main-nav.navbar .lang-selector {
       position: absolute;
       right: 20px; }
