@@ -48,7 +48,10 @@ namespace ProAFSolutionsAPI.Controllers
                 NotifyProAF(contact);
 
                 if (!string.IsNullOrEmpty(contact.OfferFileName))
+                {
+                    LoggerProvider.Info(string.Format("Sent offer: {0}", contact.OfferFileName));
                     SendOfferEmail(contact);
+                }
             }
             catch (Exception ex) {
                 LoggerProvider.Error(ex.Message);
@@ -95,33 +98,43 @@ namespace ProAFSolutionsAPI.Controllers
 
         private void SendOfferEmail(ContactModel contact)
         {
-            //Template parameters to pass data
-            var parameters = new Dictionary<string, object>();            
-            parameters.Add("contact", contact);
+            try
+            {
 
-            //Atttachment set up
-            var pdfOfferAttachment = CreateOfferAttachment(contact.Language, contact.OfferFileName);
+                //Template parameters to pass data
+                var parameters = new Dictionary<string, object>();
+                parameters.Add("contact", contact);
 
-            //Link resources to pass images 
-            var resources = new List<LinkedResource>();
-            string path = ResourceHelper.GetLogoPath();
-            // var logoResx =  new LinkedResource(ResourceHelper.GetLogoPath(), "image/jpg")
-          //  var logoResx = new LinkedResource("c:\\logo.jpg", "image/jpg");
-           // string mediaType = MediaTypeNames.Image.Jpeg;
+                //Atttachment set up
+                var pdfOfferAttachment = CreateOfferAttachment(contact.Language, contact.OfferFileName);
 
-           //  logoResx.ContentType.MediaType = mediaType;
-            // logoResx.ContentId = "logoId";
-            // logoResx.ContentLink = new Uri("cid:" + logoResx.ContentId);
-            // logoResx.ContentType.Name = logoResx.ContentId;
-            // logoResx.TransferEncoding = System.Net.Mime.TransferEncoding.Base64;
-           // resources.Add(logoResx);            
+                //Link resources to pass images 
+                var resources = new List<LinkedResource>();
+                string path = ResourceHelper.GetLogoPath();
+                // var logoResx =  new LinkedResource(ResourceHelper.GetLogoPath(), "image/jpg")
+                //  var logoResx = new LinkedResource("c:\\logo.jpg", "image/jpg");
+                // string mediaType = MediaTypeNames.Image.Jpeg;
 
-            AppServicesProvider.EmailService.SendHtmlEmail(
-                contact.Subject,
-                new string[] { contact.Email },
-                new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath(contact.Language, "offer-email.html"), resources, parameters),
-                new MailAttachment[] { pdfOfferAttachment }
-            );
+                //  logoResx.ContentType.MediaType = mediaType;
+                // logoResx.ContentId = "logoId";
+                // logoResx.ContentLink = new Uri("cid:" + logoResx.ContentId);
+                // logoResx.ContentType.Name = logoResx.ContentId;
+                // logoResx.TransferEncoding = System.Net.Mime.TransferEncoding.Base64;
+                // resources.Add(logoResx);            
+
+                AppServicesProvider.EmailService.SendHtmlEmail(
+                    contact.Subject,
+                    new string[] { contact.Email },
+                    new HtmlMailTemplate(ResourceHelper.GetEmailTemplatePath(contact.Language, "offer-email.html"), resources, parameters),
+                    new MailAttachment[] { pdfOfferAttachment }
+                );
+            }
+            catch (Exception ex)
+            {
+                LoggerProvider.Error(ex.Message);
+
+            }
+           
 
         }
 
@@ -129,18 +142,34 @@ namespace ProAFSolutionsAPI.Controllers
 
             try
             {
-                var offerFilePath = ResourceHelper.GetOfferPath(lan, fileName);
-                var stream = new FileStream(offerFilePath, FileMode.Open);
+                //var offerFilePath = ResourceHelper.GetOfferPath(lan, fileName);
+                var tempPath = "http://proafsolutions.com/api/Templates/Offers/";
+                var offerFilePath = tempPath + lan + "/" + fileName;
+
+
+                var stream = GetStreamFromUrl(offerFilePath);
+
+               // var stream = new FileStream(offerFilePath, FileMode.Open);
                 byte[] array = new byte[stream.Length];
                 stream.Read(array, 0, array.Length);
                 return new MailAttachment(new MemoryStream(array), fileName);
             }
             catch (Exception ex)
             {
-               
+                LoggerProvider.Error(ex.Message);
             }
 
             return null;
+        }
+
+        private static Stream GetStreamFromUrl(string url)
+        {
+            byte[] imageData = null;
+
+            using (var wc = new System.Net.WebClient())
+                imageData = wc.DownloadData(url);
+
+            return new MemoryStream(imageData);
         }
 
 
